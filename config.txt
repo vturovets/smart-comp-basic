@@ -14,6 +14,8 @@ MoE = 5
 [input]
 # Threshold for removing outlier values (in milliseconds)
 outlier threshold = 20000
+# number of random observations for comparison
+sample = 5000
 
 [output]
 # Output fields to include in the result
@@ -28,12 +30,13 @@ significant difference = True
 
 # Diagrams (per input file name)
 histogram = True
-boxplot = True
+boxplot = False
 
 # Create a log file for diagnostics
 create_log = True
 
 [descriptive analysis]
+required = True
 mean = True
 median = True
 min = True
@@ -41,5 +44,5 @@ max = True
 sample size = True
 standard deviation = True
 skewness = True
-diagraming = True
+diagraming = False
 save the result to file = True

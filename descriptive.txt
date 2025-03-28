@@ -1,0 +1,18 @@
+data set=input1-Dec1-24-all
+mean=33.3
+median=30.0
+min=2.0
+max=446.0
+sample size=80206
+standard deviation=14.3
+skewness=6.7
+
+data set=input2-Jan07-25-all
+mean=41.0
+median=33.0
+min=2.0
+max=5618.0
+sample size=100000
+standard deviation=35.4
+skewness=99.4
+

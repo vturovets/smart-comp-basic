@@ -4,7 +4,7 @@ import sys
 from configparser import ConfigParser
 from modules.logger import setup_logger
 from modules.config import load_config
-from modules.input_handler import validate_and_clean
+from modules.input_handler import validate_and_clean, generate_sample
 from modules.analysis import run_descriptive_analysis
 from modules.hypothesis import run_bootstrap_test
 from modules.output import save_results, show_progress
@@ -33,15 +33,19 @@ def main():
         clean2 = validate_and_clean(args.input2, config, logger)
 
         # Run descriptive statistics if enabled
-        if config.getboolean('descriptive analysis', 'mean', fallback=False):
-            run_descriptive_analysis(clean1, config, logger)
-            run_descriptive_analysis(clean2, config, logger)
+        if config.getboolean('descriptive analysis', 'required', fallback=False):
+            run_descriptive_analysis(clean1, config, logger,'w')
+            run_descriptive_analysis(clean2, config, logger,'a')
+
+        # Get samples
+        sample1 = generate_sample(clean1, config, logger)
+        sample2 = generate_sample(clean2, config, logger)
 
         # Show progress feedback
         show_progress("Running Hypothesis Test...", 50)
 
         # Run hypothesis testing
-        results = run_bootstrap_test(clean1, clean2, config, logger)
+        results = run_bootstrap_test(sample1, sample2, config, logger)
 
         # Output results
         save_results(results, args.output, config)

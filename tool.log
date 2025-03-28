@@ -1,1 +1,71 @@
 2025-03-28 12:58:52,034 - DEBUG - [Stub] Logger initialized
+2025-03-28 14:50:44,793 - DEBUG - [Stub] Logger initialized
+2025-03-28 16:38:29,253 - DEBUG - [Stub] Logger initialized
+2025-03-28 16:47:52,544 - DEBUG - [Stub] Logger initialized
+2025-03-28 16:47:52,546 - ERROR - [Error] Cannot read data in cli.py: Error tokenizing data. C error: Expected 1 fields in line 10, saw 2
+
+2025-03-28 16:51:36,848 - DEBUG - Logger initialized.
+2025-03-28 16:51:36,848 - ERROR - [Error] Cannot read data in cli.py: Error tokenizing data. C error: Expected 1 fields in line 10, saw 2
+
+2025-03-28 16:52:38,795 - DEBUG - Logger initialized.
+2025-03-28 16:52:38,892 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 16:52:38,993 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:06:20,649 - DEBUG - Logger initialized.
+2025-03-28 17:06:20,728 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:06:20,824 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:06:21,914 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:06:22,558 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:18:07,210 - DEBUG - Logger initialized.
+2025-03-28 17:18:07,290 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:18:07,385 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:19:30,777 - DEBUG - Logger initialized.
+2025-03-28 17:19:30,853 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:19:30,947 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:19:30,978 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:19:31,013 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:22:26,231 - DEBUG - Logger initialized.
+2025-03-28 17:22:26,308 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:22:26,407 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:22:26,433 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:22:26,456 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:22:36,740 - DEBUG - Logger initialized.
+2025-03-28 17:22:36,818 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:22:36,914 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:22:36,945 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:22:36,967 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:32:24,004 - DEBUG - Logger initialized.
+2025-03-28 17:32:24,081 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:32:24,177 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:32:24,222 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:32:24,265 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:40:54,567 - DEBUG - Logger initialized.
+2025-03-28 17:40:54,644 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:40:54,737 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:40:54,764 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:40:54,788 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:46:28,014 - DEBUG - Logger initialized.
+2025-03-28 17:46:28,091 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:46:28,186 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:46:28,207 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:46:28,261 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:58:53,902 - DEBUG - Logger initialized.
+2025-03-28 17:58:53,981 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:58:54,074 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:58:54,133 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:58:54,177 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:58:54,177 - ERROR - [Error] name 'generate_sample' is not defined
+2025-03-28 17:59:11,273 - DEBUG - Logger initialized.
+2025-03-28 17:59:11,350 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:59:11,443 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:59:11,482 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 17:59:11,524 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 17:59:11,542 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-03-28 17:59:11,559 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-03-28 18:03:25,351 - DEBUG - Logger initialized.
+2025-03-28 18:03:25,432 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-28 18:03:25,527 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-28 18:03:25,559 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-28 18:03:25,594 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-28 18:03:25,609 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-03-28 18:03:25,628 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-03-28 18:03:26,154 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6560
