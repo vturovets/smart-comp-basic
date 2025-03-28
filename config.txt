@@ -1,0 +1,45 @@
+[test]
+# Significance level (e.g. 0.05 for 95% confidence)
+alpha = 0.05
+
+# Use P95 as the metric for comparison
+p95 = True
+
+# Number of iterations for bootstrapping
+bootstrapping iterations = 1000
+
+# Desired Margin of Error for P95 (%)
+MoE = 5
+
+[input]
+# Threshold for removing outlier values (in milliseconds)
+outlier threshold = 20000
+
+[output]
+# Output fields to include in the result
+p95_1 = True
+p95_2 = True
+ci lower diff = True
+ci upper diff = True
+p-value = True
+alpha = True
+sample size = True
+significant difference = True
+
+# Diagrams (per input file name)
+histogram = True
+boxplot = True
+
+# Create a log file for diagnostics
+create_log = True
+
+[descriptive analysis]
+mean = True
+median = True
+min = True
+max = True
+sample size = True
+standard deviation = True
+skewness = True
+diagraming = True
+save the result to file = True
