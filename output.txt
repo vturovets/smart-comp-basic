@@ -1,0 +1,9 @@
+Test title: p95 bootstrapping comparison
+p95_1=52.0
+p95_2=82.0
+ci lower diff=-32.9
+ci upper diff=-27.0
+p-value=0.7
+alpha=0.1
+sample size=5000
+significant difference=False

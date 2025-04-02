@@ -4,7 +4,7 @@ import os
 
 def validate_and_clean(file_path, config, logger=None):
     try:
-        df = pd.read_csv(file_path, header=None, decimal='.')
+        df = pd.read_csv(file_path, header=None, decimal='.').squeeze().values
     except Exception as e:
         raise Exception(f"Cannot read data in {file_path}: {str(e)}")
 

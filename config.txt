@@ -21,6 +21,10 @@ sample = 5000
 # Output fields to include in the result
 p95_1 = True
 p95_2 = True
+ci lower p95_1 = True
+ci upper p95_1 = True
+ci lower p95_2 = True
+ci upper p95_2 = True
 ci lower diff = True
 ci upper diff = True
 p-value = True

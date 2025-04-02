@@ -1,45 +1,75 @@
+# hypothesis.py
+
 import numpy as np
-import pandas as pd
+from scipy.stats import scoreatpercentile
 
-def run_bootstrap_test(file1, file2, config, logger=None):
-    try:
-        df1 = pd.read_csv(file1, header=None)
-        df2 = pd.read_csv(file2, header=None)
-    except Exception as e:
-        raise Exception(f"Failed to read input files: {str(e)}")
+def compute_ci(bootstrap_sample, alpha=0.05):
+    """
+    Compute the confidence interval for a bootstrap sample.
+    """
+    lower = np.percentile(bootstrap_sample, 100 * (alpha / 2))
+    upper = np.percentile(bootstrap_sample, 100 * (1 - alpha / 2))
+    return lower, upper
 
-    df1.columns = ['value']
-    df2.columns = ['value']
+def bootstrap_percentile(data, percentile=95, iterations=1000):
+    """
+    Perform bootstrapping to estimate the percentile.
+    """
+    data = np.asarray(data, dtype=float).flatten()  # Ensure 1D and numeric array
+    n = len(data)
+    bootstrapped = [np.percentile(np.random.choice(data, n, replace=True), percentile)
+                    for _ in range(iterations)]
+    return np.array(bootstrapped)
 
-    sample_size = min(len(df1), len(df2))
-    iterations = int(config.get('test', 'bootstrapping iterations', fallback='1000'))
-    alpha = float(config.get('test', 'alpha', fallback='0.05'))
-    moe = float(config.get('test', 'MoE', fallback='5')) / 100
+def compare_p95s(p95_sample1, p95_sample2, alpha=0.05):
+    """
+    Compare two sets of bootstrapped P95 values using CI overlap and p-value.
+    """
+    # Confidence Intervals
+    ci1 = compute_ci(p95_sample1, alpha)
+    ci2 = compute_ci(p95_sample2, alpha)
 
-    boot_p95_1 = np.array([np.percentile(df1.sample(n=sample_size, replace=True)['value'], 95) for _ in range(iterations)])
-    boot_p95_2 = np.array([np.percentile(df2.sample(n=sample_size, replace=True)['value'], 95) for _ in range(iterations)])
+    # Check CI overlap
+    ci_overlap = not (ci1[1] < ci2[0] or ci2[1] < ci1[0])
 
-    diff_distribution = boot_p95_1 - boot_p95_2
-    observed_diff = np.percentile(df1['value'], 95) - np.percentile(df2['value'], 95)
+    # Compute difference distribution
+    diff_distribution = np.array(p95_sample1) - np.array(p95_sample2)
 
-    extreme_count = np.sum(np.abs(diff_distribution) >= np.abs(observed_diff))
-    p_value = extreme_count / iterations
-
-    lower_ci = np.percentile(diff_distribution, 100 * alpha / 2)
-    upper_ci = np.percentile(diff_distribution, 100 * (1 - alpha / 2))
-
-    significant = p_value < alpha
-
-    if logger:
-        logger.info(f"Bootstrap test completed: observed_diff={observed_diff:.2f}, p={p_value:.4f}")
+    # Compute p-value if needed
+    if ci_overlap:
+        p_value = 2 * min(
+            np.mean(diff_distribution < 0),
+            np.mean(diff_distribution > 0)
+        )
+        significant = p_value < alpha
+    else:
+        p_value = 0.0  # Since non-overlapping CIs indicate clear significance
+        significant = True
 
     return {
-        'p95_1': np.percentile(df1['value'], 95),
-        'p95_2': np.percentile(df2['value'], 95),
-        'ci lower diff': lower_ci,
-        'ci upper diff': upper_ci,
-        'p-value': p_value,
-        'alpha': alpha,
-        'significant difference': significant,
-        'sample size': sample_size
+        'p95_1_mean': np.mean(p95_sample1),
+        'p95_2_mean': np.mean(p95_sample2),
+        'ci_1': ci1,
+        'ci_2': ci2,
+        'ci_overlap': ci_overlap,
+        'p_value': p_value,
+        'significant': significant
     }
+
+def run_bootstrap_test(sample1, sample2, config, logger):
+    """
+    Entry point for the CLI. Runs the bootstrapping test using config and logs the results.
+    """
+    alpha = float(config.get('test', 'alpha'))
+    percentile = 95  # fixed for now
+    iterations = int(config.get('test', 'bootstrapping iterations'))
+
+    logger.info("Starting bootstrapping for both samples...")
+    p95_sample1 = bootstrap_percentile(sample1, percentile, iterations)
+    p95_sample2 = bootstrap_percentile(sample2, percentile, iterations)
+
+    logger.info("Running P95 comparison...")
+    result = compare_p95s(p95_sample1, p95_sample2, alpha)
+
+    logger.info("Bootstrapping and comparison completed.")
+    return result

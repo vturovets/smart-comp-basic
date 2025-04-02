@@ -69,3 +69,160 @@
 2025-03-28 18:03:25,609 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
 2025-03-28 18:03:25,628 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
 2025-03-28 18:03:26,154 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6560
+2025-03-31 16:01:13,710 - DEBUG - Logger initialized.
+2025-03-31 16:01:13,824 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-31 16:01:13,969 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-31 16:01:13,989 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-31 16:01:14,010 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-31 16:01:14,026 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-03-31 16:01:14,044 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-03-31 16:01:14,627 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6650
+2025-03-31 16:02:54,003 - DEBUG - Logger initialized.
+2025-03-31 16:02:54,081 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-03-31 16:02:54,175 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-03-31 16:02:54,207 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-03-31 16:02:54,241 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-03-31 16:02:54,256 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-03-31 16:02:54,274 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-03-31 16:02:54,771 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6640
+2025-04-01 12:58:33,478 - DEBUG - Logger initialized.
+2025-04-01 12:58:33,577 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 12:58:33,713 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 12:58:33,752 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 12:58:33,774 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 12:58:33,791 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 12:58:33,809 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 12:58:34,275 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6400, MoE1=0.0385, MoE2=0.0305
+2025-04-01 13:02:05,825 - DEBUG - Logger initialized.
+2025-04-01 13:02:05,904 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:02:06,001 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:02:06,040 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:02:06,086 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:02:06,101 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 13:02:06,118 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 13:02:06,625 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6490, MoE1=0.0380, MoE2=0.0302
+2025-04-01 13:04:41,426 - DEBUG - Logger initialized.
+2025-04-01 13:04:41,505 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:04:41,603 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:04:41,622 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:04:41,660 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:04:41,676 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 13:04:41,693 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 13:04:42,217 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6580, MoE1=0.0385, MoE2=0.0302
+2025-04-01 13:04:58,109 - DEBUG - Logger initialized.
+2025-04-01 13:04:58,186 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:04:58,279 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:04:58,298 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 13:04:58,320 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 13:04:58,336 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 13:04:58,382 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 13:04:58,954 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6550, MoE1=0.0385, MoE2=0.0305
+2025-04-01 17:16:52,964 - DEBUG - Logger initialized.
+2025-04-01 17:16:53,045 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:16:53,140 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:16:53,171 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:16:53,206 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:16:53,220 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:16:53,238 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:16:53,738 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6510, MoE1=0.0385, MoE2=0.0305
+2025-04-01 17:19:06,202 - DEBUG - Logger initialized.
+2025-04-01 17:19:06,283 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:19:06,393 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:19:06,431 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:19:06,473 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:19:06,489 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:19:06,507 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:19:06,988 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6430, MoE1=0.0385, MoE2=0.0305
+2025-04-01 17:31:39,247 - DEBUG - Logger initialized.
+2025-04-01 17:31:39,327 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:31:39,423 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:31:39,444 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:31:39,478 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:31:39,497 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:31:39,515 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:31:40,016 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6360, MoE1=0.0385, MoE2=0.0302
+2025-04-01 17:33:51,790 - DEBUG - Logger initialized.
+2025-04-01 17:33:51,867 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:33:51,961 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:33:51,980 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:33:52,000 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:33:52,015 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:33:52,033 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:33:52,571 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6600, MoE1=0.0291, MoE2=0.0305
+2025-04-01 17:35:20,279 - DEBUG - Logger initialized.
+2025-04-01 17:35:20,358 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:35:20,454 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:35:20,474 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:35:20,495 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:35:20,510 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:35:20,528 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:35:21,012 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6560, MoE1=0.0385, MoE2=0.0302
+2025-04-01 17:37:44,938 - DEBUG - Logger initialized.
+2025-04-01 17:37:45,021 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:37:45,115 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:37:45,157 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:37:45,202 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:37:45,218 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:37:45,235 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:37:45,771 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6860, MoE1=0.0380, MoE2=0.0244
+2025-04-01 17:48:10,874 - DEBUG - Logger initialized.
+2025-04-01 17:48:10,953 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:48:11,048 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:48:11,080 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:48:11,107 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:48:11,122 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:48:11,142 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:48:11,619 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6550, MoE1=0.0385, MoE2=0.0305
+2025-04-01 17:50:07,234 - DEBUG - Logger initialized.
+2025-04-01 17:50:07,311 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:50:07,404 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:50:07,423 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:50:07,458 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:50:07,473 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:50:07,493 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:50:07,973 - INFO - Bootstrap test completed: observed_diff=-30.00, p=0.6490, MoE1=0.0380, MoE2=0.0244
+2025-04-01 17:59:55,130 - DEBUG - Logger initialized.
+2025-04-01 17:59:55,209 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:59:55,304 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:59:55,348 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 17:59:55,388 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 17:59:55,403 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 17:59:55,420 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 17:59:55,917 - INFO - Bootstrap test completed: p95_1=52.00, p95_2=82.00, p-value=0.0000, MoE1=0.0385, MoE2=0.0302
+2025-04-01 18:01:50,874 - DEBUG - Logger initialized.
+2025-04-01 18:01:50,954 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-01 18:01:51,047 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-01 18:01:51,066 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-01 18:01:51,087 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-01 18:01:51,102 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-01 18:01:51,120 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-01 18:01:51,634 - INFO - Bootstrap test completed: p95_1=52.00, p95_2=82.00, p-value=0.0000, MoE1=0.0385, MoE2=0.0302
+2025-04-02 10:52:34,380 - DEBUG - Logger initialized.
+2025-04-02 10:52:34,502 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-02 10:52:34,634 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-02 10:52:34,653 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-02 10:52:34,674 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-02 10:52:34,690 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-02 10:52:34,708 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-02 10:52:34,708 - INFO - Starting bootstrapping for both samples...
+2025-04-02 10:52:34,708 - ERROR - [Error] a must be 1-dimensional or an integer
+2025-04-02 10:54:41,369 - DEBUG - Logger initialized.
+2025-04-02 10:54:41,447 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-02 10:54:41,541 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-02 10:54:41,561 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-02 10:54:41,583 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-02 10:54:41,598 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-02 10:54:41,616 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-02 10:54:41,617 - INFO - Starting bootstrapping for both samples...
+2025-04-02 10:54:41,617 - ERROR - [Error] ufunc 'subtract' did not contain a loop with signature matching types (dtype('<U29'), dtype('<U29')) -> None
+2025-04-02 11:08:24,205 - DEBUG - Logger initialized.
+2025-04-02 11:08:24,330 - INFO - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
+2025-04-02 11:08:24,466 - INFO - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
+2025-04-02 11:08:24,502 - INFO - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
+2025-04-02 11:08:24,545 - INFO - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
+2025-04-02 11:08:24,567 - INFO - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
+2025-04-02 11:08:24,595 - INFO - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
+2025-04-02 11:08:24,595 - INFO - Starting bootstrapping for both samples...
+2025-04-02 11:08:24,595 - ERROR - [Error] could not convert string to float: 'input1-Dec1-24-all_sample.csv'
+2025-04-02 11:18:50,061 - DEBUG - Logger initialized.
+2025-04-02 11:18:50,070 - ERROR - [Error] 'numpy.ndarray' object has no attribute 'empty'
