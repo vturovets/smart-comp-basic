@@ -4,9 +4,10 @@ import os
 
 def validate_and_clean(file_path, config, logger=None):
     try:
-        df = pd.read_csv(file_path, header=None, decimal='.').squeeze().values
+        df = pd.read_csv(file_path, header=None, decimal='.')
     except Exception as e:
         raise Exception(f"Cannot read data in {file_path}: {str(e)}")
+
 
     # Check if file is empty
     if df.empty:
@@ -34,7 +35,7 @@ def validate_and_clean(file_path, config, logger=None):
     cleaned_path = file_path.replace(".csv", "_cleaned.csv")
 
     # Save cleaned data
-    df.to_csv(cleaned_path, index=False, header=False, float_format='%.6f')
+    df.to_csv(cleaned_path, index=False, header=False)
 
     if logger:
         logger.info(f"Cleaned data saved to {cleaned_path}")
@@ -58,7 +59,7 @@ def generate_sample(cleaned_file, config, logger=None):
     df_sample = df.sample(n=sample_size, random_state=42)
 
     sample_path = cleaned_file.replace("_cleaned.csv", "_sample.csv")
-    df_sample.to_csv(sample_path, index=False, header=False, float_format='%.6f')
+    df_sample.to_csv(sample_path, index=False, header=False)
 
     if logger:
         logger.info(f"Sample of size {sample_size} saved to {sample_path}")

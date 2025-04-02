@@ -21,7 +21,7 @@ def setup_logger(config):
     fh.setLevel(logging.DEBUG)
 
     # Define log format
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(funcName)s:%(lineno)d - %(message)s')
     fh.setFormatter(formatter)
 
     # Add handler to logger

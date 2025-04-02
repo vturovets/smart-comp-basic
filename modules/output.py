@@ -10,7 +10,10 @@ def save_results(results: dict, output_path: str, config):
         if config.getboolean('output', key, fallback=False):
             value = results.get(label or key)
             if isinstance(value, float):
-                lines.append(f"{label or key}={value:.1f}")
+                if key=='p-value' or key=='alpha':
+                    lines.append(f"{label or key}={value:.2f}")
+                else:
+                    lines.append(f"{label or key}={value:.1f}")
             else:
                 lines.append(f"{label or key}={value}")
 

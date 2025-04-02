@@ -1,7 +1,6 @@
 # hypothesis.py
-
+import pandas as pd
 import numpy as np
-from scipy.stats import scoreatpercentile
 
 def compute_ci(bootstrap_sample, alpha=0.05):
     """
@@ -11,17 +10,22 @@ def compute_ci(bootstrap_sample, alpha=0.05):
     upper = np.percentile(bootstrap_sample, 100 * (1 - alpha / 2))
     return lower, upper
 
-def bootstrap_percentile(data, percentile=95, iterations=1000):
+def bootstrap_percentile(file_path, percentile=95, iterations=1000):
     """
     Perform bootstrapping to estimate the percentile.
     """
-    data = np.asarray(data, dtype=float).flatten()  # Ensure 1D and numeric array
+    #data = np.asarray(data, dtype=float).flatten()  # Ensure 1D and numeric array
+    try:
+        data = pd.read_csv(file_path, header=None, decimal='.')
+        data = pd.to_numeric(data.iloc[:, 0], errors='coerce').dropna().to_numpy()
+    except Exception as e:
+        raise Exception(f"Cannot read data in {file_path}: {str(e)}")
     n = len(data)
     bootstrapped = [np.percentile(np.random.choice(data, n, replace=True), percentile)
                     for _ in range(iterations)]
     return np.array(bootstrapped)
 
-def compare_p95s(p95_sample1, p95_sample2, alpha=0.05):
+def compare_p95s(p95_sample1, p95_sample2, sample_size, alpha=0.05):
     """
     Compare two sets of bootstrapped P95 values using CI overlap and p-value.
     """
@@ -47,13 +51,16 @@ def compare_p95s(p95_sample1, p95_sample2, alpha=0.05):
         significant = True
 
     return {
-        'p95_1_mean': np.mean(p95_sample1),
-        'p95_2_mean': np.mean(p95_sample2),
-        'ci_1': ci1,
-        'ci_2': ci2,
-        'ci_overlap': ci_overlap,
-        'p_value': p_value,
-        'significant': significant
+        'p95_1': np.mean(p95_sample1),
+        'p95_2': np.mean(p95_sample2),
+        'ci lower p95_1': ci1[0],
+        'ci upper p95_1': ci1[1],
+        'ci lower p95_2': ci2[0],
+        'ci upper p95_2': ci2[1],
+        'p-value': p_value,
+        'alpha': alpha,
+        'sample size': sample_size,
+        'significant difference': significant
     }
 
 def run_bootstrap_test(sample1, sample2, config, logger):
@@ -69,7 +76,7 @@ def run_bootstrap_test(sample1, sample2, config, logger):
     p95_sample2 = bootstrap_percentile(sample2, percentile, iterations)
 
     logger.info("Running P95 comparison...")
-    result = compare_p95s(p95_sample1, p95_sample2, alpha)
+    result = compare_p95s(p95_sample1, p95_sample2, int(config.get('input', 'sample')), alpha)
 
     logger.info("Bootstrapping and comparison completed.")
     return result
