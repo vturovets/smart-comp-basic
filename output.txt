@@ -1,11 +1,11 @@
 Test title: p95 bootstrapping comparison
-p95_1=51.8
-p95_2=81.9
-ci lower p95_1=50.0
-ci upper p95_1=54.0
-ci lower p95_2=80.0
-ci upper p95_2=84.0
-p-value=0.00
+p95_1=1046.6
+p95_2=1047.1
+ci lower p95_1=966.8
+ci upper p95_1=1181.1
+ci lower p95_2=959.0
+ci upper p95_2=1181.1
+p-value=0.99
 alpha=0.05
-sample size=5000
-significant difference=True
+sample size=2252
+significant difference=False

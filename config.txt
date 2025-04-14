@@ -15,7 +15,7 @@ MoE = 5
 # Threshold for removing outlier values (in milliseconds)
 outlier threshold = 20000
 # number of random observations for comparison
-sample = 5000
+sample = 2252
 
 [output]
 # Output fields to include in the result
@@ -46,5 +46,5 @@ max = True
 sample size = True
 standard deviation = True
 skewness = True
-diagraming = False
+diagraming = True
 save the result to file = True

@@ -56,13 +56,14 @@ def run_descriptive_analysis(cleaned_file, config, logger=None, mode='w'):
 
 def _generate_histogram(df, base_filename, config):
     plt.figure()
-    plt.hist(df['value'], bins=50, alpha=0.7, color='blue')
-    plt.axvline(df['value'].mean(), color='red', linestyle='dashed', linewidth=1, label='Mean')
-    plt.axvline(df['value'].median(), color='green', linestyle='dashed', linewidth=1, label='Median')
+    plt.hist(df['value'], bins=50, alpha=0.7)
+    plt.axvline(df['value'].mean(), color='red', linestyle='dashed', linewidth=1, label=f'Mean: {df['value'].mean():.1f} ms')
+    plt.axvline(df['value'].median(), color='green', linestyle='dashed', linewidth=1, label=f'Median: {df['value'].median():.1f} ms')
     p95 = np.percentile(df['value'], 95)
-    plt.axvline(p95, color='orange', linestyle='dashed', linewidth=1, label='P95')
+    plt.axvline(p95, color='orange', linestyle='dashed', linewidth=1, label=f'P95: {p95:.1f} ms')
+
     plt.title(f"Histogram of {base_filename}")
-    plt.xlabel("Value")
+    plt.xlabel('Response time, ms')
     plt.ylabel("Frequency")
     plt.legend()
     plt.tight_layout()
