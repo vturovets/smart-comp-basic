@@ -1,9 +1,10 @@
 import argparse
 import sys
-from config_handler import parse_config
-from input_handler import load_and_clean_csv
-from validation import validate_sample_sizes
-from sampling_utils import get_autosized_sample
+from modules.config_handler import parse_config
+from modules.input_handler import load_and_clean_csv
+from modules.validation import validate_sample_sizes
+from modules.sampling_utils import get_autosized_sample
+
 import numpy as np
 
 def main():

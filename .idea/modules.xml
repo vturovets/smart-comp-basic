@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/smart-comp.iml" filepath="$PROJECT_DIR$/smart-comp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/smart-comp.iml" filepath="$PROJECT_DIR$/.idea/smart-comp.iml" />
     </modules>
   </component>
 </project>

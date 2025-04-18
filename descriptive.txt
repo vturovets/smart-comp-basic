@@ -1,18 +1,18 @@
-data set=input-Apr07-08-25
-mean=342.3
-median=205.0
+data set=input-Apr16-17-25
+mean=237.4
+median=125.0
 min=2.0
-max=6478.0
-sample size=2252
-standard deviation=488.3
-skewness=5.3
+max=6798.0
+sample size=8138
+standard deviation=456.1
+skewness=5.5
 
-data set=input-Apr07-08-25
-mean=342.3
-median=205.0
+data set=input-Apr13-15-25
+mean=278.4
+median=182.0
 min=2.0
-max=6478.0
-sample size=2252
-standard deviation=488.3
-skewness=5.3
+max=7062.0
+sample size=11383
+standard deviation=424.2
+skewness=4.5
 
