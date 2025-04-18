@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-
+import numpy as np
 
 def validate_and_clean(file_path, config, logger=None):
     try:
@@ -65,3 +65,12 @@ def generate_sample(cleaned_file, config, logger=None):
         logger.info(f"Sample of size {sample_size} saved to {sample_path}")
 
     return sample_path
+
+def load_and_clean_csv(file_path):
+    try:
+        data = pd.read_csv(file_path, header=None, decimal='.')
+        cleaned = data.dropna()
+        cleaned = cleaned[cleaned.applymap(np.isreal)].dropna()
+        return cleaned.iloc[:, 0].astype(float).to_numpy()
+    except Exception as e:
+        raise Exception(f"Error processing file {file_path}: {e}")

@@ -1,63 +1,32 @@
 import argparse
-import os
 import sys
-from configparser import ConfigParser
-from modules.logger import setup_logger
-from modules.config import load_config
-from modules.input_handler import validate_and_clean, generate_sample
-from modules.analysis import run_descriptive_analysis
-from modules.hypothesis import run_bootstrap_test
-from modules.output import save_results, show_progress
-
-def parse_arguments():
-    parser = argparse.ArgumentParser(
-        description="Hypothesis Testing Tool: Compare P95 values from two datasets."
-    )
-    parser.add_argument("input1", help="First input CSV file")
-    parser.add_argument("input2", help="Second input CSV file")
-    parser.add_argument("output", nargs="?", help="Optional output text file")
-    return parser.parse_args()
+from config_handler import parse_config
+from input_handler import load_and_clean_csv
+from validation import validate_sample_sizes
+from sampling_utils import get_autosized_sample
+import numpy as np
 
 def main():
-    args = parse_arguments()
+    parser = argparse.ArgumentParser(description="Hypothesis Testing Tool with Auto Sample Sizing")
+    parser.add_argument("input1", help="Path to first input CSV file")
+    parser.add_argument("input2", help="Path to second input CSV file")
+    parser.add_argument("--config", default="config.txt", help="Path to config file")
+    args = parser.parse_args()
 
-    # Load configuration
-    config = load_config("config.txt")
+    config = parse_config(args.config)
+    requested_sample_size = int(config["test"].get("sample", 10000))
 
-    # Setup logger if configured
-    logger = setup_logger(config) if config.getboolean('output', 'create_log', fallback=False) else None
+    data1 = load_and_clean_csv(args.input1)
+    data2 = load_and_clean_csv(args.input2)
 
-    try:
-        # Validate and clean input files
-        clean1 = validate_and_clean(args.input1, config, logger)
-        clean2 = validate_and_clean(args.input2, config, logger)
+    if not validate_sample_sizes(data1, data2, config):
+        return  # descriptive fallback logic would follow here
 
-        # Run descriptive statistics if enabled
-        if config.getboolean('descriptive analysis', 'required', fallback=False):
-            run_descriptive_analysis(clean1, config, logger,'w')
-            run_descriptive_analysis(clean2, config, logger,'a')
+    sample1, sample2, final_sample_size = get_autosized_sample(data1, data2, requested_sample_size)
 
-        # Get samples
-        sample1 = generate_sample(clean1, config, logger)
-        sample2 = generate_sample(clean2, config, logger)
-
-        # Show progress feedback
-        show_progress("Running Hypothesis Test...", 50)
-
-        # Run hypothesis testing
-        results = run_bootstrap_test(sample1, sample2, config, logger)
-
-        # Output results
-        save_results(results, args.output, config)
-
-        show_progress("Complete", 100)
-
-    except Exception as e:
-        error_msg = f"[Error] {str(e)}"
-        print(error_msg)
-        if logger:
-            logger.error(error_msg)
-        sys.exit(1)
+    print(f"Final autosized sample size: {final_sample_size}")
+    print(f"Sample 1 stats: mean={np.mean(sample1):.2f}, size={len(sample1)}")
+    print(f"Sample 2 stats: mean={np.mean(sample2):.2f}, size={len(sample2)}")
 
 if __name__ == "__main__":
     main()
