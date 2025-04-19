@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import numpy as np
 
 def validate_and_clean(file_path, config, logger=None):
@@ -38,17 +37,11 @@ def validate_and_clean(file_path, config, logger=None):
     df.to_csv(cleaned_path, index=False, header=False)
 
     if logger:
-        logger.info(f"Cleaned data saved to {cleaned_path}")
+        logger.info(f"Cleaning completed for {file_path}")
 
     return cleaned_path
 
-def generate_sample(cleaned_file, config, logger=None):
-    try:
-        df = pd.read_csv(cleaned_file, header=None)
-        df.columns = ['value']
-    except Exception as e:
-        raise Exception(f"Cannot read cleaned file {cleaned_file}: {str(e)}")
-
+def generate_sample(cleaned_data, config, logger=None):
     sample_size = int(config.get('input', 'sample', fallback='0'))
     if sample_size <= 0:
         return cleaned_file  # skip sampling
@@ -74,3 +67,11 @@ def load_and_clean_csv(file_path):
         return cleaned.iloc[:, 0].astype(float).to_numpy()
     except Exception as e:
         raise Exception(f"Error processing file {file_path}: {e}")
+
+def get_data_frame_from_csv(file_path):
+    try:
+        df = pd.read_csv(file_path, header=None, decimal='.')
+        return df
+    except Exception as e:
+        print(f"Error reading CSV file: {e}")
+        return None

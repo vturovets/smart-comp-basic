@@ -35,7 +35,7 @@ p-value = True
 alpha = True
 sample size = True
 significant difference = True
-threshold=True
+threshold = True
 
 # Diagrams (per input file name)
 histogram = True
@@ -53,9 +53,9 @@ max = True
 sample size = True
 standard deviation = True
 skewness = True
-diagraming = True
+diagraming = False
 save the result to file = True
 
 #KDE Unimodality Check Settings
-bandwidth = silverman      ; or 'scott'
-peak_prominence = 0.05     ; higher = stricter peak detection
+bandwidth = silverman
+peak_prominence = 0.05

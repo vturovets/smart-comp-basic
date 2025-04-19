@@ -3,14 +3,15 @@ import matplotlib.pyplot as plt
 import os
 import numpy as np
 from scipy.stats import skew
+from scipy.stats import kurtosis
+from scipy.signal import find_peaks
+from scipy.stats import gaussian_kde
+from input_handler import get_data_frame_from_csv
+from diptest import diptest
 
 def run_descriptive_analysis(cleaned_file, config, logger=None, mode='w'):
-    try:
-        df = pd.read_csv(cleaned_file, header=None)
-        df.columns = ['value']
-    except Exception as e:
-        raise Exception(f"Failed to load cleaned file {cleaned_file}: {str(e)}")
 
+    df = get_data_frame_from_csv(cleaned_file)
     results = {}
 
     if config.getboolean('descriptive analysis', 'mean', fallback=False):
@@ -78,3 +79,59 @@ def _generate_boxplot(df, base_filename, config):
     plt.tight_layout()
     plt.savefig(f"boxplot_{base_filename}.png")
     plt.close()
+
+def check_unimodality_kde(cleaned_file, config, logger=None):
+    #get config data
+    bandwidth = config.get('descriptive analysis', 'bandwidth')
+    peak_prominence = float(config.get('descriptive analysis', 'peak_prominence'))
+    df = get_data_frame_from_csv(cleaned_file)
+    data = df.iloc[:, 0].dropna().values
+    kde = gaussian_kde(data, bw_method=bandwidth)
+
+    x_grid = np.linspace(data.min(), data.max(), 1000)
+    kde_values = kde(x_grid)
+
+    kde_values = pd.Series(kde_values).rolling(window=5, center=True, min_periods=1).mean().values
+
+    # Automatically estimate prominence if not given
+    max_kde = np.max(kde_values)
+
+    peak_prominence = 0.01 * max_kde  # more lenient than before
+
+    # Always include the global maximum as the main peak
+    main_peak_index = np.argmax(kde_values)
+
+    # Detect other peaks
+    peaks, properties = find_peaks(kde_values, prominence=peak_prominence)
+
+    # Ensure main peak is counted
+    all_peaks = set(peaks)
+    all_peaks.add(main_peak_index)
+    peak_count = len(all_peaks)
+
+    is_unimodal = peak_count == 1
+
+    is_unimodal = peak_count == 1
+    if not is_unimodal:
+        print(f"⚠️ Warning: Input file {cleaned_file} contains data that does not meet unimodality condition. Only descriptive analysis is allowed.")
+
+    if logger:
+        logger.info(f"Unimodality check completed for {cleaned_file}")
+
+    return is_unimodal
+
+def check_unimodality_dip_test(cleaned_file):
+    df = get_data_frame_from_csv(cleaned_file)
+    data = df.iloc[:, 0].dropna().values
+    stat, p_value = diptest(data)
+    is_unimodal = p_value > 0.05
+    return is_unimodal
+
+def check_unimodality_bimodality_coefficient(cleaned_file):
+    df = get_data_frame_from_csv(cleaned_file)
+    data = df.iloc[:, 0].dropna().values
+    g = skew(data)
+    k = kurtosis(data, fisher=False)
+    bc = (g**2 + 1) / k
+    is_unimodal = bc < 0.55
+    return is_unimodal
