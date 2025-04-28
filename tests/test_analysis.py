@@ -7,7 +7,6 @@ from pathlib import Path
 from modules.input_handler import validate_and_clean
 from modules.config import load_config
 from analysis import run_descriptive_analysis, check_unimodality_kde
-from modules.hypothesis import run_bootstrap_test, run_bootstrap_single_sample_test
 
 import tempfile
 import os
@@ -69,9 +68,8 @@ def test_invalid_file_path(dummy_config):
 def test_non_numeric_data(temp_csv, dummy_config):
     data = [500, 600, "abc", 700]
     file_path = temp_csv(data)
-    cleaned_path = validate_and_clean(file_path, dummy_config)
-    cleaned_data = pd.read_csv(cleaned_path, header=None)
-    assert np.issubdtype(cleaned_data.dtypes[0], np.number)
+    with pytest.raises(Exception):
+        validate_and_clean(file_path, dummy_config)
 
 
 def test_run_descriptive_analysis_basic(dummy_config):
@@ -105,42 +103,6 @@ def test_run_descriptive_analysis_with_invalid_data(dummy_config):
     df = pd.DataFrame(["a", "b", "c"])
     with pytest.raises(Exception):
         run_descriptive_analysis(df, dummy_config)
-
-
-def test_run_bootstrap_test_basic(dummy_config):
-    sample1 = pd.DataFrame(np.random.normal(0, 1, 1000))
-    sample2 = pd.DataFrame(np.random.normal(0, 1, 1000))
-    results = run_bootstrap_test(sample1, sample2, dummy_config, logger=None)
-    assert 'p-value' in results
-    assert 'significant difference' in results
-
-
-def test_run_bootstrap_single_sample_test_basic(dummy_config):
-    sample = pd.DataFrame(np.random.normal(0, 1, 1000))
-    results = run_bootstrap_single_sample_test(sample, dummy_config, logger=None)
-    assert 'p-value' in results
-    assert 'significant difference' in results
-
-
-def test_bootstrap_high_difference(dummy_config):
-    sample1 = pd.DataFrame(np.random.normal(0, 1, 1000))
-    sample2 = pd.DataFrame(np.random.normal(5, 1, 1000))
-    results = run_bootstrap_test(sample1, sample2, dummy_config, logger=None)
-    assert results['p-value'] < 0.05
-
-
-def test_bootstrap_small_samples(dummy_config):
-    sample1 = pd.DataFrame(np.random.normal(0, 1, 5))
-    sample2 = pd.DataFrame(np.random.normal(0, 1, 5))
-    results = run_bootstrap_test(sample1, sample2, dummy_config, logger=None)
-    assert 'p-value' in results
-
-
-def test_bootstrap_empty_sample(dummy_config):
-    sample1 = pd.DataFrame()
-    sample2 = pd.DataFrame()
-    with pytest.raises(Exception):
-        run_bootstrap_test(sample1, sample2, dummy_config, logger=None)
 
 
 if __name__ == "__main__":

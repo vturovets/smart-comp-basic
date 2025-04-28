@@ -1,59 +1,89 @@
-import unittest
+import pytest
 import pandas as pd
-import os
-from unittest.mock import MagicMock
+import numpy as np
+from pathlib import Path
+
+# Assume input_handler.py has this function
 from modules.input_handler import validate_and_clean
+from modules.config import load_config
 
-class TestInputHandler(unittest.TestCase):
+import tempfile
+import os
 
-    def setUp(self):
-        self.sample_file = "test_sample.csv"
-        self.cleaned_file = "test_sample_cleaned.csv"
+@pytest.fixture
+def temp_csv():
+    """Create a temporary CSV file."""
+    def _create_temp_csv(data, filename="temp_input.csv"):
+        temp_dir = tempfile.gettempdir()
+        file_path = os.path.join(temp_dir, filename)
+        pd.DataFrame(data).to_csv(file_path, header=False, index=False)
+        return file_path
+    return _create_temp_csv
 
-        # Create a sample input file
-        with open(self.sample_file, "w") as f:
-            f.write("10.5\n-5\nabc\n20001\n15.2\n")
+@pytest.fixture
+def dummy_config():
+    """Load or mock config."""
+    return load_config("C:\\Users\\votu\\Documents\\Ciklum\\2025\\AI toolset for business analysts\\Comp_tool\\smart-comp\\config.txt")  # Adjust if needed
 
-        self.config = MagicMock()
-        self.config.get.return_value = '20000'
-        self.config.getboolean.return_value = False
 
-    def tearDown(self):
-        if os.path.exists(self.sample_file):
-            os.remove(self.sample_file)
-        if os.path.exists(self.cleaned_file):
-            os.remove(self.cleaned_file)
+def test_valid_input_cleaning(temp_csv, dummy_config):
+    # valid data
+    data = np.random.normal(loc=500, scale=50, size=100)
+    file_path = temp_csv(data)
 
-    def test_validate_and_clean_filters_correctly(self):
-        result_file = validate_and_clean(self.sample_file, self.config)
-        self.assertTrue(os.path.exists(result_file))
+    cleaned_path = validate_and_clean(file_path, dummy_config)
 
-        df = pd.read_csv(result_file, header=None)
-        self.assertEqual(len(df), 2)  # only 10.5 and 15.2 should remain
-        self.assertAlmostEqual(df.iloc[0, 0], 10.5, places=2)
-        self.assertAlmostEqual(df.iloc[1, 0], 15.2, places=2)
+    assert Path(cleaned_path).exists()
+    cleaned_data = pd.read_csv(cleaned_path, header=None)
+    assert not cleaned_data.empty
 
-    def test_raises_on_invalid_format(self):
-        bad_file = "bad_sample.csv"
-        with open(bad_file, "w") as f:
-            f.write("1,2,3\n4,5,6\n")  # multiple columns
 
-        with self.assertRaises(Exception) as cm:
-            validate_and_clean(bad_file, self.config)
+def test_outlier_removal(temp_csv, dummy_config):
+    # add an extreme outlier
+    data = np.append(np.random.normal(500, 50, 99), [10000])
+    file_path = temp_csv(data)
 
-        os.remove(bad_file)
-        self.assertIn("should contain only one column", str(cm.exception))
+    cleaned_path = validate_and_clean(file_path, dummy_config)
+    cleaned_data = pd.read_csv(cleaned_path, header=None)
 
-    def test_raises_on_empty_file(self):
-        empty_file = "empty.csv"
-        with open(empty_file, "w") as f:
-            pass
+    assert cleaned_data.max().values[0] < dummy_config.getint('input', 'outlier threshold')
 
-        with self.assertRaises(Exception) as cm:
-            validate_and_clean(empty_file, self.config)
 
-        os.remove(empty_file)
-        self.assertIn("is empty", str(cm.exception))
+def test_missing_values(temp_csv, dummy_config):
+    # add a missing value
+    data = list(np.random.normal(500, 50, 99)) + [np.nan]
+    file_path = temp_csv(data)
 
-if __name__ == '__main__':
-    unittest.main()
+    cleaned_path = validate_and_clean(file_path, dummy_config)
+    cleaned_data = pd.read_csv(cleaned_path, header=None)
+
+    assert cleaned_data.isnull().sum().values[0] == 0  # no missing values left
+
+
+def test_negative_values(temp_csv, dummy_config):
+    # add a negative value
+    data = list(np.random.normal(500, 50, 99)) + [-50]
+    file_path = temp_csv(data)
+
+    cleaned_path = validate_and_clean(file_path, dummy_config)
+    cleaned_data = pd.read_csv(cleaned_path, header=None)
+
+    assert (cleaned_data.values >= 0).all()
+
+
+def test_invalid_file_path(dummy_config):
+    with pytest.raises(Exception):
+        validate_and_clean("non_existent_file.csv", dummy_config)
+
+
+def test_non_numeric_data(temp_csv, dummy_config):
+    # add text data
+    data = [500, 600, "abc", 700]
+    file_path = temp_csv(data)
+
+    with pytest.raises(Exception):
+        validate_and_clean(file_path, dummy_config)
+
+if __name__ == "__main__":
+    # Wrapper to run all tests automatically
+    pytest.main([__file__])

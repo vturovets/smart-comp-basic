@@ -15,47 +15,72 @@ MoE = 5
 threshold=1000
 
 # the requested sample size(may be auto-adjusted)
-sample=10000
+sample=3000
 
 [input]
 # Threshold for removing outlier values (in milliseconds)
-outlier threshold = 20000
+outlier threshold = 2500
 # warn and fallback if less than this
 minimum sample size = 500
+validate_ratio_scale = True
 
 [output]
 # Output fields to include in the result
+print descriptive analysis results = True
 p95_1 = True
+p95_1_empirical = False
 p95_2 = True
+p95_2_empirical = False
 ci lower p95_1 = True
 ci upper p95_1 = True
 ci lower p95_2 = True
 ci upper p95_2 = True
+p95_1_moe = True
+p95_2_moe = True
 p-value = True
 alpha = True
 sample size = True
 significant difference = True
 threshold = True
+data source = False
 
 # Diagrams (per input file name)
 histogram = True
 boxplot = False
+kde_plot = True
 
 # Create a log file for diagnostics
 create_log = True
 
 [descriptive analysis]
+descriptive only = False
 required = True
 mean = True
-median = True
+median = False
 min = True
 max = True
 sample size = True
 standard deviation = True
+mode = False
 skewness = True
 diagraming = False
-save the result to file = True
+p95_empirical = False
 
-#KDE Unimodality Check Settings
+#KDE Unimodality test settings
+unimodality_test_enabled = False
 bandwidth = silverman
-peak_prominence = 0.05
+get extended report = True
+
+[clean]
+# clean aux files
+clean_all = True
+
+[interpretation]
+explain the result = True
+# If True, will attempt to call ChatGPT API. If False, use local simple rules-based interpretation.
+use_chatgpt_api = True
+
+save the results into file = True
+
+# Your OpenAI API key (if using external interpretation)
+openai_api_key = <your key>

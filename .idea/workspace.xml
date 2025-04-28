@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffce2f87-6156-4a01-8577-00d216aeb0ef" name="Changes" comment="CR#1: threshold, autosizing, and unimodality check">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/HypothesisTool.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/Tree-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/Tree-01.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/Tree-02.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/warn-HypothesisTool.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/HypothesisTool/xref-HypothesisTool.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/HypothesisTool.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/interpretation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_interpretation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/descriptive.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/config_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/hypothesis.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/hypothesis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/input_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/input_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/output.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/output.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/p_value_dist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_hypothesis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_hypothesis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_input_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_input_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_sampling_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool.log" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vu0W9Q867yCT7uyNo3V4mdG2AK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_analysis.TestAnalysis.executor": "Run",
+    "Python tests.Python tests for test_analysis.TestAnalysis.test_run_descriptive_analysis_creates_output.executor": "Debug",
+    "Python tests.Python tests for test_cli.TestCLIModule.executor": "Run",
+    "Python tests.Python tests for test_cli.TestCLIModule.test_main_successful_flow.executor": "Run",
+    "Python tests.Python tests for test_cli.test_scenario1.executor": "Run",
+    "Python tests.Python tests for test_cli.test_scenario2.executor": "Run",
+    "Python tests.Python tests for test_cli.test_scenario3.executor": "Run",
+    "Python tests.Python tests for test_cli.test_scenario4.executor": "Run",
+    "Python tests.Python tests for test_input_handler.TestInputHandler.executor": "Run",
+    "Python tests.Python tests for test_input_handler.TestInputHandler.test_raises_on_empty_file.executor": "Run",
+    "Python tests.Python tests for test_input_handler.TestInputHandler.test_raises_on_invalid_format.executor": "Run",
+    "Python tests.Python tests for test_input_handler.TestInputHandler.test_validate_and_clean_filters_correctly.executor": "Run",
+    "Python tests.Python tests for test_input_handler.test_get_data_frame_success.executor": "Run",
+    "Python tests.Python tests for test_input_handler.test_outlier_removal.executor": "Run",
+    "Python tests.Python tests for test_input_handler.test_valid_input_cleaning.executor": "Run",
+    "Python tests.Python tests for test_interpretation.test_interpretation_local.executor": "Run",
+    "Python tests.Python tests for test_sampling_utils.TestAutoSampleSizing.executor": "Run",
+    "Python tests.Python tests for test_sampling_utils.TestAutoSampleSizing.test_no_downsizing_needed.executor": "Run",
+    "Python tests.Python tests for test_validation.TestValidationFunctions.executor": "Run",
+    "Python tests.Python tests in test_analysis.py.executor": "Run",
+    "Python tests.Python tests in test_cli.py.executor": "Run",
+    "Python tests.Python tests in test_hypothesis.py.executor": "Run",
+    "Python tests.Python tests in test_input_handler.py.executor": "Run",
+    "Python.current 2 samples.executor": "Run",
+    "Python.current all.executor": "Run",
+    "Python.current below 100.executor": "Run",
+    "Python.current.executor": "Run",
+    "Python.modelled 1 sample.executor": "Run",
+    "Python.modelled 2 samples.executor": "Run",
+    "Python.modelled.executor": "Run",
+    "Python.smart-comp  2 samples.executor": "Run",
+    "Python.smart-comp 1 sample.executor": "Run",
+    "Python.smart-comp.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/votu/Documents/Ciklum/2025/AI toolset for business analysts/Comp_tool/smart-comp/cli.py",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28850573",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests in test_cli.py">
+    <configuration name="current 2 samples" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="cli.py" />
+      <option name="PARAMETERS" value="input-21-22-2025-below-P50.csv input-21-22-2025-above-P50.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="current all" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="cli.py" />
+      <option name="PARAMETERS" value="-h" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="current below 100" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="cli.py" />
+      <option name="PARAMETERS" value="input-21-22-2025-below-100.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modelled 1 sample" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="cli.py" />
+      <option name="PARAMETERS" value="input-Apr13-15-2025_2.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modelled 2 samples" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="cli.py" />
+      <option name="PARAMETERS" value="sample4.csv sample1.csv output_sample4_sample1.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="smart-comp  2 samples" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cli.py" />
+      <option name="PARAMETERS" value="input-Apr13-15-2025.csv input-Apr16-17-2025.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="smart-comp 1 sample" type="PythonConfigurationType" factoryName="Python">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (smart-comp)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cli.py" />
+      <option name="PARAMETERS" value="input-Apr16-17-2025.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_input_handler.test_outlier_removal" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_input_handler.test_outlier_removal&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_analysis.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_analysis.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_cli.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_cli.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_hypothesis.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_hypothesis.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_input_handler.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="smart-comp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_input_handler.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.current all" />
+      <item itemvalue="Python.modelled 1 sample" />
+      <item itemvalue="Python.modelled 2 samples" />
+      <item itemvalue="Python.current below 100" />
+      <item itemvalue="Python.current 2 samples" />
+      <item itemvalue="Python.smart-comp 1 sample" />
+      <item itemvalue="Python.smart-comp  2 samples" />
+      <item itemvalue="Python tests.Python tests for test_input_handler.test_outlier_removal" />
+      <item itemvalue="Python tests.Python tests in test_analysis.py" />
+      <item itemvalue="Python tests.Python tests in test_cli.py" />
+      <item itemvalue="Python tests.Python tests in test_hypothesis.py" />
+      <item itemvalue="Python tests.Python tests in test_input_handler.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_cli.py" />
+        <item itemvalue="Python tests.Python tests in test_hypothesis.py" />
+        <item itemvalue="Python tests.Python tests in test_analysis.py" />
+        <item itemvalue="Python tests.Python tests in test_input_handler.py" />
+        <item itemvalue="Python tests.Python tests for test_input_handler.test_outlier_removal" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffce2f87-6156-4a01-8577-00d216aeb0ef" name="Changes" comment="" />
+      <created>1744979682242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744979682242</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Minor changes to fix unit tests">
+      <option name="closed" value="true" />
+      <created>1744980640105</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744980640105</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CR#1: threshold, autosizing, and unimodality check">
+      <option name="closed" value="true" />
+      <created>1745061151878</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745061151878</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CR#1: threshold, autosizing, and unimodality check">
+      <option name="closed" value="true" />
+      <created>1745061281134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745061281134</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CR#1: threshold, autosizing, and unimodality check">
+      <option name="closed" value="true" />
+      <created>1745061808341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745061808341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor changes to fix unit tests" />
+    <MESSAGE value="CR#1: threshold, autosizing, and unimodality check" />
+    <option name="LAST_COMMIT_MESSAGE" value="CR#1: threshold, autosizing, and unimodality check" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="config.getboolean(&quot;clean&quot;, &quot;clean_all&quot;, fallback=False)" />
+        <watch expression="np.mean(diff_distribution &lt; 0)" />
+        <watch expression="np.mean(diff_distribution &gt; 0)" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
