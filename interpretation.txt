@@ -1,0 +1,17 @@
+## Summary
+
+The analysis compares two datasets from IT system performance evaluations, focusing on the 95th percentiles (P95) of response times. The first dataset, sourced from "input-Apr13-15-2025_2.csv," has a mean response time of approximately 233.71 with a high skewness of 2.99, indicating a right-skewed distribution. The second dataset, from "input-Apr16-17-2025_2.csv," has a lower mean of 175.00 and a skewness of 3.08, also indicating a right-skewed distribution. Both datasets show evidence of unimodality, but the second dataset has a higher bimodality coefficient, suggesting a potential for multiple modes.
+
+The comparison of the 95th percentiles shows a statistically significant difference between the two datasets. Dataset 1 has a P95 of 997.58, while Dataset 2 has a P95 of 563.62. The p-value is 0.0, indicating a significant difference at the 0.05 alpha level. The confidence intervals for P95 are [944.49, 1063.66] for Dataset 1 and [541.00, 599.20] for Dataset 2, with margins of error of 5.97 and 5.16, respectively.
+
+## Recommendations
+
+- **Acknowledge the Significant Difference**: The statistically significant difference between the 95th percentiles of the two datasets suggests that the systems or conditions represented by Dataset 1 have significantly higher response times at the 95th percentile compared to Dataset 2. This could indicate performance issues or higher variability in the system represented by Dataset 1.
+  
+- **Investigate Underlying Causes**: Given the significant difference in P95 values, it is recommended to investigate the underlying causes of the higher response times in Dataset 1. This may involve examining system configurations, load conditions, or other environmental factors.
+
+- **Consider System Optimization**: For the system represented by Dataset 1, consider optimization strategies to reduce high response times, especially since the upper bound of the confidence interval is quite high (1063.66).
+
+- **Monitor and Compare Over Time**: Continue monitoring both systems over time to ensure that performance improvements are achieved and maintained. Regular comparisons can help identify trends and potential issues early.
+
+- **Communicate Findings to Stakeholders**: Clearly communicate these findings to relevant stakeholders, emphasizing the practical implications of the significant performance differences and the need for potential system improvements.

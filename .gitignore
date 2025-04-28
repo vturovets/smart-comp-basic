@@ -1,0 +1,18 @@
+# Ignore build and distribution folders
+build/
+dist/
+
+# Ignore executable and package files
+*.exe
+*.zip
+*.pkg
+
+# Ignore other temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE related (optional)
+.idea/
+*.iml

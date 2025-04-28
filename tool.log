@@ -1,366 +1,799 @@
-2025-04-02 12:56:50,446 - DEBUG - Logger initialized.
-2025-04-02 12:56:50,456 - ERROR - [Error] 'numpy.ndarray' object has no attribute 'empty'
-2025-04-02 13:03:34,796 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:03:34,804 - ERROR - hypothesis_tool - main:59 - [Error] 'numpy.ndarray' object has no attribute 'empty'
-2025-04-02 13:04:10,563 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:04:10,644 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:04:10,741 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:04:10,768 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:04:10,801 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:04:10,823 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:04:10,845 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:04:10,845 - INFO - hypothesis_tool - run_bootstrap_test:67 - Starting bootstrapping for both samples...
-2025-04-02 13:04:10,845 - ERROR - hypothesis_tool - main:59 - [Error] could not convert string to float: 'input1-Dec1-24-all_sample.csv'
-2025-04-02 13:06:21,761 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:06:21,812 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:06:21,901 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:06:21,948 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:06:21,984 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:06:21,998 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:06:22,013 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:06:22,013 - INFO - hypothesis_tool - run_bootstrap_test:67 - Starting bootstrapping for both samples...
-2025-04-02 13:06:22,013 - ERROR - hypothesis_tool - main:59 - [Error] could not convert string to float: 'input1-Dec1-24-all_sample.csv'
-2025-04-02 13:07:55,000 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:07:55,040 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:07:55,087 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:07:55,157 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:07:55,198 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:07:55,209 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:07:55,221 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:07:55,221 - INFO - hypothesis_tool - run_bootstrap_test:67 - Starting bootstrapping for both samples...
-2025-04-02 13:07:55,221 - ERROR - hypothesis_tool - main:59 - [Error] could not convert string to float: 'input1-Dec1-24-all_sample.csv'
-2025-04-02 13:23:15,046 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:23:15,117 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:23:15,165 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:23:15,233 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:23:15,271 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:23:15,282 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:23:15,296 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:23:15,297 - INFO - hypothesis_tool - run_bootstrap_test:67 - Starting bootstrapping for both samples...
-2025-04-02 13:23:15,297 - ERROR - hypothesis_tool - main:59 - [Error] a must be 1-dimensional or an integer
-2025-04-02 13:26:40,916 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:26:40,957 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:26:41,004 - INFO - hypothesis_tool - validate_and_clean:42 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:26:41,082 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:26:41,123 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:26:41,135 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:26:41,147 - INFO - hypothesis_tool - generate_sample:66 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:26:41,147 - INFO - hypothesis_tool - run_bootstrap_test:67 - Starting bootstrapping for both samples...
-2025-04-02 13:26:41,149 - ERROR - hypothesis_tool - main:59 - [Error] a must be 1-dimensional
-2025-04-02 13:32:04,640 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:32:04,682 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:32:04,730 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:32:04,804 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:32:04,846 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:32:04,858 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:32:04,872 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:32:04,872 - INFO - hypothesis_tool - run_bootstrap_test:71 - Starting bootstrapping for both samples...
-2025-04-02 13:32:04,872 - ERROR - hypothesis_tool - main:59 - [Error] Cannot read data in input1-Dec1-24-all_sample.csv: name 'pd' is not defined
-2025-04-02 13:32:26,749 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 13:32:26,793 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:32:26,842 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:32:26,880 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 13:32:26,912 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 13:32:26,924 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 13:32:26,936 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 13:32:26,937 - INFO - hypothesis_tool - run_bootstrap_test:71 - Starting bootstrapping for both samples...
-2025-04-02 13:32:26,955 - ERROR - hypothesis_tool - main:59 - [Error] a must be 1-dimensional
-2025-04-02 14:02:01,747 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:02:01,793 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:02:01,841 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:02:01,879 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:02:01,907 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:02:01,921 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:02:01,934 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:02:01,935 - INFO - hypothesis_tool - run_bootstrap_test:71 - Starting bootstrapping for both samples...
-2025-04-02 14:02:24,053 - ERROR - hypothesis_tool - main:59 - [Error] a must be 1-dimensional
-2025-04-02 14:02:48,458 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:02:48,500 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:02:48,552 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:02:48,624 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:02:48,647 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:02:48,658 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:02:48,671 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:02:48,671 - INFO - hypothesis_tool - run_bootstrap_test:71 - Starting bootstrapping for both samples...
-2025-04-02 14:05:20,893 - ERROR - hypothesis_tool - main:59 - [Error] a must be 1-dimensional
-2025-04-02 14:09:06,274 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:09:06,313 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:09:06,363 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:09:06,390 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:09:06,417 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:09:06,428 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:09:06,440 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:09:06,440 - INFO - hypothesis_tool - run_bootstrap_test:72 - Starting bootstrapping for both samples...
-2025-04-02 14:09:06,777 - INFO - hypothesis_tool - run_bootstrap_test:76 - Running P95 comparison...
-2025-04-02 14:09:06,777 - INFO - hypothesis_tool - run_bootstrap_test:79 - Bootstrapping and comparison completed.
-2025-04-02 14:10:20,289 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:10:20,333 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:10:20,384 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:10:20,448 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:10:20,486 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:10:20,499 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:10:20,512 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:10:20,513 - INFO - hypothesis_tool - run_bootstrap_test:72 - Starting bootstrapping for both samples...
-2025-04-02 14:10:21,099 - INFO - hypothesis_tool - run_bootstrap_test:76 - Running P95 comparison...
-2025-04-02 14:10:35,479 - INFO - hypothesis_tool - run_bootstrap_test:79 - Bootstrapping and comparison completed.
-2025-04-02 14:11:30,959 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:11:31,003 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:11:31,049 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:11:31,073 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:11:31,092 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:11:31,103 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:11:31,116 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:11:31,116 - INFO - hypothesis_tool - run_bootstrap_test:72 - Starting bootstrapping for both samples...
-2025-04-02 14:11:31,716 - INFO - hypothesis_tool - run_bootstrap_test:76 - Running P95 comparison...
-2025-04-02 14:21:49,560 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:21:49,602 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:21:49,649 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:21:49,701 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:21:49,746 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:21:49,759 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:21:49,771 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:21:49,771 - INFO - hypothesis_tool - run_bootstrap_test:75 - Starting bootstrapping for both samples...
-2025-04-02 14:21:50,128 - INFO - hypothesis_tool - run_bootstrap_test:79 - Running P95 comparison...
-2025-04-02 14:21:50,128 - INFO - hypothesis_tool - run_bootstrap_test:82 - Bootstrapping and comparison completed.
-2025-04-02 14:28:45,916 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:28:45,959 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:28:46,006 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:28:46,073 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:28:46,113 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:28:46,124 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:28:46,136 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:28:46,136 - INFO - hypothesis_tool - run_bootstrap_test:75 - Starting bootstrapping for both samples...
-2025-04-02 14:28:46,459 - INFO - hypothesis_tool - run_bootstrap_test:79 - Running P95 comparison...
-2025-04-02 14:28:46,459 - ERROR - hypothesis_tool - main:59 - [Error] unsupported operand type(s) for /: 'str' and 'int'
-2025-04-02 14:29:11,177 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:29:11,217 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:29:11,264 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:29:11,333 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:29:11,377 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:29:11,393 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:29:11,406 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:29:11,406 - INFO - hypothesis_tool - run_bootstrap_test:75 - Starting bootstrapping for both samples...
-2025-04-02 14:29:11,748 - INFO - hypothesis_tool - run_bootstrap_test:79 - Running P95 comparison...
-2025-04-02 14:29:11,748 - ERROR - hypothesis_tool - main:59 - [Error] Percentiles must be in the range [0, 100]
-2025-04-02 14:29:56,859 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:29:56,900 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:29:56,972 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:29:57,019 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:29:57,047 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:29:57,072 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:29:57,090 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:29:57,090 - INFO - hypothesis_tool - run_bootstrap_test:75 - Starting bootstrapping for both samples...
-2025-04-02 14:29:57,434 - INFO - hypothesis_tool - run_bootstrap_test:79 - Running P95 comparison...
-2025-04-02 14:29:57,434 - INFO - hypothesis_tool - run_bootstrap_test:82 - Bootstrapping and comparison completed.
-2025-04-02 14:30:26,901 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:30:26,943 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:30:26,991 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:30:27,065 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:30:27,089 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:30:27,101 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:30:27,116 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:30:27,116 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-02 14:30:27,472 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-02 14:30:27,472 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-02 14:35:08,505 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:35:08,545 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:35:08,594 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:35:08,671 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:35:08,690 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:35:08,701 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:35:08,712 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:35:08,713 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-02 14:35:09,039 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-02 14:35:09,039 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-02 14:37:03,979 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:37:04,024 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:37:04,071 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:37:04,132 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:37:04,167 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:37:04,178 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:37:04,192 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:37:04,192 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-02 14:37:04,542 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-02 14:37:04,543 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-02 14:39:49,402 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:39:49,448 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:39:49,499 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:39:49,567 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:39:49,607 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:39:49,617 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:39:49,630 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:39:49,630 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-02 14:39:49,991 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-02 14:39:49,992 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-02 14:41:10,274 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-02 14:41:10,316 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:41:10,363 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:41:10,425 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input1-Dec1-24-all_cleaned.csv
-2025-04-02 14:41:10,462 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input2-Jan07-25-all_cleaned.csv
-2025-04-02 14:41:10,475 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input1-Dec1-24-all_sample.csv
-2025-04-02 14:41:10,489 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 5000 saved to input2-Jan07-25-all_sample.csv
-2025-04-02 14:41:10,489 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-02 14:41:10,811 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-02 14:41:10,811 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-03 10:19:40,737 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-03 10:19:40,743 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 10:19:40,747 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 10:19:40,764 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 10:19:40,770 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 10:19:40,771 - ERROR - hypothesis_tool - main:59 - [Error] Requested sample size 5000 exceeds available data (905)
-2025-04-03 10:20:08,591 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-03 10:20:08,595 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 10:20:08,597 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 10:20:08,600 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 10:20:08,601 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 10:20:08,603 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 905 saved to input-Apr02-25-all_sample.csv
-2025-04-03 10:20:08,605 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 905 saved to input-Apr02-25-all_sample.csv
-2025-04-03 10:20:08,606 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-03 10:20:08,720 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-03 10:20:08,720 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-03 11:32:04,036 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-03 11:32:04,041 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 11:32:04,043 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_cleaned.csv
-2025-04-03 11:32:04,047 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 11:32:04,049 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_cleaned.csv
-2025-04-03 11:32:04,051 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 905 saved to input-Apr02-25-all_sample.csv
-2025-04-03 11:32:04,052 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 905 saved to input-Apr02-25-all_sample.csv
-2025-04-03 11:32:04,053 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-03 11:32:04,183 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-03 11:32:04,183 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-03 18:46:37,233 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-03 18:46:37,237 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:37,240 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:37,261 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:37,263 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:37,264 - ERROR - hypothesis_tool - main:59 - [Error] Requested sample size 905 exceeds available data (838)
-2025-04-03 18:46:59,764 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-03 18:46:59,768 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:59,770 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:59,774 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:59,775 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_2_cleaned.csv
-2025-04-03 18:46:59,778 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_2_sample.csv
-2025-04-03 18:46:59,779 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_2_sample.csv
-2025-04-03 18:46:59,779 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-03 18:46:59,921 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-03 18:46:59,921 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 10:17:04,677 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 10:17:04,685 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 10:17:04,687 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 10:17:04,716 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 10:17:04,719 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 10:17:04,722 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 10:17:04,724 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 10:17:04,724 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 10:17:04,852 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 10:17:04,852 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:44:13,692 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:44:13,705 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:44:13,708 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:44:14,295 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:44:14,615 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:44:14,624 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:44:14,626 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:44:14,626 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:44:14,891 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:44:14,891 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:46:16,088 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:46:16,092 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:46:16,094 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:46:16,497 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:46:16,812 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:46:16,815 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:46:16,817 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:46:16,817 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:46:16,943 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:46:16,943 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:47:15,174 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:47:15,179 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:47:15,180 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:47:15,564 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:47:15,866 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:47:15,868 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:47:15,870 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:47:15,871 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:47:15,987 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:47:15,987 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:49:26,622 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:49:26,668 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:49:26,671 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:49:28,280 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:49:28,561 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:49:28,564 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:49:28,566 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:49:28,566 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:49:28,690 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:49:28,692 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:50:49,973 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:50:49,977 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:50:49,979 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:50:50,597 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:50:50,921 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:50:50,923 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:50:50,925 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:50:50,925 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:50:51,048 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:50:51,048 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 11:55:43,782 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 11:55:43,786 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:55:43,789 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:55:44,514 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:55:44,862 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr02-25-all_3_cleaned.csv
-2025-04-04 11:55:44,864 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:55:44,867 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 838 saved to input-Apr02-25-all_3_sample.csv
-2025-04-04 11:55:44,867 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 11:55:45,008 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 11:55:45,009 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-04 13:11:54,799 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-04 13:11:54,805 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr03-04-25_cleaned.csv
-2025-04-04 13:11:54,808 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr03-04-25_cleaned.csv
-2025-04-04 13:11:55,227 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr03-04-25_cleaned.csv
-2025-04-04 13:11:55,575 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr03-04-25_cleaned.csv
-2025-04-04 13:11:55,584 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 2546 saved to input-Apr03-04-25_sample.csv
-2025-04-04 13:11:55,591 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 2546 saved to input-Apr03-04-25_sample.csv
-2025-04-04 13:11:55,591 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-04 13:11:55,832 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-04 13:11:55,833 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-07 09:44:39,356 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-07 09:44:39,360 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr05-07-25_cleaned.csv
-2025-04-07 09:44:39,363 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr05-07-25_cleaned.csv
-2025-04-07 09:44:39,705 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr05-07-25_cleaned.csv
-2025-04-07 09:44:40,001 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr05-07-25_cleaned.csv
-2025-04-07 09:44:40,010 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 1919 saved to input-Apr05-07-25_sample.csv
-2025-04-07 09:44:40,015 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 1919 saved to input-Apr05-07-25_sample.csv
-2025-04-07 09:44:40,015 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-07 09:44:40,194 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-07 09:44:40,194 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-08 09:32:38,126 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-08 09:32:38,133 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr07-08-25_cleaned.csv
-2025-04-08 09:32:38,139 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr07-08-25_cleaned.csv
-2025-04-08 09:32:40,058 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr07-08-25_cleaned.csv
-2025-04-08 09:32:40,378 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr07-08-25_cleaned.csv
-2025-04-08 09:32:40,390 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 2252 saved to input-Apr07-08-25_sample.csv
-2025-04-08 09:32:40,396 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 2252 saved to input-Apr07-08-25_sample.csv
-2025-04-08 09:32:40,396 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-08 09:32:40,634 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-08 09:32:40,634 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-15 10:32:43,188 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-15 10:32:43,249 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr13-15-25_cleaned.csv
-2025-04-15 10:32:43,260 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr13-15-25_cleaned.csv
-2025-04-15 10:32:43,707 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr13-15-25_cleaned.csv
-2025-04-15 10:32:44,108 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr13-15-25_cleaned.csv
-2025-04-15 10:32:44,124 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 10000 saved to input-Apr13-15-25_sample.csv
-2025-04-15 10:32:44,132 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 10000 saved to input-Apr13-15-25_sample.csv
-2025-04-15 10:32:44,132 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-15 10:32:44,657 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-15 10:32:44,657 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
-2025-04-17 09:13:06,274 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
-2025-04-17 09:13:06,284 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr16-17-25_cleaned.csv
-2025-04-17 09:13:06,311 - INFO - hypothesis_tool - validate_and_clean:41 - Cleaned data saved to input-Apr13-15-25_cleaned.csv
-2025-04-17 09:13:08,304 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr16-17-25_cleaned.csv
-2025-04-17 09:13:08,677 - INFO - hypothesis_tool - run_descriptive_analysis:55 - Descriptive analysis completed for input-Apr13-15-25_cleaned.csv
-2025-04-17 09:13:08,687 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 8000 saved to input-Apr16-17-25_sample.csv
-2025-04-17 09:13:08,695 - INFO - hypothesis_tool - generate_sample:65 - Sample of size 8000 saved to input-Apr13-15-25_sample.csv
-2025-04-17 09:13:08,695 - INFO - hypothesis_tool - run_bootstrap_test:74 - Starting bootstrapping for both samples...
-2025-04-17 09:13:09,038 - INFO - hypothesis_tool - run_bootstrap_test:78 - Running P95 comparison...
-2025-04-17 09:13:09,039 - INFO - hypothesis_tool - run_bootstrap_test:81 - Bootstrapping and comparison completed.
+2025-04-28 10:02:18,074 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:02:18,081 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:02:18,085 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:02:18,091 - ERROR - hypothesis_tool - main:142 - [Error] 'str' object has no attribute 'contains'
+2025-04-28 10:02:46,139 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:02:49,983 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:02:50,575 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:04:11,309 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:04:16,946 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:04:16,951 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:04:16,958 - ERROR - hypothesis_tool - main:142 - [Error] 'str' object has no attribute 'contains'
+2025-04-28 10:04:36,125 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:04:36,135 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:04:36,141 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:04:43,465 - ERROR - hypothesis_tool - main:142 - [Error] 'str' object has no attribute 'contains'
+2025-04-28 10:09:34,117 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:09:34,128 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:09:34,132 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:09:35,758 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 10:09:36,488 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 10:09:36,492 - INFO - hypothesis_tool - run_bootstrap_test:99 - Bootstrapping and comparison completed.
+2025-04-28 10:09:36,492 - ERROR - hypothesis_tool - main:142 - [Error] cannot access local variable 'results' where it is not associated with a value
+2025-04-28 10:10:46,790 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:10:46,803 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:10:46,809 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:11:25,897 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 10:11:26,763 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 10:11:26,767 - INFO - hypothesis_tool - run_bootstrap_test:99 - Bootstrapping and comparison completed.
+2025-04-28 10:11:26,767 - ERROR - hypothesis_tool - main:142 - [Error] cannot access local variable 'results' where it is not associated with a value
+2025-04-28 10:12:27,958 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:12:27,964 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:12:27,967 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:12:28,358 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 10:12:28,638 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 10:12:28,640 - INFO - hypothesis_tool - run_bootstrap_test:99 - Bootstrapping and comparison completed.
+2025-04-28 10:12:28,640 - ERROR - hypothesis_tool - main:142 - [Error] cannot access local variable 'results' where it is not associated with a value
+2025-04-28 10:13:36,850 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:13:36,855 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:13:36,859 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:13:37,253 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 10:13:37,472 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 10:13:37,475 - INFO - hypothesis_tool - run_bootstrap_test:99 - Bootstrapping and comparison completed.
+2025-04-28 10:13:37,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 10:13:37,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 10:13:37,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 10:13:37,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 10:17:10,537 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:17:10,542 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:17:10,546 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:17:10,934 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 10:17:11,446 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 10:17:11,454 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 10:17:11,456 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 10:17:11,456 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 10:17:11,457 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 10:17:11,457 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 10:21:13,601 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:21:13,608 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:21:13,612 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:21:13,994 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 10:21:14,346 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 10:21:14,351 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 10:21:14,352 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 10:21:14,352 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 10:21:14,353 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 10:21:14,353 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 10:29:03,514 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:29:03,520 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:29:03,523 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:29:03,900 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 10:29:04,257 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 10:29:04,260 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 10:29:04,261 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 10:29:04,261 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 10:29:04,262 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 10:29:04,262 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 10:30:15,386 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 10:30:15,398 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 10:30:15,403 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 10:30:16,239 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 10:30:16,782 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 10:30:16,786 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:02:00,779 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:02:00,784 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:02:00,789 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:02:01,183 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:02:01,397 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:02:01,400 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:02:01,400 - ERROR - hypothesis_tool - main:142 - [Error] RawConfigParser.get() missing 1 required positional argument: 'option'
+2025-04-28 11:02:36,086 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:02:36,096 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:02:36,102 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:02:36,950 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:02:37,463 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:02:37,467 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:02:37,467 - ERROR - hypothesis_tool - main:142 - [Error] RawConfigParser.get() missing 1 required positional argument: 'option'
+2025-04-28 11:23:03,213 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:23:03,220 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:23:03,225 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:23:04,262 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:23:04,472 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:23:04,475 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:23:04,475 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:23:04,475 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:23:04,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:23:04,476 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 11:27:39,275 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:27:39,281 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:27:39,285 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:27:39,662 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:27:39,969 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:27:39,972 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:27:39,973 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:27:39,973 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:27:39,973 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:27:39,973 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 11:29:05,077 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:29:05,083 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:29:05,086 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:29:05,465 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:29:05,848 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:29:05,851 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:29:05,852 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:29:05,852 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:29:05,852 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:29:05,853 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 11:45:01,495 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:45:01,502 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:45:01,505 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:45:01,890 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:45:02,193 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:45:02,198 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:45:02,198 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:45:02,198 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:45:02,199 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:45:02,199 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 11:45:53,099 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:45:53,105 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:45:53,109 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:45:53,475 - ERROR - hypothesis_tool - main:142 - [Error] save_results() takes from 1 to 2 positional arguments but 3 were given
+2025-04-28 11:46:52,236 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:46:52,241 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:46:52,245 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:46:52,629 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:46:52,971 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:46:52,974 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:46:52,974 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:46:52,974 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:46:52,974 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:46:52,975 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 11:47:31,194 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 11:47:31,199 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 11:47:31,204 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 11:47:31,590 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 11:47:31,954 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 11:47:31,957 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 11:47:31,957 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 11:47:31,957 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 11:47:31,958 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 11:47:31,958 - INFO - hypothesis_tool - _remove_cleaned_files:149 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:01:59,794 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:01:59,799 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:01:59,803 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:02:00,209 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:02:00,525 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:02:00,530 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:02:00,531 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:02:00,531 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:02:00,532 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:02:00,532 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:03:43,709 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:03:43,715 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:03:43,719 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:03:44,098 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:03:44,423 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:03:44,426 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:03:44,427 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:03:44,427 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:03:44,428 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:03:44,428 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:04:10,692 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:04:10,697 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:04:10,701 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:04:11,081 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:04:11,363 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:04:11,366 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:04:11,366 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:04:11,367 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:04:11,367 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:04:11,367 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:07:42,727 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:07:42,732 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:07:42,736 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:07:43,113 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:07:43,447 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:07:43,450 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:07:43,451 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:07:43,451 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:07:43,451 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:07:43,451 - INFO - hypothesis_tool - _remove_cleaned_files:153 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:13:26,103 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:13:26,109 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:13:26,113 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:13:26,501 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:13:26,501 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:14:02,898 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:14:02,904 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:14:02,908 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:14:03,296 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:14:03,538 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:14:03,541 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:14:03,541 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:14:03,542 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:14:03,542 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:14:03,542 - INFO - hypothesis_tool - _remove_cleaned_files:150 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:17:10,703 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:17:10,708 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:17:10,712 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:17:11,078 - INFO - hypothesis_tool - _remove_cleaned_files:152 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:17:11,078 - INFO - hypothesis_tool - _remove_cleaned_files:152 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:18:56,895 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:18:56,901 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:18:56,905 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:18:57,275 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:18:57,275 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:21:17,122 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:21:17,127 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:21:17,131 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:21:17,491 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:21:17,492 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:21:34,280 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:21:34,285 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:21:34,289 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:21:34,724 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:21:34,982 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:21:34,984 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:21:34,984 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:21:34,985 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:21:34,985 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:21:34,985 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:34:22,876 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:34:22,884 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:34:22,890 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:34:23,273 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:34:23,609 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:34:23,611 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:34:23,611 - ERROR - hypothesis_tool - main:147 - [Error] cannot access local variable 'formatted_value' where it is not associated with a value
+2025-04-28 12:41:51,570 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:41:51,575 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:41:51,579 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:41:51,993 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:41:52,233 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:41:52,236 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:41:52,236 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:41:52,236 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:41:52,236 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:41:52,236 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:42:49,621 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:42:49,626 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:42:49,630 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:42:50,011 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:42:50,247 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:42:50,296 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:42:50,297 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:42:50,298 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:42:50,298 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:42:50,298 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:43:25,375 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:43:25,380 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:43:25,384 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:43:25,396 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:43:25,592 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:43:25,594 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:43:25,595 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:43:25,595 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:43:25,595 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:43:25,595 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:43:42,218 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:43:42,223 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:43:42,227 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:43:42,240 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:43:42,426 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:43:42,428 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:43:42,429 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:43:42,429 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:43:42,429 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:43:42,429 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:44:35,518 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:44:35,524 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:44:35,527 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:44:35,540 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:44:35,737 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:44:35,740 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:44:35,740 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:44:35,740 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:44:35,740 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:44:35,740 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:46:21,141 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:46:21,155 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:46:21,160 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:47:19,666 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:47:20,188 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:47:20,192 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:47:54,133 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:47:54,133 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:47:54,133 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:47:54,134 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:48:01,142 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:48:01,147 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:48:01,151 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:48:01,162 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:48:01,360 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:48:01,362 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:48:01,363 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:48:01,363 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:48:01,363 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:48:01,364 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 12:48:50,955 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 12:48:50,960 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 12:48:50,964 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 12:48:50,976 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 12:48:51,172 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 12:48:51,175 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 12:48:51,175 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 12:48:51,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 12:48:51,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 12:48:51,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 13:21:59,838 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 13:21:59,843 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 13:21:59,847 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 13:21:59,857 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 13:22:00,057 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 13:22:00,060 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 13:22:00,060 - ERROR - hypothesis_tool - main:147 - [Error] 'p95_1_empirical'
+2025-04-28 13:23:02,355 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 13:23:02,367 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 13:23:02,373 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 13:23:07,391 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 13:23:07,895 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 13:23:20,885 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 13:23:26,669 - ERROR - hypothesis_tool - main:147 - [Error] 'p95_1_empirical'
+2025-04-28 14:00:49,635 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:00:49,641 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 14:00:49,644 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 14:00:49,656 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 14:00:49,855 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 14:00:49,857 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 14:00:49,857 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 14:00:49,858 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 14:00:49,858 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 14:00:49,858 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 14:01:55,034 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:01:55,046 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:01:55,142 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:01:55,144 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:01:55,144 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 14:01:55,145 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 14:02:57,147 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:02:57,169 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:02:57,414 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:02:57,417 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:03:38,910 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 14:03:38,911 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 14:04:48,024 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:05:04,023 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:05:05,899 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:05:45,230 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:16:04,230 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:16:04,243 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:16:04,344 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:16:04,345 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:16:04,345 - ERROR - hypothesis_tool - main:147 - [Error] 'numpy.float64' object has no attribute 'items'
+2025-04-28 14:16:19,361 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:16:19,373 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:16:19,470 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:16:19,471 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:16:19,471 - ERROR - hypothesis_tool - main:147 - [Error] 'numpy.float64' object has no attribute 'items'
+2025-04-28 14:16:44,207 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:16:49,289 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:16:49,556 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:16:49,559 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:19:12,877 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:19:12,889 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:19:12,985 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:19:12,986 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:19:12,987 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 14:19:12,987 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 14:19:49,005 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 14:19:49,019 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 14:19:49,129 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 14:19:49,130 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 14:19:49,131 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 14:19:49,132 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:08:07,295 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:08:07,309 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 15:08:07,416 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 15:08:07,417 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 15:08:07,418 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:08:07,418 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:08:46,398 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:08:46,413 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Starting bootstrapping for single sample...
+2025-04-28 15:08:46,528 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:155 - Running single sample P95 comparison...
+2025-04-28 15:08:46,530 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 15:08:46,530 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:08:46,531 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:13:27,945 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:13:27,950 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:13:27,957 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:13:27,970 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:13:28,181 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:13:28,184 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:13:28,184 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:13:28,185 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:13:28,185 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:13:28,185 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:15:07,934 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:15:07,940 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:15:07,944 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:15:07,960 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:15:08,157 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:15:08,159 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:15:08,161 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:15:08,161 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:15:08,161 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:15:08,161 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:16:07,212 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:16:07,217 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:16:07,221 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:16:07,233 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:16:07,434 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:16:07,437 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:16:07,438 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:16:07,438 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:16:07,438 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:16:07,438 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:18:20,502 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:18:20,507 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:18:20,511 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:18:20,524 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:18:20,732 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:18:20,734 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:18:20,735 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:18:20,735 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:18:20,735 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:18:20,735 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:20:03,650 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:20:03,656 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:20:03,660 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:20:03,675 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:20:03,892 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:20:03,895 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:20:03,896 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:20:03,896 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:20:03,896 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:20:03,896 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:22:27,459 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:22:27,465 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:22:27,469 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:22:27,490 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:22:27,719 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:22:27,722 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:22:27,723 - ERROR - hypothesis_tool - main:147 - [Error] name 'output_text' is not defined
+2025-04-28 15:23:40,023 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:23:40,029 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:23:40,032 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:23:40,044 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:23:40,258 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:23:40,260 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:23:40,261 - ERROR - hypothesis_tool - main:147 - [Error] write() argument must be str, not list
+2025-04-28 15:24:17,610 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:24:17,616 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:24:17,620 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:24:17,632 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:24:17,838 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:24:17,840 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:24:17,841 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:24:17,842 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:24:17,842 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:24:17,842 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:27:20,568 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:27:20,579 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:27:20,584 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:27:20,603 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:27:21,099 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:27:27,528 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:28:33,736 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:28:33,745 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:28:33,749 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:28:33,764 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:28:33,965 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:28:33,968 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:28:33,970 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:28:33,970 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:28:33,970 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:28:33,970 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:33:11,954 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:33:11,959 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:33:11,963 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:33:11,976 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:33:12,173 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:33:12,175 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:33:12,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:33:12,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:33:12,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:33:12,176 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:34:32,976 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:34:32,982 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:34:32,986 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:34:33,000 - INFO - hypothesis_tool - run_bootstrap_test:81 - Starting bootstrapping for both samples...
+2025-04-28 15:34:33,208 - INFO - hypothesis_tool - run_bootstrap_test:85 - Running P95 comparison...
+2025-04-28 15:34:33,211 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:34:33,212 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:34:33,212 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:34:33,212 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:34:33,213 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:38:15,538 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:38:15,543 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:38:15,547 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:38:15,559 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 15:38:15,763 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 15:38:15,766 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:38:15,767 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:38:15,767 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:38:15,767 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:38:15,767 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:39:22,942 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:39:22,948 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:39:22,951 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:39:22,970 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 15:39:23,162 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 15:39:23,164 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 15:39:23,166 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:39:23,166 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 15:39:23,166 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:39:23,166 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 15:40:25,014 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:40:25,029 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 15:40:25,129 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 15:40:25,130 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 15:40:25,131 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:40:25,131 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:42:26,376 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:42:26,507 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 15:42:26,607 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 15:42:26,608 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 15:42:26,610 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:42:26,610 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 15:43:13,310 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 15:43:13,315 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 15:43:13,318 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 15:43:13,550 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 15:43:13,550 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 16:58:08,259 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 16:58:08,265 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 16:58:08,268 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 16:58:08,509 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 16:58:08,713 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 16:58:08,716 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 16:58:08,717 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 16:58:08,718 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 16:58:08,718 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 16:58:08,718 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:02:43,518 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:02:43,524 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:02:43,527 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:02:43,763 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:02:43,964 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:02:43,968 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:02:43,969 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:02:43,969 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:02:43,969 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:02:43,969 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:03:57,092 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:03:57,097 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:03:57,101 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:03:57,338 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:03:57,529 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:03:57,532 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:03:57,533 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:03:57,533 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:03:57,533 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:03:57,534 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:07:29,733 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:07:29,738 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:07:29,743 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:07:31,260 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:07:31,487 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:07:31,489 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:07:31,490 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:07:31,490 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:07:31,490 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:07:31,490 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:11:04,236 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:11:04,241 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:11:04,244 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:11:04,485 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:11:04,676 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:11:04,679 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:11:15,265 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:11:15,265 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:11:15,265 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:11:15,265 - INFO - hypothesis_tool - _remove_cleaned_files:154 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:53:56,731 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:53:56,737 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:53:56,741 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:53:56,997 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:53:57,197 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:53:57,200 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:53:57,201 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:53:57,201 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:53:57,202 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:53:57,202 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 17:58:43,070 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 17:58:43,077 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 17:58:43,080 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 17:58:43,317 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 17:58:43,507 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 17:58:43,510 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 17:58:43,511 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 17:58:43,512 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 17:58:43,512 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 17:58:43,512 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 18:02:06,197 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 18:02:06,202 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 18:02:06,206 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 18:02:06,449 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 18:02:06,642 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 18:02:06,646 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 18:02:32,155 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 18:02:32,155 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 18:02:32,156 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 18:02:32,156 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 19:23:27,813 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 19:23:27,818 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 19:23:27,822 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 19:23:28,058 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 19:23:28,259 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 19:23:28,262 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 19:23:28,263 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 19:23:28,263 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 19:23:28,263 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 19:23:28,263 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:07:02,294 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:07:02,299 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:07:02,303 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:07:02,552 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:07:02,749 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:07:02,752 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:07:02,753 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:07:02,753 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:07:02,753 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:07:02,753 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:08:24,843 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:08:24,856 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:08:24,861 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:08:25,124 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:08:25,659 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:08:25,663 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:09:53,624 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:09:53,629 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:09:53,633 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:09:53,876 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:09:54,076 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:09:54,079 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:09:54,080 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:09:54,080 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:09:54,080 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:09:54,080 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:10:52,316 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:10:52,322 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:10:52,325 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:10:52,563 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:10:52,758 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:10:52,760 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:10:52,761 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:10:52,761 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:10:52,761 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:10:52,761 - INFO - hypothesis_tool - _remove_cleaned_files:158 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:17:52,682 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:17:52,688 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:17:52,692 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:17:52,928 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:17:53,129 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:17:53,131 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:17:53,131 - ERROR - hypothesis_tool - main:157 - [Error] interpret_results() takes 2 positional arguments but 3 were given
+2025-04-28 20:18:12,103 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:18:12,108 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:18:12,112 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:18:12,349 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:18:12,545 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:18:12,547 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:18:12,548 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:18:12,548 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:18:12,548 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:18:12,548 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:18:35,428 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:18:35,433 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:18:35,437 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:18:35,673 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:18:35,872 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:18:35,875 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:18:35,876 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:18:35,876 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:18:35,876 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:18:35,876 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:19:07,664 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:19:07,671 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:19:07,675 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:19:07,909 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:19:08,103 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:19:08,105 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:19:21,332 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:19:21,332 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:19:21,333 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:19:21,333 - INFO - hypothesis_tool - _remove_cleaned_files:164 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:24:33,532 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:24:33,538 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:24:33,542 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:24:33,795 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:24:33,995 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:24:33,997 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:24:33,998 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:24:33,998 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:24:33,998 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:24:33,998 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:29:43,732 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:29:43,738 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:29:43,743 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:29:43,990 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:29:44,189 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:29:44,193 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:29:44,194 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:29:44,194 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:29:44,195 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:29:44,195 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:35:44,469 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:35:44,478 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:35:44,482 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:35:44,790 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:35:44,998 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:35:44,998 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:35:53,564 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:35:53,564 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:35:53,565 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:35:53,565 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:43:49,977 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:43:49,983 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:43:49,987 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:43:50,255 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:43:50,488 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:43:50,488 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:44:01,980 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:44:01,980 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:44:01,980 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:44:01,980 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:46:12,804 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:46:12,809 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:46:12,813 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:46:13,050 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:46:13,267 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:46:13,267 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:46:27,539 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:46:27,540 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:46:27,540 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:46:27,540 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:48:54,108 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:48:54,114 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr13-15-2025_2.csv
+2025-04-28 20:48:54,117 - INFO - hypothesis_tool - validate_and_clean:34 - Cleaning completed for input-Apr16-17-2025_2.csv
+2025-04-28 20:48:54,362 - INFO - hypothesis_tool - run_bootstrap_test:80 - Starting bootstrapping for both samples...
+2025-04-28 20:48:54,558 - INFO - hypothesis_tool - run_bootstrap_test:84 - Running P95 comparison...
+2025-04-28 20:48:54,559 - INFO - hypothesis_tool - run_bootstrap_test:100 - Bootstrapping and comparison completed.
+2025-04-28 20:49:13,885 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:49:13,885 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_cleaned.csv
+2025-04-28 20:49:13,885 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:49:13,885 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr16-17-2025_2_sample.csv
+2025-04-28 20:49:59,715 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:49:59,831 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 20:49:59,928 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 20:49:59,928 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 20:50:08,686 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:50:08,686 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 20:56:48,954 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 20:56:49,071 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 20:56:49,188 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 20:56:49,189 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 20:56:49,803 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 20:56:49,803 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 21:03:43,533 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 21:03:43,657 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 21:03:43,764 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 21:03:43,765 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 21:03:44,253 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 21:03:44,253 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-04-28 21:39:13,106 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2025-04-28 21:39:13,235 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:151 - Starting bootstrapping for single sample...
+2025-04-28 21:39:13,341 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:154 - Running single sample P95 comparison...
+2025-04-28 21:39:13,342 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:164 - Bootstrapping and comparison completed.
+2025-04-28 21:39:14,019 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-04-28 21:39:14,020 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
