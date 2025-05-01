@@ -77,12 +77,16 @@ def test_invalid_file_path(dummy_config):
 
 
 def test_non_numeric_data(temp_csv, dummy_config):
-    # add text data
+    # Include non-numeric value
     data = [500, 600, "abc", 700]
     file_path = temp_csv(data)
 
-    with pytest.raises(Exception):
-        validate_and_clean(file_path, dummy_config)
+    cleaned_path = validate_and_clean(file_path, dummy_config)
+    cleaned_data = pd.read_csv(cleaned_path, header=None)
+
+    # Expect only 3 numeric rows remain
+    assert cleaned_data.shape[0] == 3
+    assert np.issubdtype(cleaned_data.dtypes[0], np.number)
 
 if __name__ == "__main__":
     # Wrapper to run all tests automatically

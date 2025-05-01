@@ -77,11 +77,11 @@ def run_bootstrap_test(sample_file_path1, sample_file_path2, config, logger):
     iterations = int(config.get('test', 'bootstrapping iterations'))
     sample_size = _get_sample_size (sample_file_path1)
 
-    logger.info("Starting bootstrapping for both samples...")
+    if logger: logger.info("Starting bootstrapping for both samples...")
     p95_sample1 = bootstrap_percentile(sample_file_path1, percentile, iterations)
     p95_sample2 = bootstrap_percentile(sample_file_path2, percentile, iterations)
 
-    logger.info("Running P95 comparison...")
+    if logger: logger.info("Running P95 comparison...")
     result = compare_p95s(p95_sample1, p95_sample2, sample_size, alpha)
     top_fields = {}
     top_fields['operation'] = "comparing two P95s"
@@ -97,7 +97,7 @@ def run_bootstrap_test(sample_file_path1, sample_file_path2, config, logger):
         top_fields['p95_2_empirical'] = p95_2_empirical
         result['data source 2'] = sample_file_path2
 
-    logger.info("Bootstrapping and comparison completed.")
+    if logger: logger.info("Bootstrapping and comparison completed.")
     return _get_sorted_result (result, top_fields)
 
 def compare_p95_to_threshold(p95_samples, threshold, sample_size, alpha):
@@ -148,10 +148,10 @@ def run_bootstrap_single_sample_test(sample_file_path1, config, logger):
     threshold = int(config.get('test', 'threshold'))
     sample_size = _get_sample_size (sample_file_path1)
 
-    logger.info("Starting bootstrapping for single sample...")
+    if logger: logger.info("Starting bootstrapping for single sample...")
     p95_sample1 = bootstrap_percentile(sample_file_path1, percentile, iterations)
 
-    logger.info("Running single sample P95 comparison...")
+    if logger: logger.info("Running single sample P95 comparison...")
     result = compare_p95_to_threshold(p95_sample1, threshold, sample_size, alpha)
     top_fields = {}
     top_fields['operation'] = "comparing P95 to the threshold"
@@ -161,7 +161,7 @@ def run_bootstrap_single_sample_test(sample_file_path1, config, logger):
         p95_1_empirical = np.percentile(sample1_df['value'], 95)
         top_fields['p95_1_empirical'] = p95_1_empirical
         result['data source 1'] = sample_file_path1
-    logger.info("Bootstrapping and comparison completed.")
+    if logger: logger.info("Bootstrapping and comparison completed.")
     return _get_sorted_result (result, top_fields)
 
 def _get_sample_size(sample_file_path):
