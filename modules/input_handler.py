@@ -1,13 +1,9 @@
 import pandas as pd
-import os
-
+import numpy as np
 
 def validate_and_clean(file_path, config, logger=None):
-    try:
-        df = pd.read_csv(file_path, header=None, decimal='.')
-    except Exception as e:
-        raise Exception(f"Cannot read data in {file_path}: {str(e)}")
 
+    df = get_data_frame_from_csv(file_path)
 
     # Check if file is empty
     if df.empty:
@@ -16,9 +12,6 @@ def validate_and_clean(file_path, config, logger=None):
     # Check if only one column exists
     if df.shape[1] != 1:
         raise Exception(f"Input file {file_path} should contain only one column.")
-
-    # Rename column for easier reference
-    df.columns = ['value']
 
     # Detect non-numeric values
     df = df[pd.to_numeric(df['value'], errors='coerce').notnull()]
@@ -38,30 +31,15 @@ def validate_and_clean(file_path, config, logger=None):
     df.to_csv(cleaned_path, index=False, header=False)
 
     if logger:
-        logger.info(f"Cleaned data saved to {cleaned_path}")
+        logger.info(f"Cleaning completed for {file_path}")
 
     return cleaned_path
 
-def generate_sample(cleaned_file, config, logger=None):
+def get_data_frame_from_csv(file_path):
     try:
-        df = pd.read_csv(cleaned_file, header=None)
+        df = pd.read_csv(file_path, header=None, decimal='.')
         df.columns = ['value']
+        return df
     except Exception as e:
-        raise Exception(f"Cannot read cleaned file {cleaned_file}: {str(e)}")
-
-    sample_size = int(config.get('input', 'sample', fallback='0'))
-    if sample_size <= 0:
-        return cleaned_file  # skip sampling
-
-    if sample_size > len(df):
-        raise Exception(f"Requested sample size {sample_size} exceeds available data ({len(df)})")
-
-    df_sample = df.sample(n=sample_size, random_state=42)
-
-    sample_path = cleaned_file.replace("_cleaned.csv", "_sample.csv")
-    df_sample.to_csv(sample_path, index=False, header=False)
-
-    if logger:
-        logger.info(f"Sample of size {sample_size} saved to {sample_path}")
-
-    return sample_path
+        print(f"Error reading CSV file: {e}")
+    return None
