@@ -1,6 +1,4 @@
-import sys
-from analysis import run_descriptive_analysis
-from input_handler import get_data_frame_from_csv
+from modules.input_handler import get_data_frame_from_csv
 
 
 def validate_sample_sizes(file_path1, file_path2=None, config=None):

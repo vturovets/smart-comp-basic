@@ -1,5 +1,4 @@
 import logging
-import os
 
 def setup_logger(config):
     log_enabled = config.getboolean('output', 'create_log', fallback=False)

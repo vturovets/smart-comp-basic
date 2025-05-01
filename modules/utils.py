@@ -2,9 +2,9 @@ import os
 
 def get_base_filename(file_path):
     if "_cleaned.csv" in file_path:
-        return os.path.basename(file_path).replace("_cleaned.csv", ".csv")
+        return os.path.basename(file_path).replace("_cleaned.csv", "")
     elif "_sample.csv" in file_path:
-        return os.path.basename(file_path).replace("_sample.csv", ".csv")
+        return os.path.basename(file_path).replace("_sample.csv", "")
     return file_path
 
 import numpy as np

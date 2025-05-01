@@ -1,8 +1,6 @@
-# hypothesis.py
-import pandas as pd
 import numpy as np
 
-from input_handler import get_data_frame_from_csv
+from modules.input_handler import get_data_frame_from_csv
 
 
 def compute_ci(bootstrap_sample, alpha=0.05):

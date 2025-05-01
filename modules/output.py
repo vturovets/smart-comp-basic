@@ -1,6 +1,3 @@
-import os
-import configparser
-from typing import Dict, Optional
 
 def save_results(results: dict, output_path: str = None, config = None):
     lines = []

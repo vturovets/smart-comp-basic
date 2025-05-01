@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def validate_and_clean(file_path, config, logger=None):
 
@@ -23,6 +22,10 @@ def validate_and_clean(file_path, config, logger=None):
     # Remove outliers based on threshold
     threshold = float(config.get('input', 'outlier threshold', fallback='20000'))
     df = df[df['value'] <= threshold]
+
+    # Remove cache responses if needed
+    lower_threshold = float(config.get('input', 'lower threshold', fallback=0))
+    df = df[df['value'] >= lower_threshold]
 
     # Prepare cleaned file path
     cleaned_path = file_path.replace(".csv", "_cleaned.csv")
