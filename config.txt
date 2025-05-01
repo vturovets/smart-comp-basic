@@ -20,6 +20,9 @@ sample=3000
 [input]
 # Threshold for removing outlier values (in milliseconds)
 outlier threshold = 2500
+# Threshold to cut off cache responses
+lower threshold = 0
+
 # warn and fallback if less than this
 minimum sample size = 500
 validate_ratio_scale = True
@@ -53,7 +56,7 @@ kde_plot = True
 create_log = True
 
 [descriptive analysis]
-descriptive only = False
+descriptive only = True
 required = True
 mean = True
 median = False
@@ -63,7 +66,7 @@ sample size = True
 standard deviation = True
 mode = False
 skewness = True
-diagraming = False
+diagraming = True
 p95_empirical = False
 
 #KDE Unimodality test settings
@@ -78,7 +81,7 @@ clean_all = True
 [interpretation]
 explain the result = True
 # If True, will attempt to call ChatGPT API. If False, use local simple rules-based interpretation.
-use_chatgpt_api = True
+use_chatgpt_api = False
 
 save the results into file = True
 

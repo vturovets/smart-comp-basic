@@ -6,11 +6,11 @@ from scipy.stats import skew
 from scipy.stats import kurtosis
 from scipy.signal import find_peaks
 from scipy.stats import gaussian_kde
-from input_handler import get_data_frame_from_csv
+from modules.input_handler import get_data_frame_from_csv
 from diptest import diptest
-from pathlib import Path
 
-from utils import get_base_filename
+
+from modules.utils import get_base_filename
 
 
 def run_descriptive_analysis(cleaned_file, config, logger=None, mode='w'):
@@ -105,15 +105,16 @@ def check_unimodality_kde(cleaned_file, config, logger=None):
     return is_unimodal
 
 def _generate_kde_plot(x_grid, kde_values, all_peaks, cleaned_file):
+    base_filename = get_base_filename (cleaned_file)
     plt.figure()
     plt.plot(x_grid, kde_values, label='KDE')
     plt.plot(x_grid[list(all_peaks)], kde_values[list(all_peaks)], "x", color='red', label='Detected Peaks')
-    plt.title(f"KDE with Peak Detection: {os.path.basename(cleaned_file)}")
+    plt.title(f"KDE with Peak Detection: {base_filename}")
     plt.xlabel("Response time, ms")
     plt.ylabel("Density")
     plt.legend()
     plt.tight_layout()
-    plt.savefig(f"kde_peaks_{os.path.basename(cleaned_file).replace('_cleaned.csv', '')}.png")
+    plt.savefig(f"kde_peaks_{base_filename}.png")
     plt.close()
 
 

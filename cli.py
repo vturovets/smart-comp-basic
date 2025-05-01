@@ -3,14 +3,14 @@ import os
 import sys
 from pathlib import Path
 
-from analysis import check_unimodality_kde, run_descriptive_analysis
-from interpretation import interpret_results
+from modules.analysis import check_unimodality_kde, run_descriptive_analysis
+from modules.interpretation import interpret_results
 from modules.input_handler import validate_and_clean
 from modules.hypothesis import run_bootstrap_test, run_bootstrap_single_sample_test
 from modules.logger import setup_logger
 from modules.validation import validate_sample_sizes, validate_ratio_scale
-from output import show_progress, save_results
-from sampling_utils import get_autosized_sample
+from modules.output import show_progress, save_results
+from modules.sampling_utils import get_autosized_sample
 from modules.config import load_config
 
 # will hold all the cleaned‐CSV paths we write

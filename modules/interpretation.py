@@ -1,9 +1,7 @@
-import os
-
 import openai
 import json
 
-from utils import sanitize_for_json
+from modules.utils import sanitize_for_json
 
 
 def interpret_results(results, config):

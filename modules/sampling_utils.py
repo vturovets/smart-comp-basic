@@ -1,6 +1,4 @@
-import pandas as pd
-
-from input_handler import get_data_frame_from_csv
+from modules.input_handler import get_data_frame_from_csv
 
 
 def get_autosized_sample(file_path1, file_path2=None, requested_sample_size=None):
