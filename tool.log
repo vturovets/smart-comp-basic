@@ -827,3 +827,29 @@
 2025-05-01 16:55:15,844 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
 2025-05-01 16:57:28,300 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
 2025-05-01 16:57:28,813 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:10:24,465 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
+2025-05-02 17:10:24,997 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:11:27,283 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
+2025-05-02 17:11:27,784 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:149 - Starting bootstrapping for single sample...
+2025-05-02 17:11:27,914 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Running single sample P95 comparison...
+2025-05-02 17:11:27,914 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:162 - Bootstrapping and comparison completed.
+2025-05-02 17:11:49,666 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:11:49,667 - INFO - hypothesis_tool - _remove_cleaned_files:165 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-05-02 17:41:52,389 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
+2025-05-02 17:41:52,881 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:149 - Starting bootstrapping for single sample...
+2025-05-02 17:41:53,034 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Running single sample P95 comparison...
+2025-05-02 17:41:53,034 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:162 - Bootstrapping and comparison completed.
+2025-05-02 17:42:03,670 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:42:03,672 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-05-02 17:53:23,972 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
+2025-05-02 17:53:24,089 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:149 - Starting bootstrapping for single sample...
+2025-05-02 17:53:24,187 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Running single sample P95 comparison...
+2025-05-02 17:53:24,188 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:162 - Bootstrapping and comparison completed.
+2025-05-02 17:53:36,950 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:53:36,950 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv
+2025-05-02 17:56:18,360 - DEBUG - hypothesis_tool - setup_logger:29 - Logger initialized.
+2025-05-02 17:56:18,888 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:149 - Starting bootstrapping for single sample...
+2025-05-02 17:56:19,014 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:152 - Running single sample P95 comparison...
+2025-05-02 17:56:19,014 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:162 - Bootstrapping and comparison completed.
+2025-05-02 17:56:28,181 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_cleaned.csv
+2025-05-02 17:56:28,181 - INFO - hypothesis_tool - _remove_cleaned_files:184 - Removed cleaned file: input-Apr13-15-2025_2_sample.csv

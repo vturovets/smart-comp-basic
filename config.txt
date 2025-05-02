@@ -56,7 +56,7 @@ kde_plot = True
 create_log = True
 
 [descriptive analysis]
-descriptive only = True
+descriptive only = False
 required = True
 mean = True
 median = False
@@ -81,9 +81,9 @@ clean_all = True
 [interpretation]
 explain the result = True
 # If True, will attempt to call ChatGPT API. If False, use local simple rules-based interpretation.
-use_chatgpt_api = False
+use_chatgpt_api = True
 
 save the results into file = True
 
 # Your OpenAI API key (if using external interpretation)
-openai_api_key = <your key>
+openai_api_key = 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
