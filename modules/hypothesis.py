@@ -112,11 +112,6 @@ def compare_p95_to_threshold(p95_samples, threshold, sample_size, alpha):
     # Compute p-value if needed
     if is_threshold_in_ci:
         diff_distribution = np.array(p95_samples) - threshold
-        #two-tailed p-value
-        #p_value = 2 * min(
-        #    np.mean(diff_distribution < 0),
-        #    np.mean(diff_distribution > 0)
-        #)
         p_value = np.mean(diff_distribution > 0)  # one-tailed: P95 > threshold
         significant = p_value < alpha
     else:
