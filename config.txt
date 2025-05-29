@@ -21,7 +21,7 @@ sample=3000
 # Threshold for removing outlier values (in milliseconds)
 outlier threshold = 2500
 # Threshold to cut off cache responses
-lower threshold = 0
+lower threshold = 100
 
 # warn and fallback if less than this
 minimum sample size = 500
@@ -50,7 +50,7 @@ data source = False
 # Diagrams (per input file name)
 histogram = True
 boxplot = False
-kde_plot = True
+kde_plot = False
 
 # Create a log file for diagnostics
 create_log = True
@@ -86,4 +86,4 @@ use_chatgpt_api = True
 save the results into file = True
 
 # Your OpenAI API key (if using external interpretation)
-openai_api_key = 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
+openai_api_key = <your key>

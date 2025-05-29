@@ -71,8 +71,10 @@ def main(config, logger):
             if descriptive_enabled:
                 results["001_descriptive_analysis1"] = run_descriptive_analysis (clean1, config)
                 if config.getboolean("descriptive analysis", "descriptive only", fallback=False):
-                    print("\nOnly descriptive analysis has been requested")
+                    print("\nOnly descriptive analysis has been requested.")
                     save_results(results, args.output, config)
+                    if config.getboolean("interpretation", "explain the result", fallback=False):
+                        _get_results_interpreted (results, args.input1)
                     return
             if not validate_sample_sizes(clean1, None, config):
                 return
@@ -112,6 +114,8 @@ def main(config, logger):
                 if config.getboolean("descriptive analysis", "descriptive only", fallback=False):
                     print("\nOnly descriptive analysis has been requested")
                     save_results(results, args.output, config)
+                    if config.getboolean("interpretation", "explain the result", fallback=False):
+                        _get_results_interpreted (results, args.input1, args.input2)
                     return
 
             if not validate_sample_sizes(clean1, clean2, config):
@@ -137,20 +141,11 @@ def main(config, logger):
 
         # Output results
         save_results(results, args.output, config)
+
         if config.getboolean("interpretation", "explain the result", fallback=False):
-            show_progress("Running Interpretation ...", 10)
-            interpretation_text = interpret_results(results, config)
-            # Optionally save into file
-            if config.getboolean('interpretation', 'save the results into file', fallback=False):
-                interp_file = ("interpretation.md")
-                with open(interp_file, "w", encoding="utf-8") as f:
-                    f.write(interpretation_text)
-                    _add_visual_analysis (f, args.input1, args.input2)
-                    print(f"\nInterpretation saved to {interp_file}")
-            else:
-                print("\nInterpretation:")
-                print(interpretation_text)
-        show_progress("Complete", 100)
+            _get_results_interpreted (results, args.input1, args.input2)
+
+        show_progress("Complete.", 100)
 
     except Exception as e:
         error_msg = f"[Error] {str(e)}"
@@ -158,6 +153,21 @@ def main(config, logger):
         if logger:
             logger.error(error_msg)
         sys.exit(1)
+
+def _get_results_interpreted(results, input1, input2 = None):
+    show_progress("Running Interpretation ...", 10)
+    interpretation_text = interpret_results(results, config)
+    # Optionally save into file
+    if config.getboolean('interpretation', 'save the results into file', fallback=False):
+        interp_file = ("interpretation.md")
+        with open(interp_file, "w", encoding="utf-8") as f:
+            f.write(interpretation_text)
+            _add_visual_analysis (f, input1, input2)
+            print(f"\nInterpretation saved to {interp_file}")
+    else:
+        print("\nInterpretation:")
+        print(interpretation_text)
+
 
 def _add_visual_analysis(f, input_file1, input_file2 = None):
     if config.getboolean('output', 'histogram', fallback=False) or config.getboolean('output', 'kde_plot', fallback=False):
