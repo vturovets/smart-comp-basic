@@ -12,6 +12,7 @@ from modules.validation import validate_sample_sizes, validate_ratio_scale
 from modules.output import show_progress, save_results
 from modules.sampling_utils import get_autosized_sample
 from modules.config import load_config
+from modules.utils import get_base_filename
 
 # will hold all the cleaned‐CSV paths we write
 _cleaned_files: list[Path] = []
@@ -70,8 +71,10 @@ def main(config, logger):
             if descriptive_enabled:
                 results["001_descriptive_analysis1"] = run_descriptive_analysis (clean1, config)
                 if config.getboolean("descriptive analysis", "descriptive only", fallback=False):
-                    print("\nOnly descriptive analysis has been requested")
+                    print("\nOnly descriptive analysis has been requested.")
                     save_results(results, args.output, config)
+                    if config.getboolean("interpretation", "explain the result", fallback=False):
+                        _get_results_interpreted (results, args.input1)
                     return
             if not validate_sample_sizes(clean1, None, config):
                 return
@@ -111,6 +114,8 @@ def main(config, logger):
                 if config.getboolean("descriptive analysis", "descriptive only", fallback=False):
                     print("\nOnly descriptive analysis has been requested")
                     save_results(results, args.output, config)
+                    if config.getboolean("interpretation", "explain the result", fallback=False):
+                        _get_results_interpreted (results, args.input1, args.input2)
                     return
 
             if not validate_sample_sizes(clean1, clean2, config):
@@ -136,20 +141,11 @@ def main(config, logger):
 
         # Output results
         save_results(results, args.output, config)
-        if config.getboolean("interpretation", "explain the result", fallback=False):
-            show_progress("Running Interpretation ...", 10)
-            interpretation_text = interpret_results(results, config)
-            # Optionally save into file
-            if config.getboolean('interpretation', 'save the results into file', fallback=False):
-                interp_file = ("interpretation.md")
-                with open(interp_file, "w", encoding="utf-8") as f:
-                    f.write(interpretation_text)
-                    print(f"\nInterpretation saved to {interp_file}")
-            else:
-                print("\nInterpretation:")
-                print(interpretation_text)
 
-        show_progress("Complete", 100)
+        if config.getboolean("interpretation", "explain the result", fallback=False):
+            _get_results_interpreted (results, args.input1, args.input2)
+
+        show_progress("Complete.", 100)
 
     except Exception as e:
         error_msg = f"[Error] {str(e)}"
@@ -157,6 +153,39 @@ def main(config, logger):
         if logger:
             logger.error(error_msg)
         sys.exit(1)
+
+def _get_results_interpreted(results, input1, input2 = None):
+    show_progress("Running Interpretation ...", 10)
+    interpretation_text = interpret_results(results, config)
+    # Optionally save into file
+    if config.getboolean('interpretation', 'save the results into file', fallback=False):
+        interp_file = ("interpretation.md")
+        with open(interp_file, "w", encoding="utf-8") as f:
+            f.write(interpretation_text)
+            _add_visual_analysis (f, input1, input2)
+            print(f"\nInterpretation saved to {interp_file}")
+    else:
+        print("\nInterpretation:")
+        print(interpretation_text)
+
+
+def _add_visual_analysis(f, input_file1, input_file2 = None):
+    if config.getboolean('output', 'histogram', fallback=False) or config.getboolean('output', 'kde_plot', fallback=False):
+        f.write("\n## Visual Analysis\n")
+    else:
+        return
+
+    base_filename1 = get_base_filename(input_file1)
+    if config.getboolean('output', 'histogram', fallback=False):
+        f.write(f"![Histogram](histogram_{base_filename1}.png)\n")
+    if config.getboolean('output', 'kde_plot', fallback=False):
+        f.write(f"![KDE Plot](kde_peaks_{base_filename1}.png)\n")
+    if input_file2:
+        base_filename2 = get_base_filename(input_file2)
+        if config.getboolean('output', 'histogram', fallback=False):
+            f.write(f"![Histogram](histogram_{base_filename2}.png)\n")
+        if config.getboolean('output', 'kde_plot', fallback=False):
+            f.write(f"![KDE Plot](kde_peaks_{base_filename2}.png)\n")
 
 def _remove_cleaned_files(_cleaned_files, log):
     for path in _cleaned_files:

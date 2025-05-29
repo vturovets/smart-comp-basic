@@ -5,7 +5,8 @@ def get_base_filename(file_path):
         return os.path.basename(file_path).replace("_cleaned.csv", "")
     elif "_sample.csv" in file_path:
         return os.path.basename(file_path).replace("_sample.csv", "")
-    return file_path
+    else:
+        return os.path.basename(file_path).replace(".csv", "")
 
 import numpy as np
 

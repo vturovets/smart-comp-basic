@@ -39,6 +39,10 @@ Your task:
 3. Analyze the provided confidence intervals and margins of error (MoE) — based only on given data.
 4. If a threshold comparison was provided, explain it based on the data.
 5. Based on the results, provide clear and practical recommendations.
+6. Please avoid stating that the distribution is unimodal if:
+- KDE Peak Count > 1
+- Dip Test p-value < 0.05
+- Bimodality Coefficient > 0.55
 
 Format:
 - Output everything in Markdown format.

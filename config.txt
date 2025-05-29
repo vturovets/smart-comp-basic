@@ -21,7 +21,7 @@ sample=3000
 # Threshold for removing outlier values (in milliseconds)
 outlier threshold = 2500
 # Threshold to cut off cache responses
-lower threshold = 0
+lower threshold = 100
 
 # warn and fallback if less than this
 minimum sample size = 500
@@ -50,13 +50,13 @@ data source = False
 # Diagrams (per input file name)
 histogram = True
 boxplot = False
-kde_plot = True
+kde_plot = False
 
 # Create a log file for diagnostics
 create_log = True
 
 [descriptive analysis]
-descriptive only = True
+descriptive only = False
 required = True
 mean = True
 median = False
@@ -81,7 +81,7 @@ clean_all = True
 [interpretation]
 explain the result = True
 # If True, will attempt to call ChatGPT API. If False, use local simple rules-based interpretation.
-use_chatgpt_api = False
+use_chatgpt_api = True
 
 save the results into file = True
 
