@@ -1,33 +1,46 @@
+"""Ensure the interpretation helpers gracefully fall back to the local logic."""
+
+import sys
+import types
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+# Reset potential stubs created by other tests before importing the real module.
+sys.modules.pop("modules.interpretation", None)
+sys.modules.pop("interpretation", None)
+
+# Provide a tiny stub so that modules.interpretation can import ``openai``
+openai_stub = types.ModuleType("openai")
+openai_stub.OpenAI = lambda *_, **__: None
+sys.modules.setdefault("openai", openai_stub)
+
 from interpretation import interpret_results
 
 
-def test_interpretation_local():
-    class DummyConfig:
-        def getboolean(self, section, option, fallback=False):
-            return False  # simulate: no GPT API
+class DummyConfig:
+    def getboolean(self, section, option, fallback=False):
+        return False  # force the local interpretation path
 
-        def get(self, section, option, fallback=None):
-            return fallback
+    def get(self, section, option, fallback=None):
+        return fallback
 
-    dummy_results = {
+
+def test_interpretation_local_fallback():
+    results = {
         "003_comp_2_P95s": {
-            "p95_1_empirical": 950.0,
-            "p95_2_empirical": 1050.0,
             "p-value": 0.03,
             "alpha": 0.05,
             "significant difference": True,
+            "p95_1": 950.0,
+            "p95_2": 1050.0,
             "p95_1_moe": 4.5,
-            "p95_2_moe": 5.0
+            "p95_2_moe": 5.0,
         }
     }
 
-    interpretation = interpret_results(dummy_results, DummyConfig())
-    print("\nGenerated interpretation:\n")
-    print(interpretation)
+    interpretation = interpret_results(results, DummyConfig())
 
-    assert "statistically significant" in interpretation.lower()
-    assert "p-value" in interpretation.lower()
-    print("\n✅ Local fallback interpretation test passed.")
-
-if __name__ == "__main__":
-    test_interpretation_local()
+    text = interpretation.lower()
+    assert "statistically significant" in text
+    assert "p-value" in text
