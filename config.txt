@@ -1,39 +1,29 @@
+# Smart-Comp configuration optimised for fast local analysis
+
 [test]
-# Significance level (e.g. 0.05 for 95% confidence)
+# Significance level for hypothesis tests
 alpha = 0.05
-
-# Use P95 as the metric for comparison
-p95 = True
-
-# Number of iterations for bootstrapping
-bootstrapping iterations = 1000
-
-# Desired Margin of Error for P95 (%)
-MoE = 5
-
-# optional, used only for single-file mode
-threshold=1000
-
-# the requested sample size(may be auto-adjusted)
-sample=3000
+# Number of bootstrap resamples (lower for faster runs while keeping stability)
+bootstrapping iterations = 600
+# Target sample size used when auto-sampling cleaned inputs
+sample = 2000
+# Threshold for single-sample comparisons (required when only one dataset is provided)
+threshold = 1000
 
 [input]
-# Threshold for removing outlier values (in milliseconds)
+# Outlier guard rails applied during cleaning
 outlier threshold = 2500
-# Threshold to cut off cache responses
 lower threshold = 100
-
-# warn and fallback if less than this
 minimum sample size = 500
 validate_ratio_scale = True
 
 [output]
-# Output fields to include in the result
-print descriptive analysis results = True
+# Persist diagnostic logs to tool.log
+create_log = True
+
+# Fields emitted for hypothesis test summaries
 p95_1 = True
-p95_1_empirical = False
 p95_2 = True
-p95_2_empirical = False
 ci lower p95_1 = True
 ci upper p95_1 = True
 ci lower p95_2 = True
@@ -47,43 +37,33 @@ significant difference = True
 threshold = True
 data source = False
 
-# Diagrams (per input file name)
-histogram = True
+# Diagram exports
+histogram = False
 boxplot = False
 kde_plot = False
 
-# Create a log file for diagnostics
-create_log = True
-
 [descriptive analysis]
-descriptive only = False
 required = True
+descriptive only = False
 mean = True
 median = False
 min = True
 max = True
 sample size = True
 standard deviation = True
+skewness = False
 mode = False
-skewness = True
-diagraming = True
 p95_empirical = False
-
-#KDE Unimodality test settings
+diagraming = False
 unimodality_test_enabled = False
 bandwidth = silverman
-get extended report = True
+get extended report = False
 
 [clean]
-# clean aux files
 clean_all = True
 
 [interpretation]
 explain the result = True
-# If True, will attempt to call ChatGPT API. If False, use local simple rules-based interpretation.
-use_chatgpt_api = True
-
+use_chatgpt_api = False
 save the results into file = True
-
-# Your OpenAI API key (if using external interpretation)
-openai_api_key = <your key>
+openai_api_key =
