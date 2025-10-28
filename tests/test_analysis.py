@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-# Provide a minimal ``numpy`` stub so modules.utils can be imported without the
+# Provide a minimal ``numpy`` stub so smart_comp.utils can be imported without the
 # heavy dependency.
 numpy_stub = types.ModuleType("numpy")
 numpy_stub.integer = int
@@ -14,7 +14,7 @@ numpy_stub.floating = float
 numpy_stub.bool_ = bool
 sys.modules.setdefault("numpy", numpy_stub)
 
-from modules.utils import get_base_filename
+from smart_comp.utils import get_base_filename
 
 
 def test_get_base_filename_for_cleaned_and_raw_files():

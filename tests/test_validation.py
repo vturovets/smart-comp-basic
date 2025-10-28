@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from modules.config import load_config
+from smart_comp.config import load_config
 
 
 def test_load_config_returns_parser_for_unknown_path(tmp_path):
