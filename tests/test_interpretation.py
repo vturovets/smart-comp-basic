@@ -8,14 +8,13 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 # Reset potential stubs created by other tests before importing the real module.
 sys.modules.pop("smart_comp.interpretation", None)
-sys.modules.pop("interpretation", None)
 
 # Provide a tiny stub so that smart_comp.interpretation can import ``openai``
 openai_stub = types.ModuleType("openai")
 openai_stub.OpenAI = lambda *_, **__: None
 sys.modules.setdefault("openai", openai_stub)
 
-from interpretation import interpret_results
+from smart_comp.interpretation import interpret_results
 
 
 class DummyConfig:
