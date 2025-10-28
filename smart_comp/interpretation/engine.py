@@ -1,22 +1,20 @@
-import openai
+"""Interpretation helpers for CLI results."""
+
+from __future__ import annotations
+
 import json
 
-from modules.utils import sanitize_for_json
+import openai
+
+from smart_comp.utils import sanitize_for_json
 
 
 def interpret_results(results, config):
-    """
-        Generate interpretation based on results.
-        - Use GPT API if enabled and working
-        - Otherwise fallback to local simple interpretation
-        - Optionally save the interpretation to a file
-        """
     try:
-        if config.getboolean('interpretation', 'use_chatgpt_api', fallback=False):
-            client = openai.OpenAI(api_key=config.get('interpretation', 'openai_api_key'))
+        if config.getboolean("interpretation", "use_chatgpt_api", fallback=False):
+            client = openai.OpenAI(api_key=config.get("interpretation", "openai_api_key"))
 
             sanitized_results = sanitize_for_json(results)
-
             prompt = f"""
 You are an expert in statistical analysis for IT system performance evaluation.
 
@@ -25,6 +23,7 @@ Here is the data from a recent hypothesis testing comparing 95th percentiles (P9
 [RESULTS]
 ```json
 {json.dumps(sanitized_results, indent=2)}
+```
 
 Important Instructions:
 - Base your interpretation strictly and exclusively on the provided results.
@@ -63,38 +62,32 @@ Format:
                 max_tokens=800,
             )
             interpretation_text = response.choices[0].message.content.strip()
-
         else:
             interpretation_text = simple_local_interpretation(results)
-
-    except Exception as e:
-        print(f"[Warning] GPT interpretation failed: {e}")
+    except Exception as exc:
+        print(f"[Warning] GPT interpretation failed: {exc}")
         interpretation_text = simple_local_interpretation(results)
 
     return interpretation_text
 
+
 def simple_local_interpretation(results):
-    """
-    Very simple rules-based interpretation
-    """
     try:
-        # find the right section in results
         for section in results:
-            if isinstance(results[section], dict):
-                if 'significant difference' in results[section]:
-                    r = results[section]
-                    break
+            if isinstance(results[section], dict) and "significant difference" in results[section]:
+                r = results[section]
+                break
         else:
             return "No valid test results found."
 
-        p_value = r.get('p-value')
-        alpha = r.get('alpha', 0.05)
-        significant = r.get('significant difference')
-        p95_1 = r.get('p95_1_empirical') or r.get('p95_1')
-        p95_2 = r.get('p95_2_empirical') or r.get('p95_2')
-        threshold = r.get('threshold')
-        moe_1 = r.get('p95_1_moe')
-        moe_2 = r.get('p95_2_moe')
+        p_value = r.get("p-value")
+        alpha = r.get("alpha", 0.05)
+        significant = r.get("significant difference")
+        p95_1 = r.get("p95_1_empirical") or r.get("p95_1")
+        p95_2 = r.get("p95_2_empirical") or r.get("p95_2")
+        threshold = r.get("threshold")
+        moe_1 = r.get("p95_1_moe")
+        moe_2 = r.get("p95_2_moe")
 
         text = []
         text.append("## Summary of Statistical Findings:")
@@ -123,7 +116,6 @@ def simple_local_interpretation(results):
         if moe_2 is not None:
             text.append(f"- Margin of Error for Sample 2: ±{moe_2:.1f}%")
 
-        # Simple recommendations
         text.append("\n## Recommendations:")
 
         if significant and (p_value is not None and p_value < alpha):
@@ -134,9 +126,10 @@ def simple_local_interpretation(results):
             text.append("- No strong evidence of difference; monitor further if needed.")
 
         if (moe_1 and moe_1 > 10) or (moe_2 and moe_2 > 10):
-            text.append("- Large margin of error detected. Larger sample size is recommended for more precise estimation.")
+            text.append(
+                "- Large margin of error detected. Larger sample size is recommended for more precise estimation."
+            )
 
         return "\n".join(text)
-
-    except Exception as e:
-        return f"[Error in local interpretation: {e}]"
+    except Exception as exc:
+        return f"[Error in local interpretation: {exc}]"

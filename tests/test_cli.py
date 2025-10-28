@@ -24,16 +24,32 @@ def _stub_module(name: str, **attrs):
 
 
 # Provide the minimal set of stubs required by cli.py at import time.
-_stub_module("modules.analysis", check_unimodality_kde=lambda *_, **__: True, run_descriptive_analysis=lambda *_, **__: {})
-_stub_module("modules.interpretation", interpret_results=lambda *_, **__: "")
-_stub_module("modules.input_handler", validate_and_clean=lambda path, *_: f"{path}_cleaned")
-_stub_module("modules.hypothesis", run_bootstrap_test=lambda *_, **__: {}, run_bootstrap_single_sample_test=lambda *_, **__: {})
-_stub_module("modules.logger", setup_logger=lambda *_: None)
-_stub_module("modules.validation", validate_sample_sizes=lambda *_, **__: True, validate_ratio_scale=lambda *_, **__: True)
-_stub_module("modules.output", show_progress=lambda *_, **__: None, save_results=lambda *_, **__: None)
-_stub_module("modules.sampling_utils", get_autosized_sample=lambda *_, **__: "sampled.csv")
+_stub_module(
+    "smart_comp.analysis",
+    check_unimodality_kde=lambda *_, **__: True,
+    run_descriptive_analysis=lambda *_, **__: {},
+)
+_stub_module("smart_comp.interpretation", interpret_results=lambda *_, **__: "")
+_stub_module(
+    "smart_comp.io",
+    validate_and_clean=lambda path, *_: f"{path}_cleaned",
+    save_results=lambda *_, **__: None,
+    show_progress=lambda *_, **__: None,
+)
+_stub_module(
+    "smart_comp.stats",
+    run_bootstrap_test=lambda *_, **__: {},
+    run_bootstrap_single_sample_test=lambda *_, **__: {},
+)
+_stub_module("smart_comp.logging", setup_logger=lambda *_: None)
+_stub_module(
+    "smart_comp.validation",
+    validate_sample_sizes=lambda *_, **__: True,
+    validate_ratio_scale=lambda *_, **__: True,
+)
+_stub_module("smart_comp.sampling", get_autosized_sample=lambda *_, **__: "sampled.csv")
 
-# cli.py still relies on the real config/utils modules which are lightweight, so we
+# cli.py still relies on the real configuration utilities which are lightweight, so we
 # import it only after injecting the stubs above.
 from cli import _remove_cleaned_files, parse_arguments
 

@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from modules.config import _resolve_config_path
+from smart_comp.config.loader import _resolve_config_path
 
 
 def test_resolve_config_path_prefers_existing(tmp_path):
