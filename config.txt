@@ -39,6 +39,7 @@ data source = False
 
 # Diagram exports
 histogram = False
+histogram_log_scale = False
 boxplot = False
 kde_plot = False
 
