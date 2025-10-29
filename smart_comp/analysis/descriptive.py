@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import warnings
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -78,8 +80,27 @@ def _generate_histogram(df: pd.DataFrame, base_filename: str, config) -> None:
     p95 = np.percentile(df["value"], 95)
     plt.axvline(p95, color="orange", linestyle="dashed", linewidth=1, label=f"P95: {p95:.1f} ms")
 
+    x_label = "Response time, ms"
+    log_scale_requested = False
+    if config is not None:
+        log_scale_requested = config.getboolean(
+            "output", "histogram_log_scale", fallback=False
+        )
+
+    if log_scale_requested:
+        non_positive_mask = df["value"] <= 0
+        if non_positive_mask.any():
+            warnings.warn(
+                "Histogram log scale requested but data contains non-positive values; "
+                "falling back to linear scale.",
+                RuntimeWarning,
+            )
+        else:
+            plt.xscale("log")
+            x_label += " (log scale)"
+
     plt.title(f"Histogram of {base_filename}")
-    plt.xlabel("Response time, ms")
+    plt.xlabel(x_label)
     plt.ylabel("Frequency")
     plt.legend()
     plt.tight_layout()
