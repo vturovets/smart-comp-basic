@@ -68,11 +68,13 @@ def test_kw_permutation_command_generates_outputs(tmp_path, capsys):
     config = configparser.ConfigParser()
 
     result = run_kw_permutation_command(args, config, logger=None)
-    stdout = capsys.readouterr().out
+    stdout_lines = capsys.readouterr().out.strip().splitlines()
 
-    assert "Kruskal–Wallis permutation test" in stdout.splitlines()[0]
-    assert "group_a.csv" in stdout
-    assert "Permutation p-value" in stdout
+    assert stdout_lines[0] == "Kruskal–Wallis permutation test"
+    assert any("group_a.csv" in line for line in stdout_lines)
+    assert any("Permutation p-value" in line for line in stdout_lines)
+    assert stdout_lines[-2].startswith("Report written to ")
+    assert stdout_lines[-1].startswith("Summary CSV written to ")
 
     assert result["omnibus"]["seed"] == 321
     assert result["omnibus"]["permutations"] == 64
@@ -129,3 +131,26 @@ def test_kw_permutation_quiet_output(tmp_path, capsys):
     assert "permutations=10" in stdout
     assert "seed" not in stdout
     assert "seed" not in result["omnibus"]
+
+
+def test_kw_permutation_reports_require_existing_directory(tmp_path):
+    folder = tmp_path / "datasets"
+    _create_sample_csvs(folder)
+
+    args = Namespace(
+        command="kw-permutation",
+        folder=str(folder),
+        pattern="*.csv",
+        column="duration",
+        permutations=10,
+        seed=None,
+        report=str(tmp_path / "missing" / "report.json"),
+        summary_csv=None,
+        quiet=True,
+    )
+    config = configparser.ConfigParser()
+
+    with pytest.raises(FileNotFoundError) as excinfo:
+        run_kw_permutation_command(args, config, logger=None)
+
+    assert "Destination directory does not exist" in str(excinfo.value)
