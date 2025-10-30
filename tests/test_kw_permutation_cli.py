@@ -4,13 +4,14 @@ from __future__ import annotations
 
 import configparser
 import json
+import shutil
 from argparse import Namespace
 from pathlib import Path
 
 import numpy as np
 import pytest
 
-from smart_comp.cli.app import parse_arguments
+from smart_comp.cli.app import parse_arguments, run_cli
 from smart_comp.cli.kw_permutation import run_kw_permutation_command
 from smart_comp.io import load_group_durations
 from smart_comp.stats import kruskal_permutation_test
@@ -41,18 +42,25 @@ def test_parse_arguments_kw_permutation():
     assert args.permutations == 500
     assert args.seed == 123
     assert args.quiet is True
+FIXTURE_DIR = Path(__file__).parent / "fixtures" / "kruskal"
 
 
-def _create_sample_csvs(root: Path) -> None:
+def _copy_groups(root: Path, filenames: list[str]) -> None:
     root.mkdir(parents=True, exist_ok=True)
-    (root / "group_a.csv").write_text("duration\n1\n2\n3\n4\n", encoding="utf-8")
-    (root / "group_b.csv").write_text("duration\n2\n3\n4\n5\n", encoding="utf-8")
-    (root / "group_c.csv").write_text("duration\n6\n7\n8\n9\n", encoding="utf-8")
+    for name in filenames:
+        shutil.copy(FIXTURE_DIR / name, root / name)
 
 
 def test_kw_permutation_command_generates_outputs(tmp_path, capsys):
     folder = tmp_path / "data"
-    _create_sample_csvs(folder)
+    _copy_groups(
+        folder,
+        [
+            "same_group_a.csv",
+            "same_group_b.csv",
+            "shifted_group_c.csv",
+        ],
+    )
 
     args = Namespace(
         command="kw-permutation",
@@ -108,7 +116,14 @@ def test_kw_permutation_command_generates_outputs(tmp_path, capsys):
 
 def test_kw_permutation_quiet_output(tmp_path, capsys):
     folder = tmp_path / "datasets"
-    _create_sample_csvs(folder)
+    _copy_groups(
+        folder,
+        [
+            "same_group_a.csv",
+            "same_group_b.csv",
+            "shifted_group_c.csv",
+        ],
+    )
 
     args = Namespace(
         command="kw-permutation",
@@ -135,7 +150,14 @@ def test_kw_permutation_quiet_output(tmp_path, capsys):
 
 def test_kw_permutation_reports_require_existing_directory(tmp_path):
     folder = tmp_path / "datasets"
-    _create_sample_csvs(folder)
+    _copy_groups(
+        folder,
+        [
+            "same_group_a.csv",
+            "same_group_b.csv",
+            "shifted_group_c.csv",
+        ],
+    )
 
     args = Namespace(
         command="kw-permutation",
@@ -154,3 +176,63 @@ def test_kw_permutation_reports_require_existing_directory(tmp_path):
         run_kw_permutation_command(args, config, logger=None)
 
     assert "Destination directory does not exist" in str(excinfo.value)
+
+
+def test_run_cli_kw_permutation_success(tmp_path, monkeypatch, capsys):
+    folder = tmp_path / "cli"
+    _copy_groups(
+        folder,
+        [
+            "same_group_a.csv",
+            "same_group_b.csv",
+            "shifted_group_c.csv",
+        ],
+    )
+
+    monkeypatch.chdir(Path(__file__).resolve().parents[1])
+
+    report_path = tmp_path / "result.json"
+    summary_path = tmp_path / "summary.csv"
+
+    run_cli(
+        [
+            "kw-permutation",
+            "--folder",
+            str(folder),
+            "--pattern",
+            "*.csv",
+            "--column",
+            "duration",
+            "--permutations",
+            "128",
+            "--seed",
+            "42",
+            "--report",
+            str(report_path),
+            "--summary-csv",
+            str(summary_path),
+        ]
+    )
+
+    captured = capsys.readouterr().out
+    assert "Kruskal–Wallis permutation test" in captured
+    assert "Report written to" in captured
+    assert report_path.exists()
+    assert summary_path.exists()
+
+
+def test_run_cli_kw_permutation_missing_folder(monkeypatch, capsys):
+    monkeypatch.chdir(Path(__file__).resolve().parents[1])
+
+    with pytest.raises(SystemExit) as excinfo:
+        run_cli(
+            [
+                "kw-permutation",
+                "--folder",
+                "does-not-exist",
+            ]
+        )
+
+    assert excinfo.value.code == 1
+    stderr = capsys.readouterr().out
+    assert "[Error]" in stderr
