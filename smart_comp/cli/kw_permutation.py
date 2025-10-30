@@ -2,15 +2,16 @@
 
 from __future__ import annotations
 
-import csv
-import json
 from dataclasses import asdict
-from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Sequence
 
 import numpy as np
 
-from smart_comp.io import GroupMetadata, load_group_durations
+from smart_comp.io import (
+    GroupMetadata,
+    load_group_durations,
+    write_kw_permutation_reports,
+)
 from smart_comp.stats import kruskal_permutation_test
 from smart_comp.utils import sanitize_for_json
 
@@ -43,19 +44,22 @@ def run_kw_permutation_command(args, config, logger=None):
     report_path = None
     summary_path = None
 
-    if args.report:
-        report_path = _write_json_report(args.report, result)
+    if args.report or args.summary_csv:
+        report_path, summary_path = write_kw_permutation_reports(
+            metadata,
+            result,
+            report_path=args.report,
+            summary_csv_path=args.summary_csv,
+        )
         if logger:
-            logger.info("Wrote kw-permutation report to %s", report_path)
-
-    if args.summary_csv:
-        summary_path = _write_summary_csv(args.summary_csv, metadata)
-        if logger:
-            logger.info("Wrote kw-permutation summary CSV to %s", summary_path)
+            if report_path:
+                logger.info("Wrote kw-permutation report to %s", report_path)
+            if summary_path:
+                logger.info("Wrote kw-permutation summary CSV to %s", summary_path)
 
     _render_console_output(result, quiet=args.quiet)
 
-    if not args.quiet and not logger:
+    if not args.quiet:
         if report_path:
             print(f"Report written to {report_path}")
         if summary_path:
@@ -89,40 +93,6 @@ def _assemble_result(
         "omnibus": omnibus,
     }
     return sanitize_for_json(payload)
-
-
-def _write_json_report(destination: str | Path, result: dict[str, object]) -> Path:
-    path = Path(destination).expanduser()
-    if path.parent and not path.parent.exists():
-        path.parent.mkdir(parents=True, exist_ok=True)
-
-    with path.open("w", encoding="utf-8") as handle:
-        json.dump(result, handle, indent=2)
-        handle.write("\n")
-    return path
-
-
-def _write_summary_csv(destination: str | Path, metadata: Iterable[GroupMetadata]) -> Path:
-    path = Path(destination).expanduser()
-    if path.parent and not path.parent.exists():
-        path.parent.mkdir(parents=True, exist_ok=True)
-
-    fieldnames = [
-        "file_name",
-        "n",
-        "median",
-        "p95",
-        "dropped_non_numeric_or_nan",
-        "dropped_negative",
-    ]
-
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        writer.writeheader()
-        for entry in metadata:
-            writer.writerow(asdict(entry))
-
-    return path
 
 
 def _render_console_output(result: dict[str, object], *, quiet: bool) -> None:
