@@ -46,7 +46,9 @@ If you intend to generate AI-assisted interpretations, export `OPENAI_API_KEY` o
 
 ## Usage
 
-Run the CLI from the project root. The command accepts one or two CSV files plus an optional output path for the result summary.
+Run the CLI from the project root. Two entry points are available:
+
+### Legacy bootstrap comparison
 
 ```bash
 python cli.py <input_1.csv> [input_2.csv] [results.txt]
@@ -56,7 +58,7 @@ python cli.py <input_1.csv> [input_2.csv] [results.txt]
 - **Two inputs:** compares the P95 between the datasets using paired bootstrap resampling ([smart_comp/cli/app.py](smart_comp/cli/app.py#L88-L115)).
 - **Output file:** if provided, the formatted results are written to disk; otherwise they are printed to stdout ([smart_comp/io/output.py](smart_comp/io/output.py#L8-L39)).
 
-By default the CLI will:
+By default the bootstrap flow will:
 
 1. Clean and validate each CSV, ensuring a single numeric `value` column and applying outlier thresholds ([smart_comp/io/input.py](smart_comp/io/input.py#L10-L35)).
 2. Optionally produce descriptive statistics (`[descriptive analysis] required = True`).
@@ -64,15 +66,40 @@ By default the CLI will:
 4. Auto-sample cleaned data to the configured size and execute the bootstrap hypothesis test ([smart_comp/cli/app.py](smart_comp/cli/app.py#L82-L109)).
 5. Save the results and (optionally) generate interpretation Markdown with links to any plots the configuration enables ([smart_comp/cli/app.py](smart_comp/cli/app.py#L117-L153)).
 
+### Kruskal–Wallis permutation command
+
+Use the dedicated sub-command to analyse multiple latency groups stored in a folder of CSVs:
+
+```bash
+python cli.py kw-permutation \
+  --folder path/to/groups \
+  --pattern "*.csv" \
+  --column duration \
+  --permutations 5000 \
+  --seed 1234 \
+  --report report.json \
+  --summary-csv summary.csv
+```
+
+- `--folder` and `--pattern` describe where to locate the CSV files. At least two files must be found or the command exits with an error ([smart_comp/io/folder_loader.py](smart_comp/io/folder_loader.py#L31-L74)).
+- `--column` can be omitted to auto-detect the first numeric column. Pass a header name or zero-based index to override detection ([smart_comp/io/folder_loader.py](smart_comp/io/folder_loader.py#L76-L120)).
+- `--permutations` and `--seed` control the permutation test reproducibility ([smart_comp/stats/kruskal.py](smart_comp/stats/kruskal.py#L32-L83)).
+- Optional `--report` and `--summary-csv` arguments persist JSON and CSV outputs alongside the console table ([smart_comp/cli/kw_permutation.py](smart_comp/cli/kw_permutation.py#L16-L73)).
+
+The console report lists per-group medians, P95 values, dropped-row counts, and the omnibus statistics. The JSON payload includes the observed Kruskal–Wallis H statistic, tie-correction factor, permutation distribution metadata, and (if provided) the RNG seed used for shuffling labels ([smart_comp/cli/kw_permutation.py](smart_comp/cli/kw_permutation.py#L75-L157)).
+
+**Interpreting H and permutation p-values:** H measures how different the group rank sums are—the larger the value, the more evidence of distributional shifts between groups. The permutation p-value reports the fraction of shuffled label assignments whose H statistic is at least as extreme as the observed one. Small p-values (e.g., `< 0.05`) indicate the observed H is unlikely under the null hypothesis that all files were drawn from the same distribution, while larger p-values suggest no statistically detectable shift ([smart_comp/stats/kruskal.py](smart_comp/stats/kruskal.py#L32-L111)).
+
 ### Configuration
 
-The CLI loads settings from `config.txt`. Tweak this file to control sampling, thresholds, cleaning rules, and output fields. Notable sections include:
+The CLI loads settings from `config.txt`. Tweak this file to control sampling, thresholds, cleaning rules, permutation parameters, and output fields. Notable sections include:
 
 - `[test]` – significance level, bootstrap iterations, sample size, and comparison threshold.
 - `[input]` – outlier limits, minimum sample size, and ratio-scale enforcement.
 - `[output]` – toggle individual statistics, diagnostics, log creation, and plot exports.
 - `[descriptive analysis]` – enable descriptive runs, extended reports, and unimodality checks.
 - `[interpretation]` – configure automatic narrative generation and persistence ([config.txt](config.txt#L1-L73)).
+- `kw-permutation` options are primarily specified on the command line; provide `--permutations`, `--seed`, `--report`, and `--summary-csv` flags to tailor the permutation test outputs per run.
 
 ### Cleaning up
 
