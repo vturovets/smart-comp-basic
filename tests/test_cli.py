@@ -1,57 +1,13 @@
 """Tests for the CLI helpers using stubbed dependencies."""
 
 import sys
-import types
 from pathlib import Path
 
 import pytest
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-numpy_stub = types.ModuleType("numpy")
-numpy_stub.integer = int
-numpy_stub.floating = float
-numpy_stub.bool_ = bool
-sys.modules.setdefault("numpy", numpy_stub)
-
-
-def _stub_module(name: str, **attrs):
-    module = types.ModuleType(name)
-    for attr_name, value in attrs.items():
-        setattr(module, attr_name, value)
-    sys.modules[name] = module
-    return module
-
-
-# Provide the minimal set of stubs required by cli.py at import time.
-_stub_module(
-    "smart_comp.analysis",
-    check_unimodality_kde=lambda *_, **__: True,
-    run_descriptive_analysis=lambda *_, **__: {},
-)
-_stub_module("smart_comp.interpretation", interpret_results=lambda *_, **__: "")
-_stub_module(
-    "smart_comp.io",
-    validate_and_clean=lambda path, *_: f"{path}_cleaned",
-    save_results=lambda *_, **__: None,
-    show_progress=lambda *_, **__: None,
-)
-_stub_module(
-    "smart_comp.stats",
-    run_bootstrap_test=lambda *_, **__: {},
-    run_bootstrap_single_sample_test=lambda *_, **__: {},
-)
-_stub_module("smart_comp.logging", setup_logger=lambda *_: None)
-_stub_module(
-    "smart_comp.validation",
-    validate_sample_sizes=lambda *_, **__: True,
-    validate_ratio_scale=lambda *_, **__: True,
-)
-_stub_module("smart_comp.sampling", get_autosized_sample=lambda *_, **__: "sampled.csv")
-
-# cli.py still relies on the real configuration utilities which are lightweight, so we
-# import it only after injecting the stubs above.
-from cli import _remove_cleaned_files, parse_arguments
+from smart_comp.cli.app import _remove_cleaned_files, parse_arguments
 
 
 def test_parse_arguments_single_input(monkeypatch):

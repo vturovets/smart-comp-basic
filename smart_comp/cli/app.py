@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Iterable
 
 from smart_comp.analysis import check_unimodality_kde, run_descriptive_analysis
+from smart_comp.cli.kw_permutation import run_kw_permutation_command
 from smart_comp.config import load_config
 from smart_comp.interpretation import interpret_results
 from smart_comp.io import save_results, show_progress, validate_and_clean
@@ -21,14 +22,84 @@ from smart_comp.validation import validate_ratio_scale, validate_sample_sizes
 _CLEANED_FILES: list[Path] = []
 
 
+def _parse_column_option(value: str) -> str | int:
+    """Coerce ``--column`` values into either integers or raw strings."""
+
+    try:
+        return int(value)
+    except ValueError:
+        return value
+
+
 def parse_arguments(argv: Iterable[str] | None = None) -> argparse.Namespace:
+    argv_list = list(argv) if argv is not None else sys.argv[1:]
+
     parser = argparse.ArgumentParser(
         description="Hypothesis Testing Tool: Compare P95 values from one or two datasets."
     )
-    parser.add_argument("paths", nargs="+", help="One or two input CSVs, plus optional output TXT")
-    args = parser.parse_args(list(argv) if argv is not None else None)
+    parser.set_defaults(command=None)
 
-    paths = args.paths
+    subparsers = parser.add_subparsers(dest="command")
+
+    kw_parser = subparsers.add_parser(
+        "kw-permutation",
+        help="Run a Kruskal–Wallis permutation test across CSV groups.",
+    )
+    kw_parser.add_argument("--folder", required=True, help="Folder containing CSV files.")
+    kw_parser.add_argument(
+        "--pattern",
+        default="*.csv",
+        help="Glob pattern (relative to folder) used to locate CSV files.",
+    )
+    kw_parser.add_argument(
+        "--column",
+        type=_parse_column_option,
+        help="Optional column name or zero-based index containing durations.",
+    )
+    kw_parser.add_argument(
+        "--permutations",
+        type=int,
+        default=10000,
+        help="Number of label permutations to evaluate (default: 10000).",
+    )
+    kw_parser.add_argument(
+        "--seed",
+        type=int,
+        help="Optional random seed for reproducibility.",
+    )
+    kw_parser.add_argument(
+        "--report",
+        help="Optional path to write the JSON report for the permutation test.",
+    )
+    kw_parser.add_argument(
+        "--summary-csv",
+        dest="summary_csv",
+        help="Optional path to write per-group summary metrics as CSV.",
+    )
+    kw_parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help="Reduce console output to only the key statistics.",
+    )
+
+    if argv_list and argv_list[0] == "kw-permutation":
+        return parser.parse_args(argv_list)
+
+    if argv_list and argv_list[0] in {"-h", "--help"}:
+        return parser.parse_args(argv_list)
+
+    legacy_parser = argparse.ArgumentParser(
+        description="Hypothesis Testing Tool: Compare P95 values from one or two datasets."
+    )
+    legacy_parser.add_argument(
+        "paths",
+        nargs="+",
+        help="One or two input CSVs, plus optional output TXT (legacy flow).",
+    )
+
+    legacy_args = legacy_parser.parse_args(argv_list)
+
+    paths = legacy_args.paths
     input1 = paths[0]
     input2 = None
     output = None
@@ -42,11 +113,11 @@ def parse_arguments(argv: Iterable[str] | None = None) -> argparse.Namespace:
         input2 = paths[1]
         output = paths[2]
 
-    return argparse.Namespace(input1=input1, input2=input2, output=output)
+    return argparse.Namespace(command=None, input1=input1, input2=input2, output=output)
 
 
-def main(config, logger=None) -> None:
-    args = parse_arguments()
+def main(config, logger=None, args: argparse.Namespace | None = None) -> None:
+    args = args or parse_arguments()
 
     sample_size = config.getint("test", "sample", fallback=10000)
     threshold = config.getfloat("test", "threshold", fallback=None)
@@ -197,9 +268,26 @@ def _remove_cleaned_files(cleaned_files: Iterable[Path], log=None) -> None:
                 log.warning(f"Could not remove {path}: {exc}")
 
 
-def run_cli() -> None:
+def run_cli(argv: Iterable[str] | None = None) -> None:
+    args = parse_arguments(argv)
     config = load_config("config.txt")
-    logger = setup_logger(config) if config.getboolean("output", "create_log", fallback=False) else None
-    main(config, logger)
-    if config.getboolean("clean", "clean_all", fallback=False):
-        _remove_cleaned_files(_CLEANED_FILES, logger)
+    logger = (
+        setup_logger(config)
+        if config.getboolean("output", "create_log", fallback=False)
+        else None
+    )
+
+    try:
+        if getattr(args, "command", None) == "kw-permutation":
+            run_kw_permutation_command(args, config, logger)
+        else:
+            main(config, logger, args=args)
+    except Exception as exc:
+        error_msg = f"[Error] {exc}"
+        print(error_msg)
+        if logger:
+            logger.error(error_msg)
+        sys.exit(1)
+    finally:
+        if config.getboolean("clean", "clean_all", fallback=False):
+            _remove_cleaned_files(_CLEANED_FILES, logger)
