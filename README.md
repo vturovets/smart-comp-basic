@@ -92,14 +92,36 @@ The console report lists per-group medians, P95 values, dropped-row counts, and 
 
 ### Configuration
 
-The CLI loads settings from `config.txt`. Tweak this file to control sampling, thresholds, cleaning rules, permutation parameters, and output fields. Notable sections include:
+The CLI loads settings from `config.txt`. Adjust this file to control sampling, thresholds, cleaning rules, permutation parameters, descriptive metrics, and output fields. Every available option is listed below with defaults and example usage (see [config.txt](config.txt#L1-L83)):
 
-- `[test]` – significance level, bootstrap iterations, sample size, comparison threshold, and `percentile` (integer between 1 and 99; defaults to 95 for backward compatibility).
-- `[input]` – outlier limits, minimum sample size, and ratio-scale enforcement.
-- `[output]` – toggle individual statistics, diagnostics, log creation, and plot exports. P95 toggles remain enabled by default; matching P90 toggles are present but off.
-- `[descriptive analysis]` – enable descriptive runs, extended reports, and unimodality checks.
-- `[interpretation]` – configure automatic narrative generation and persistence ([config.txt](config.txt#L1-L83)).
-- `kw-permutation` options are primarily specified on the command line; provide `--permutations`, `--seed`, `--report`, and `--summary-csv` flags to tailor the permutation test outputs per run.
+#### `[test]`
+
+| Option | Description | Default | Example |
+| --- | --- | --- | --- |
+| `alpha` | Significance level for hypothesis tests. | `0.05` | `alpha = 0.01` |
+| `bootstrapping iterations` | Number of bootstrap resamples. | `600` | `bootstrapping iterations = 2000` |
+| `sample` | Target sample size when auto-sampling cleaned inputs. | `2000` | `sample = 5000` |
+| `threshold` | Cutoff used for single-sample comparisons. | `1000` | `threshold = 750` |
+| `percentile` | Percentile to analyze (integer between 1 and 99). | `95` | `percentile = 90` |
+
+#### `[input]`
+
+| Option | Description | Default | Example |
+| --- | --- | --- | --- |
+| `outlier threshold` | Values above this boundary are dropped during cleaning. | `2500` | `outlier threshold = 5000` |
+| `lower threshold` | Values below this boundary are dropped during cleaning. | `100` | `lower threshold = 0` |
+| `minimum sample size` | Enforces a minimum number of rows before tests can run. | `500` | `minimum sample size = 1000` |
+| `validate_ratio_scale` | Enable ratio-scale validation before analysis. | `True` | `validate_ratio_scale = False` |
+
+#### `[output]`
+
+| Option | Description | Default | Example |
+| --- | --- | --- | --- |
+| `create_log` | Write diagnostic logs to `tool.log`. | `True` | `create_log = False` |
+| Statistic flags | Toggle visibility of individual fields in saved/printed output. | See below | `p95_1 = False` |
+| Diagram exports | Enable visualizations. | See below | `histogram = True` |
+
+- **Statistic flags (defaults shown):** `p95_1 = True`, `p95_2 = True`, `ci lower p95_1 = True`, `ci upper p95_1 = True`, `ci lower p95_2 = True`, `ci upper p95_2 = True`, `p95_1_moe = True`, `p95_2_moe = True`, `p-value = True`, `alpha = True`, `sample size = True`, `significant difference = True`, `threshold = True`, `data source = False`, `p95_1_empirical = False`, `p95_2_empirical = False`, `p90_1 = False`, `p90_2 = False`, `ci lower p90_1 = False`, `ci upper p90_1 = False`, `ci lower p90_2 = False`, `ci upper p90_2 = False`, `p90_1_moe = False`, `p90_2_moe = False`, `p90_1_empirical = False`, `p90_2_empirical = False`.\n+- **Diagram exports (defaults shown):** `histogram = False`, `histogram_log_scale = False`, `boxplot = False`, `kde_plot = False` (enable any to generate the corresponding plot).\n+\n+#### `[descriptive analysis]`\n+\n+| Option | Description | Default | Example |\n+| --- | --- | --- | --- |\n+| `required` | Run the descriptive pipeline before hypothesis testing. | `True` | `required = False` |\n+| `descriptive only` | Skip hypothesis tests and emit only descriptive summaries. | `False` | `descriptive only = True` |\n+| Metric flags | Control which statistics appear. | See below | `skewness = True` |\n+| `diagraming` | Allow descriptive analysis to trigger `[output]` diagrams. | `False` | `diagraming = True` |\n+| `unimodality_test_enabled` | Run KDE-based unimodality checks before sampling. | `False` | `unimodality_test_enabled = True` |\n+| `bandwidth` | Bandwidth selection rule for unimodality KDE analysis. | `silverman` | `bandwidth = scott` |\n+| `get extended report` | Include extended unimodality diagnostics. | `False` | `get extended report = True` |\n+\n+- **Metric flags (defaults shown):** `mean = True`, `median = False`, `min = True`, `max = True`, `sample size = True`, `standard deviation = True`, `skewness = False`, `mode = False`, `p95_empirical = False`.\n+\n+#### `[clean]`\n+\n+| Option | Description | Default | Example |\n+| --- | --- | --- | --- |\n+| `clean_all` | Remove temporary cleaned and sampled CSV files after execution. | `True` | `clean_all = False` |\n+\n+#### `[interpretation]`\n+\n+| Option | Description | Default | Example |\n+| --- | --- | --- | --- |\n+| `explain the result` | Generate narrative interpretations of the statistics. | `True` | `explain the result = False` |\n+| `use_chatgpt_api` | Enable ChatGPT-powered interpretations (requires an API key). | `False` | `use_chatgpt_api = True` |\n+| `save the results into file` | Persist interpretation text to disk. | `True` | `save the results into file = False` |\n+| `openai_api_key` | API key used when `use_chatgpt_api` is enabled (falls back to `OPENAI_API_KEY`). | *(blank)* | `openai_api_key = sk-...` |\n+\n+`kw-permutation` options are primarily specified on the command line; provide `--permutations`, `--seed`, `--report`, and `--summary-csv` flags to tailor the permutation test outputs per run.
 
 ### Cleaning up
 
