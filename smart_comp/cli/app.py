@@ -35,7 +35,7 @@ def parse_arguments(argv: Iterable[str] | None = None) -> argparse.Namespace:
     argv_list = list(argv) if argv is not None else sys.argv[1:]
 
     parser = argparse.ArgumentParser(
-        description="Hypothesis Testing Tool: Compare P95 values from one or two datasets."
+        description="Hypothesis Testing Tool: Compare selected percentile values (default P95) from one or two datasets."
     )
     parser.set_defaults(command=None)
 
@@ -89,7 +89,7 @@ def parse_arguments(argv: Iterable[str] | None = None) -> argparse.Namespace:
         return parser.parse_args(argv_list)
 
     legacy_parser = argparse.ArgumentParser(
-        description="Hypothesis Testing Tool: Compare P95 values from one or two datasets."
+        description="Hypothesis Testing Tool: Compare selected percentile values (default P95) from one or two datasets."
     )
     legacy_parser.add_argument(
         "paths",
@@ -121,6 +121,7 @@ def main(config, logger=None, args: argparse.Namespace | None = None) -> None:
 
     sample_size = config.getint("test", "sample", fallback=10000)
     threshold = config.getfloat("test", "threshold", fallback=None)
+    percentile = config.getint("test", "percentile", fallback=95)
     descriptive_enabled = config.getboolean("descriptive analysis", "required", fallback=False)
     unimodality_enabled = config.getboolean(
         "descriptive analysis", "unimodality_test_enabled", fallback=True
@@ -161,7 +162,7 @@ def main(config, logger=None, args: argparse.Namespace | None = None) -> None:
             _CLEANED_FILES.append(Path(sample1))
 
             show_progress("Running Hypothesis Test...", 50)
-            results["002_comp_P95_to_threshold"] = run_bootstrap_single_sample_test(
+            results[f"002_comp_P{percentile}_to_threshold"] = run_bootstrap_single_sample_test(
                 sample1, config, logger
             )
             show_progress("Hypothesis Test completed", 100)
@@ -202,7 +203,9 @@ def main(config, logger=None, args: argparse.Namespace | None = None) -> None:
             _CLEANED_FILES.extend([Path(sample1), Path(sample2)])
 
             show_progress("Running Hypothesis Test...", 50)
-            results["003_comp_2_P95s"] = run_bootstrap_test(sample1, sample2, config, logger)
+            results[f"003_comp_2_P{percentile}s"] = run_bootstrap_test(
+                sample1, sample2, config, logger
+            )
             show_progress("Hypothesis Test completed", 100)
 
         save_results(results, args.output, config)

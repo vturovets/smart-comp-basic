@@ -9,16 +9,26 @@ import openai
 from smart_comp.utils import sanitize_for_json
 
 
+def _infer_percentile_from_results(results: dict) -> int:
+    for section in results.values():
+        if isinstance(section, dict):
+            for key in section:
+                if key.startswith("p") and "_" in key and key[1:key.find("_")].isdigit():
+                    return int(key[1 : key.find("_")])
+    return 95
+
+
 def interpret_results(results, config):
     try:
         if config.getboolean("interpretation", "use_chatgpt_api", fallback=False):
             client = openai.OpenAI(api_key=config.get("interpretation", "openai_api_key"))
 
             sanitized_results = sanitize_for_json(results)
+            percentile = _infer_percentile_from_results(results)
             prompt = f"""
 You are an expert in statistical analysis for IT system performance evaluation.
 
-Here is the data from a recent hypothesis testing comparing 95th percentiles (P95) using bootstrapping.
+Here is the data from a recent hypothesis testing comparing {percentile}th percentiles (P{percentile}) using bootstrapping.
 
 [RESULTS]
 ```json
@@ -80,14 +90,23 @@ def simple_local_interpretation(results):
         else:
             return "No valid test results found."
 
+        percentile = _infer_percentile_from_results(results)
+        perc_label = f"P{percentile}"
+        p_key_1 = f"p{percentile}_1"
+        p_key_2 = f"p{percentile}_2"
+        moe_key_1 = f"p{percentile}_1_moe"
+        moe_key_2 = f"p{percentile}_2_moe"
+        empirical_key_1 = f"p{percentile}_1_empirical"
+        empirical_key_2 = f"p{percentile}_2_empirical"
+
         p_value = r.get("p-value")
         alpha = r.get("alpha", 0.05)
         significant = r.get("significant difference")
-        p95_1 = r.get("p95_1_empirical") or r.get("p95_1")
-        p95_2 = r.get("p95_2_empirical") or r.get("p95_2")
+        p95_1 = r.get(empirical_key_1) or r.get(p_key_1)
+        p95_2 = r.get(empirical_key_2) or r.get(p_key_2)
         threshold = r.get("threshold")
-        moe_1 = r.get("p95_1_moe")
-        moe_2 = r.get("p95_2_moe")
+        moe_1 = r.get(moe_key_1)
+        moe_2 = r.get(moe_key_2)
 
         text = []
         text.append("## Summary of Statistical Findings:")
@@ -103,13 +122,13 @@ def simple_local_interpretation(results):
 
         if threshold is not None and p95_1 is not None:
             if p95_1 <= threshold:
-                text.append(f"- The P95 ({p95_1:.1f}) is within the threshold ({threshold}). ✅")
+                text.append(f"- The {perc_label} ({p95_1:.1f}) is within the threshold ({threshold}). ✅")
             else:
-                text.append(f"- The P95 ({p95_1:.1f}) exceeds the threshold ({threshold}). ⚠️")
+                text.append(f"- The {perc_label} ({p95_1:.1f}) exceeds the threshold ({threshold}). ⚠️")
 
         if p95_1 is not None and p95_2 is not None:
-            text.append(f"- P95 of Sample 1: {p95_1:.1f}")
-            text.append(f"- P95 of Sample 2: {p95_2:.1f}")
+            text.append(f"- {perc_label} of Sample 1: {p95_1:.1f}")
+            text.append(f"- {perc_label} of Sample 2: {p95_2:.1f}")
 
         if moe_1 is not None:
             text.append(f"- Margin of Error for Sample 1: ±{moe_1:.1f}%")

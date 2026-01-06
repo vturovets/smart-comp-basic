@@ -54,8 +54,8 @@ Run the CLI from the project root. Two entry points are available:
 python cli.py <input_1.csv> [input_2.csv] [results.txt]
 ```
 
-- **Single input:** compares the dataset against the `[test] threshold` configured in `config.txt` and emits hypothesis test statistics for the sample P95 ([smart_comp/cli/app.py](smart_comp/cli/app.py#L46-L87)).
-- **Two inputs:** compares the P95 between the datasets using paired bootstrap resampling ([smart_comp/cli/app.py](smart_comp/cli/app.py#L88-L115)).
+- **Single input:** compares the dataset against the `[test] threshold` configured in `config.txt` and emits hypothesis test statistics for the sample percentile (default P95) ([smart_comp/cli/app.py](smart_comp/cli/app.py#L46-L87)).
+- **Two inputs:** compares the selected percentile between the datasets using paired bootstrap resampling ([smart_comp/cli/app.py](smart_comp/cli/app.py#L88-L115)).
 - **Output file:** if provided, the formatted results are written to disk; otherwise they are printed to stdout ([smart_comp/io/output.py](smart_comp/io/output.py#L8-L39)).
 
 By default the bootstrap flow will:
@@ -63,7 +63,7 @@ By default the bootstrap flow will:
 1. Clean and validate each CSV, ensuring a single numeric `value` column and applying outlier thresholds ([smart_comp/io/input.py](smart_comp/io/input.py#L10-L35)).
 2. Optionally produce descriptive statistics (`[descriptive analysis] required = True`).
 3. Run unimodality checks (if enabled) before sampling.
-4. Auto-sample cleaned data to the configured size and execute the bootstrap hypothesis test ([smart_comp/cli/app.py](smart_comp/cli/app.py#L82-L109)).
+4. Auto-sample cleaned data to the configured size and execute the bootstrap hypothesis test at the configured percentile ([smart_comp/cli/app.py](smart_comp/cli/app.py#L82-L109)).
 5. Save the results and (optionally) generate interpretation Markdown with links to any plots the configuration enables ([smart_comp/cli/app.py](smart_comp/cli/app.py#L117-L153)).
 
 ### Kruskal–Wallis permutation command
@@ -94,11 +94,11 @@ The console report lists per-group medians, P95 values, dropped-row counts, and 
 
 The CLI loads settings from `config.txt`. Tweak this file to control sampling, thresholds, cleaning rules, permutation parameters, and output fields. Notable sections include:
 
-- `[test]` – significance level, bootstrap iterations, sample size, and comparison threshold.
+- `[test]` – significance level, bootstrap iterations, sample size, comparison threshold, and `percentile` (integer between 1 and 99; defaults to 95 for backward compatibility).
 - `[input]` – outlier limits, minimum sample size, and ratio-scale enforcement.
-- `[output]` – toggle individual statistics, diagnostics, log creation, and plot exports.
+- `[output]` – toggle individual statistics, diagnostics, log creation, and plot exports. P95 toggles remain enabled by default; matching P90 toggles are present but off.
 - `[descriptive analysis]` – enable descriptive runs, extended reports, and unimodality checks.
-- `[interpretation]` – configure automatic narrative generation and persistence ([config.txt](config.txt#L1-L73)).
+- `[interpretation]` – configure automatic narrative generation and persistence ([config.txt](config.txt#L1-L83)).
 - `kw-permutation` options are primarily specified on the command line; provide `--permutations`, `--seed`, `--report`, and `--summary-csv` flags to tailor the permutation test outputs per run.
 
 ### Cleaning up
