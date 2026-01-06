@@ -9,6 +9,8 @@ bootstrapping iterations = 600
 sample = 2000
 # Threshold for single-sample comparisons (required when only one dataset is provided)
 threshold = 1000
+# Percentile to analyze (must be an integer between 1 and 99)
+percentile = 95
 
 [input]
 # Outlier guard rails applied during cleaning
@@ -36,6 +38,18 @@ sample size = True
 significant difference = True
 threshold = True
 data source = False
+p95_1_empirical = False
+p95_2_empirical = False
+p90_1 = False
+p90_2 = False
+ci lower p90_1 = False
+ci upper p90_1 = False
+ci lower p90_2 = False
+ci upper p90_2 = False
+p90_1_moe = False
+p90_2_moe = False
+p90_1_empirical = False
+p90_2_empirical = False
 
 # Diagram exports
 histogram = False
