@@ -9,7 +9,7 @@ Smart-Comp is a command-line toolkit for statistically comparing the 95th percen
 - **Automated data hygiene** – validates ratio-scale requirements, enforces guardrails, removes outliers, and writes sanitized copies of the inputs ([smart_comp/io/input.py](smart_comp/io/input.py#L10-L35), [smart_comp/validation/checks.py](smart_comp/validation/checks.py#L1-L69)).
 - **Autosized sampling** – derives sample sizes tailored to your data before running hypothesis tests ([smart_comp/cli/app.py](smart_comp/cli/app.py#L82-L95), [smart_comp/sampling/autosize.py](smart_comp/sampling/autosize.py#L1-L34)).
 - **Result interpretation** – optional Markdown explanations and visualization call-outs help communicate findings to stakeholders ([smart_comp/cli/app.py](smart_comp/cli/app.py#L117-L153)).
-- **Configurable outputs** – toggle log creation, text exports, histograms, KDE plots, and more from a simple INI configuration file ([config.txt](config.txt#L1-L58)).
+- **Configurable outputs** – toggle log creation, text exports, histograms, KDE plots, normal Q-Q plots, lag plots, run sequence plots, and more from a simple INI configuration file ([config.txt](config.txt#L1-L61)).
 
 ## Project layout
 
@@ -125,7 +125,7 @@ All behaviour is driven by `config.txt`. The tables below list every available o
 | `data source` | Include the path of sampled inputs when empirical percentiles are requested. | `False` |
 | `p95_1_empirical`, `p95_2_empirical` | Output empirical percentile calculations alongside bootstrap results. | `False` |
 | `p90_1`, `p90_2`, `ci lower p90_1`, `ci upper p90_1`, `ci lower p90_2`, `ci upper p90_2`, `p90_1_moe`, `p90_2_moe`, `p90_1_empirical`, `p90_2_empirical` | Optional P90 counterparts for the above fields. | `False` |
-| `histogram`, `histogram_log_scale`, `boxplot`, `kde_plot` | Generate diagnostic plots (log scaling only applies when `histogram = True`). | `False` |
+| `histogram`, `histogram_log_scale`, `boxplot`, `kde_plot`, `normal_probability_qq_plot`, `lag_plot`, `run_sequence_plot` | Generate diagnostic plots (log scaling only applies when `histogram = True`). | `False` |
 
 #### `[descriptive analysis]` – summary statistics and diagnostics
 

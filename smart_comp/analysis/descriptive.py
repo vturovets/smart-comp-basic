@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from diptest import diptest
 from scipy.signal import find_peaks
-from scipy.stats import gaussian_kde, kurtosis, skew
+from scipy.stats import gaussian_kde, kurtosis, probplot, skew
 
 from smart_comp.io import get_data_frame_from_csv
 from smart_comp.utils import get_base_filename
@@ -47,6 +47,12 @@ def run_descriptive_analysis(cleaned_file, config, logger=None, mode="w"):
             _generate_histogram(df, base_filename, config)
         if config.getboolean("output", "boxplot", fallback=False):
             _generate_boxplot(df, base_filename, config)
+        if config.getboolean("output", "normal_probability_qq_plot", fallback=False):
+            _generate_normal_probability_qq_plot(df, base_filename)
+        if config.getboolean("output", "lag_plot", fallback=False):
+            _generate_lag_plot(df, base_filename)
+        if config.getboolean("output", "run_sequence_plot", fallback=False):
+            _generate_run_sequence_plot(df, base_filename)
 
     if config.getboolean("descriptive analysis", "get extended report", fallback=False):
         unimodality_report = run_unimodality_analysis(cleaned_file, config, logger)
@@ -115,6 +121,42 @@ def _generate_boxplot(df: pd.DataFrame, base_filename: str, config) -> None:
     plt.xlabel("Value")
     plt.tight_layout()
     plt.savefig(f"boxplot_{base_filename}.png")
+    plt.close()
+
+
+def _generate_normal_probability_qq_plot(df: pd.DataFrame, base_filename: str) -> None:
+    plt.figure()
+    probplot(df["value"], dist="norm", plot=plt)
+    plt.title(f"Normal Probability Q-Q Plot of {base_filename}")
+    plt.tight_layout()
+    plt.savefig(f"normal_probability_qq_plot_{base_filename}.png")
+    plt.close()
+
+
+def _generate_lag_plot(df: pd.DataFrame, base_filename: str) -> None:
+    values = df["value"].to_numpy()
+    if len(values) < 2:
+        return
+
+    plt.figure()
+    plt.scatter(values[:-1], values[1:], alpha=0.6)
+    plt.title(f"Lag Plot of {base_filename}")
+    plt.xlabel("Value (t)")
+    plt.ylabel("Value (t+1)")
+    plt.tight_layout()
+    plt.savefig(f"lag_plot_{base_filename}.png")
+    plt.close()
+
+
+def _generate_run_sequence_plot(df: pd.DataFrame, base_filename: str) -> None:
+    values = df["value"].to_numpy()
+    plt.figure()
+    plt.plot(range(1, len(values) + 1), values, marker="o", linestyle="-", linewidth=1, markersize=2)
+    plt.title(f"Run Sequence Plot of {base_filename}")
+    plt.xlabel("Observation Order")
+    plt.ylabel("Value")
+    plt.tight_layout()
+    plt.savefig(f"run_sequence_plot_{base_filename}.png")
     plt.close()
 
 

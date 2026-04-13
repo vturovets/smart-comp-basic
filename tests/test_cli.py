@@ -1,5 +1,7 @@
 """Tests for the CLI helpers using stubbed dependencies."""
 
+import configparser
+import io
 import sys
 from pathlib import Path
 
@@ -7,7 +9,7 @@ import pytest
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from smart_comp.cli.app import _remove_cleaned_files, parse_arguments
+from smart_comp.cli.app import _add_visual_analysis, _remove_cleaned_files, parse_arguments
 
 
 def test_parse_arguments_single_input(monkeypatch):
@@ -46,3 +48,22 @@ def test_remove_cleaned_files(tmp_path):
 
     assert not temp_file.exists()
     assert any("Removed cleaned file" in message for message in logger_calls["info"])
+
+
+def test_add_visual_analysis_includes_new_diagrams():
+    config = configparser.ConfigParser()
+    config.add_section("output")
+    config.set("output", "normal_probability_qq_plot", "true")
+    config.set("output", "lag_plot", "true")
+    config.set("output", "run_sequence_plot", "true")
+    config.set("output", "histogram", "false")
+    config.set("output", "kde_plot", "false")
+    config.set("output", "boxplot", "false")
+
+    handle = io.StringIO()
+    _add_visual_analysis(handle, config, "sample.csv")
+    output = handle.getvalue()
+
+    assert "normal_probability_qq_plot_sample.png" in output
+    assert "lag_plot_sample.png" in output
+    assert "run_sequence_plot_sample.png" in output
