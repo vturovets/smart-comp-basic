@@ -29,7 +29,9 @@ Runtime dependencies – NumPy, pandas, SciPy, Matplotlib, diptest, and optional
 
 ## Installation
 
-1. Create and activate a virtual environment.
+1. Create and activate a virtual environment:
+   py -3.12 -m venv .venv
+   .\.venv\Scripts\Activate.ps1
 2. Install runtime dependencies:
 
    ```bash

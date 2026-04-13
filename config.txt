@@ -42,17 +42,17 @@ percentile_1_empirical = False
 percentile_2_empirical = False
 
 # Diagram exports
-histogram = False
+histogram = True
 histogram_log_scale = False
 boxplot = False
 kde_plot = False
-normal_probability_qq_plot = False
-lag_plot = False
-run_sequence_plot = False
+normal_probability_qq_plot = True
+lag_plot = True
+run_sequence_plot = True
 
 [descriptive analysis]
 required = True
-descriptive only = False
+descriptive only = True
 mean = True
 median = False
 min = True
@@ -62,7 +62,7 @@ standard deviation = True
 skewness = False
 mode = False
 percentile_empirical = False
-diagraming = False
+diagraming = True
 unimodality_test_enabled = False
 bandwidth = silverman
 get extended report = False

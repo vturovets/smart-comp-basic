@@ -1,8 +1,6 @@
-## Summary of Statistical Findings:
-- **P-value** = 0.000 (alpha = 0.05)
-- **Result**: A statistically significant difference was detected.
-- The P95 (1182.4) exceeds the threshold (1000). ⚠️
-- Margin of Error for Sample 1: ±4.4%
-
-## Recommendations:
-- Proceed with decision-making based on the observed difference.
+No valid test results found.
+## Visual Analysis
+![Histogram](histogram_p95_sample1.png)
+![Normal Probability Q-Q Plot](normal_probability_qq_plot_p95_sample1.png)
+![Lag Plot](lag_plot_p95_sample1.png)
+![Run Sequence Plot](run_sequence_plot_p95_sample1.png)

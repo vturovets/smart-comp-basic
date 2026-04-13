@@ -943,3 +943,11 @@
 2025-10-28 11:45:11,700 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:148 - Bootstrapping and comparison completed.
 2025-10-28 11:45:11,702 - INFO - hypothesis_tool - _remove_cleaned_files:194 - Removed cleaned file: NGS-NR-271025_cleaned.csv
 2025-10-28 11:45:11,703 - INFO - hypothesis_tool - _remove_cleaned_files:194 - Removed cleaned file: NGS-NR-271025_sample.csv
+2026-04-13 14:18:53,772 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-13 14:18:53,780 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
+2026-04-13 14:24:30,524 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-13 14:24:32,542 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
+2026-04-13 14:26:19,907 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-13 14:26:21,339 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
+2026-04-13 16:45:19,242 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-13 16:45:20,714 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
