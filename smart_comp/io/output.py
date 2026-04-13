@@ -44,11 +44,39 @@ def _render_section(title: str, section: dict[str, Any], config) -> list[str]:
         if "descriptive" not in title:
             if key == "operation":
                 lines.append(f"{key}={value}")
-            elif config.getboolean("output", key, fallback=False):
+            elif _should_render_output_key(key, config):
                 lines.append(f"{key}={_format_value(value, key)}")
         else:
             lines.append(f"{key}={_format_value(value, key)}")
     return lines
+
+
+def _should_render_output_key(key: str, config) -> bool:
+    if config.getboolean("output", key, fallback=False):
+        return True
+
+    generic_key = _to_generic_percentile_output_key(key)
+    if generic_key != key and config.getboolean("output", generic_key, fallback=False):
+        return True
+
+    return False
+
+
+def _to_generic_percentile_output_key(key: str) -> str:
+    percentile_key = key
+    if percentile_key.startswith("ci lower "):
+        percentile_key = "ci lower " + _replace_percentile_token(percentile_key[9:])
+    elif percentile_key.startswith("ci upper "):
+        percentile_key = "ci upper " + _replace_percentile_token(percentile_key[9:])
+    else:
+        percentile_key = _replace_percentile_token(percentile_key)
+    return percentile_key
+
+
+def _replace_percentile_token(token: str) -> str:
+    if token.startswith("p") and "_" in token and token[1 : token.find("_")].isdigit():
+        return f"percentile{token[token.find('_'):]}"
+    return token
 
 
 def _format_value(value: Any, key: str) -> str:
@@ -121,7 +149,7 @@ def _maybe_write_summary_csv(
         "file_name",
         "n",
         "median",
-        "p95",
+        "percentile_95",
         "dropped_non_numeric_or_nan",
         "dropped_negative",
     ]

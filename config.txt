@@ -23,33 +23,23 @@ validate_ratio_scale = True
 # Persist diagnostic logs to tool.log
 create_log = True
 
-# Fields emitted for hypothesis test summaries
-p95_1 = True
-p95_2 = True
-ci lower p95_1 = True
-ci upper p95_1 = True
-ci lower p95_2 = True
-ci upper p95_2 = True
-p95_1_moe = True
-p95_2_moe = True
+# Fields emitted for hypothesis test summaries (apply to the configured percentile)
+percentile_1 = True
+percentile_2 = True
+ci lower percentile_1 = True
+ci upper percentile_1 = True
+ci lower percentile_2 = True
+ci upper percentile_2 = True
+percentile_1_moe = True
+percentile_2_moe = True
 p-value = True
 alpha = True
 sample size = True
 significant difference = True
 threshold = True
 data source = False
-p95_1_empirical = False
-p95_2_empirical = False
-p90_1 = False
-p90_2 = False
-ci lower p90_1 = False
-ci upper p90_1 = False
-ci lower p90_2 = False
-ci upper p90_2 = False
-p90_1_moe = False
-p90_2_moe = False
-p90_1_empirical = False
-p90_2_empirical = False
+percentile_1_empirical = False
+percentile_2_empirical = False
 
 # Diagram exports
 histogram = False
@@ -71,7 +61,7 @@ sample size = True
 standard deviation = True
 skewness = False
 mode = False
-p95_empirical = False
+percentile_empirical = False
 diagraming = False
 unimodality_test_enabled = False
 bandwidth = silverman

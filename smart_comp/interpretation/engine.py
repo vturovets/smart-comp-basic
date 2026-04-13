@@ -102,8 +102,8 @@ def simple_local_interpretation(results):
         p_value = r.get("p-value")
         alpha = r.get("alpha", 0.05)
         significant = r.get("significant difference")
-        p95_1 = r.get(empirical_key_1) or r.get(p_key_1)
-        p95_2 = r.get(empirical_key_2) or r.get(p_key_2)
+        percentile_value_1 = r.get(empirical_key_1) or r.get(p_key_1)
+        percentile_value_2 = r.get(empirical_key_2) or r.get(p_key_2)
         threshold = r.get("threshold")
         moe_1 = r.get(moe_key_1)
         moe_2 = r.get(moe_key_2)
@@ -120,15 +120,19 @@ def simple_local_interpretation(results):
             else:
                 text.append("- **Result**: No statistically significant difference was detected.")
 
-        if threshold is not None and p95_1 is not None:
-            if p95_1 <= threshold:
-                text.append(f"- The {perc_label} ({p95_1:.1f}) is within the threshold ({threshold}). ✅")
+        if threshold is not None and percentile_value_1 is not None:
+            if percentile_value_1 <= threshold:
+                text.append(
+                    f"- The {perc_label} ({percentile_value_1:.1f}) is within the threshold ({threshold}). ✅"
+                )
             else:
-                text.append(f"- The {perc_label} ({p95_1:.1f}) exceeds the threshold ({threshold}). ⚠️")
+                text.append(
+                    f"- The {perc_label} ({percentile_value_1:.1f}) exceeds the threshold ({threshold}). ⚠️"
+                )
 
-        if p95_1 is not None and p95_2 is not None:
-            text.append(f"- {perc_label} of Sample 1: {p95_1:.1f}")
-            text.append(f"- {perc_label} of Sample 2: {p95_2:.1f}")
+        if percentile_value_1 is not None and percentile_value_2 is not None:
+            text.append(f"- {perc_label} of Sample 1: {percentile_value_1:.1f}")
+            text.append(f"- {perc_label} of Sample 2: {percentile_value_2:.1f}")
 
         if moe_1 is not None:
             text.append(f"- Margin of Error for Sample 1: ±{moe_1:.1f}%")

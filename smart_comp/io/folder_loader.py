@@ -23,7 +23,7 @@ class GroupMetadata:
     file_name: str
     n: int
     median: float
-    p95: float
+    percentile_95: float
     dropped_non_numeric_or_nan: int
     dropped_negative: int
 
@@ -119,7 +119,7 @@ def _summarise_group(values: np.ndarray, file_name: str, dropped: Tuple[int, int
         )
 
     median = float(np.median(values))
-    p95 = float(np.percentile(values, 95))
+    percentile_95 = float(np.percentile(values, 95))
 
     non_numeric_or_nan, negative = dropped
 
@@ -127,7 +127,7 @@ def _summarise_group(values: np.ndarray, file_name: str, dropped: Tuple[int, int
         file_name=file_name,
         n=int(values.size),
         median=median,
-        p95=p95,
+        percentile_95=percentile_95,
         dropped_non_numeric_or_nan=non_numeric_or_nan,
         dropped_negative=negative,
     )

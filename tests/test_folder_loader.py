@@ -67,7 +67,7 @@ def test_load_group_durations_auto_detect(tmp_path: Path) -> None:
     ]
     assert [m.n for m in meta] == [3, 4]
     assert meta[0].median == pytest.approx(20.0)
-    assert meta[1].p95 == pytest.approx(np.percentile([15, 25, 35, 45], 95))
+    assert meta[1].percentile_95 == pytest.approx(np.percentile([15, 25, 35, 45], 95))
 
 
 def test_load_group_durations_with_column_selection(tmp_path: Path) -> None:

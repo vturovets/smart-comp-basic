@@ -79,8 +79,8 @@ def compare_percentiles(p_sample1, p_sample2, percentile, sample_size, alpha: fl
     }
 
 
-def compare_p95s(p95_sample1, p95_sample2, sample_size, alpha: float = 0.05):
-    return compare_percentiles(p95_sample1, p95_sample2, 95, sample_size, alpha)
+def compare_p95s(sample1_percentiles, sample2_percentiles, sample_size, alpha: float = 0.05):
+    return compare_percentiles(sample1_percentiles, sample2_percentiles, 95, sample_size, alpha)
 
 
 def run_bootstrap_test(sample_file_path1, sample_file_path2, config, logger):
@@ -100,14 +100,18 @@ def run_bootstrap_test(sample_file_path1, sample_file_path2, config, logger):
     top_fields = {"operation": f"comparing two P{percentile}s"}
 
     empirical_key1 = f"p{percentile}_1_empirical"
-    if config.getboolean("output", empirical_key1, fallback=False):
+    if config.getboolean("output", empirical_key1, fallback=False) or config.getboolean(
+        "output", "percentile_1_empirical", fallback=False
+    ):
         sample1_df = get_data_frame_from_csv(sample_file_path1)
         p_empirical = np.percentile(sample1_df["value"], percentile)
         top_fields[empirical_key1] = p_empirical
         result["data source 1"] = sample_file_path1
 
     empirical_key2 = f"p{percentile}_2_empirical"
-    if config.getboolean("output", empirical_key2, fallback=False):
+    if config.getboolean("output", empirical_key2, fallback=False) or config.getboolean(
+        "output", "percentile_2_empirical", fallback=False
+    ):
         sample2_df = get_data_frame_from_csv(sample_file_path2)
         p_empirical = np.percentile(sample2_df["value"], percentile)
         top_fields[empirical_key2] = p_empirical
@@ -148,8 +152,8 @@ def compare_percentile_to_threshold(p_samples, threshold, percentile, sample_siz
     }
 
 
-def compare_p95_to_threshold(p95_samples, threshold, sample_size, alpha: float):
-    return compare_percentile_to_threshold(p95_samples, threshold, 95, sample_size, alpha)
+def compare_p95_to_threshold(sample_percentiles, threshold, sample_size, alpha: float):
+    return compare_percentile_to_threshold(sample_percentiles, threshold, 95, sample_size, alpha)
 
 
 def run_bootstrap_single_sample_test(sample_file_path1, config, logger):
@@ -169,8 +173,11 @@ def run_bootstrap_single_sample_test(sample_file_path1, config, logger):
     top_fields = {"operation": f"comparing P{percentile} to the threshold"}
 
     empirical_key1 = f"p{percentile}_1_empirical"
-    if config.getboolean("output", empirical_key1, fallback=False) or config.getboolean(
-        "output", f"p{percentile}_2_empirical", fallback=False
+    if (
+        config.getboolean("output", empirical_key1, fallback=False)
+        or config.getboolean("output", f"p{percentile}_2_empirical", fallback=False)
+        or config.getboolean("output", "percentile_1_empirical", fallback=False)
+        or config.getboolean("output", "percentile_2_empirical", fallback=False)
     ):
         sample1_df = get_data_frame_from_csv(sample_file_path1)
         p_empirical = np.percentile(sample1_df["value"], percentile)

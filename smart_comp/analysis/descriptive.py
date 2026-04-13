@@ -39,7 +39,9 @@ def run_descriptive_analysis(cleaned_file, config, logger=None, mode="w"):
         results["skewness"] = skew(df["value"])
     if config.getboolean("descriptive analysis", "mode", fallback=False):
         results["mode"] = df["value"].mode()[0]
-    if config.getboolean("descriptive analysis", "p95_empirical", fallback=False):
+    if config.getboolean("descriptive analysis", "p95_empirical", fallback=False) or config.getboolean(
+        "descriptive analysis", "percentile_empirical", fallback=False
+    ):
         results["p95_empirical"] = np.percentile(df["value"], 95)
 
     if config.getboolean("descriptive analysis", "diagraming", fallback=False):
@@ -83,8 +85,14 @@ def _generate_histogram(df: pd.DataFrame, base_filename: str, config) -> None:
         linewidth=1,
         label=f"Median: {df['value'].median():.1f} ms",
     )
-    p95 = np.percentile(df["value"], 95)
-    plt.axvline(p95, color="orange", linestyle="dashed", linewidth=1, label=f"P95: {p95:.1f} ms")
+    percentile_95 = np.percentile(df["value"], 95)
+    plt.axvline(
+        percentile_95,
+        color="orange",
+        linestyle="dashed",
+        linewidth=1,
+        label=f"P95: {percentile_95:.1f} ms",
+    )
 
     x_label = "Response time, ms"
     log_scale_requested = False
