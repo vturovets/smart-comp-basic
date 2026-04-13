@@ -44,6 +44,8 @@ Runtime dependencies – NumPy, pandas, SciPy, Matplotlib, diptest, and optional
 
 If you intend to generate AI-assisted interpretations, export `OPENAI_API_KEY` or provide a key in `config.txt` under `[interpretation]`.
 
+For packaging this project into a wheel and consuming it from `smart-comp-web`, see [docs/WHL_FOR_SMART_COMP_WEB.md](docs/WHL_FOR_SMART_COMP_WEB.md).
+
 ## Usage
 
 Run the CLI from the project root. Two entry points are available:
