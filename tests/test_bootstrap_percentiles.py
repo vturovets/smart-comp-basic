@@ -75,8 +75,8 @@ def test_get_configured_percentile_validation():
 
 
 def test_run_bootstrap_test_uses_percentile(monkeypatch, tmp_path):
-    data1 = tmp_path / "p95_sample1.csv"
-    data2 = tmp_path / "p95_sample2.csv"
+    data1 = tmp_path / "percentile_sample1.csv"
+    data2 = tmp_path / "percentile_sample2.csv"
     data1.write_text("\n".join("100" for _ in range(50)))
     data2.write_text("\n".join("110" for _ in range(50)))
 
@@ -95,7 +95,7 @@ def test_run_bootstrap_test_uses_percentile(monkeypatch, tmp_path):
 
 
 def test_run_bootstrap_single_sample_test_uses_percentile(monkeypatch, tmp_path):
-    data1 = tmp_path / "p95_sample1.csv"
+    data1 = tmp_path / "percentile_sample1.csv"
     data1.write_text("\n".join("100" for _ in range(50)))
 
     cfg = DummyConfig(percentile=90)
@@ -109,4 +109,3 @@ def test_run_bootstrap_single_sample_test_uses_percentile(monkeypatch, tmp_path)
 
     assert result["operation"] == "comparing P90 to the threshold"
     assert "p90_1" in result
-

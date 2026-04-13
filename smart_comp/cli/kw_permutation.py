@@ -129,7 +129,7 @@ def _format_verbose_lines(groups: Sequence[dict[str, object]], omnibus: dict[str
         "Group",
         "n",
         "Median",
-        "P95",
+        "P95 (fixed)",
         "Dropped (non-numeric/NaN)",
         "Dropped (negative)",
     ]
@@ -141,7 +141,7 @@ def _format_verbose_lines(groups: Sequence[dict[str, object]], omnibus: dict[str
                 str(group.get("file_name", "")),
                 str(group.get("n", "")),
                 f"{float(group.get('median', 0.0)):.3f}",
-                f"{float(group.get('p95', 0.0)):.3f}",
+                f"{float(group.get('percentile_95', 0.0)):.3f}",
                 str(group.get("dropped_non_numeric_or_nan", 0)),
                 str(group.get("dropped_negative", 0)),
             ]
