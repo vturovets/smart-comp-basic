@@ -56,6 +56,9 @@ histogram = False
 histogram_log_scale = False
 boxplot = False
 kde_plot = False
+normal_probability_qq_plot = False
+lag_plot = False
+run_sequence_plot = False
 
 [descriptive analysis]
 required = True

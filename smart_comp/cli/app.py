@@ -240,7 +240,11 @@ def _interpret_results(results, config, input1, input2=None) -> None:
 def _add_visual_analysis(handle, config, input_file1, input_file2=None) -> None:
     if not (
         config.getboolean("output", "histogram", fallback=False)
+        or config.getboolean("output", "boxplot", fallback=False)
         or config.getboolean("output", "kde_plot", fallback=False)
+        or config.getboolean("output", "normal_probability_qq_plot", fallback=False)
+        or config.getboolean("output", "lag_plot", fallback=False)
+        or config.getboolean("output", "run_sequence_plot", fallback=False)
     ):
         return
 
@@ -249,15 +253,31 @@ def _add_visual_analysis(handle, config, input_file1, input_file2=None) -> None:
     base_filename1 = get_base_filename(input_file1)
     if config.getboolean("output", "histogram", fallback=False):
         handle.write(f"![Histogram](histogram_{base_filename1}.png)\n")
+    if config.getboolean("output", "boxplot", fallback=False):
+        handle.write(f"![Boxplot](boxplot_{base_filename1}.png)\n")
     if config.getboolean("output", "kde_plot", fallback=False):
         handle.write(f"![KDE Plot](kde_peaks_{base_filename1}.png)\n")
+    if config.getboolean("output", "normal_probability_qq_plot", fallback=False):
+        handle.write(f"![Normal Probability Q-Q Plot](normal_probability_qq_plot_{base_filename1}.png)\n")
+    if config.getboolean("output", "lag_plot", fallback=False):
+        handle.write(f"![Lag Plot](lag_plot_{base_filename1}.png)\n")
+    if config.getboolean("output", "run_sequence_plot", fallback=False):
+        handle.write(f"![Run Sequence Plot](run_sequence_plot_{base_filename1}.png)\n")
 
     if input_file2:
         base_filename2 = get_base_filename(input_file2)
         if config.getboolean("output", "histogram", fallback=False):
             handle.write(f"![Histogram](histogram_{base_filename2}.png)\n")
+        if config.getboolean("output", "boxplot", fallback=False):
+            handle.write(f"![Boxplot](boxplot_{base_filename2}.png)\n")
         if config.getboolean("output", "kde_plot", fallback=False):
             handle.write(f"![KDE Plot](kde_peaks_{base_filename2}.png)\n")
+        if config.getboolean("output", "normal_probability_qq_plot", fallback=False):
+            handle.write(f"![Normal Probability Q-Q Plot](normal_probability_qq_plot_{base_filename2}.png)\n")
+        if config.getboolean("output", "lag_plot", fallback=False):
+            handle.write(f"![Lag Plot](lag_plot_{base_filename2}.png)\n")
+        if config.getboolean("output", "run_sequence_plot", fallback=False):
+            handle.write(f"![Run Sequence Plot](run_sequence_plot_{base_filename2}.png)\n")
 
 
 def _remove_cleaned_files(cleaned_files: Iterable[Path], log=None) -> None:
