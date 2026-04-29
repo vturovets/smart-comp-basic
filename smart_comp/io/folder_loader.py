@@ -9,6 +9,8 @@ from typing import List, Tuple, Union
 import numpy as np
 import pandas as pd
 
+from smart_comp.io.unit_parser import normalize_series
+
 __all__ = [
     "GroupMetadata",
     "find_group_files",
@@ -95,10 +97,26 @@ def _select_column(df: pd.DataFrame, column: Union[str, int, None]) -> pd.Series
     raise TypeError("column must be a string, integer, or None")
 
 
-def _clean_duration_series(series: pd.Series) -> Tuple[np.ndarray, int, int]:
+def _clean_duration_series(
+    series: pd.Series,
+    logger=None,
+    file_name: str = "",
+) -> Tuple[np.ndarray, int, int]:
     """Convert a series into a clean numpy array of non-negative numeric durations."""
 
-    coerced = pd.to_numeric(series, errors="coerce")
+    normalized, summary = normalize_series(series)
+
+    if logger and (summary["ms"] > 0 or summary["s"] > 0):
+        logger.info(
+            "Unit normalization: %d ms-suffixed, %d s-suffixed, %d plain, %d failed (file: %s)",
+            summary["ms"],
+            summary["s"],
+            summary["plain"],
+            summary["failed"],
+            file_name,
+        )
+
+    coerced = pd.to_numeric(normalized, errors="coerce")
 
     non_numeric_or_nan = series.size - coerced.notna().sum()
 
@@ -137,6 +155,7 @@ def load_group_durations(
     folder: Union[str, Path],
     pattern: str = "*.csv",
     column: Union[str, int, None] = None,
+    logger=None,
 ) -> Tuple[List[np.ndarray], List[GroupMetadata]]:
     """Load multiple CSV files as latency groups for statistical analysis.
 
@@ -145,6 +164,7 @@ def load_group_durations(
         pattern: Glob pattern (relative to *folder*) used to locate files.
         column: Optional name or zero-based index of the column that contains
             durations. If ``None`` the first numeric column is used.
+        logger: Optional logger for emitting normalization summaries.
 
     Raises:
         FileNotFoundError: If *folder* does not exist.
@@ -169,7 +189,9 @@ def load_group_durations(
     for file_path in files:
         frame = pd.read_csv(file_path)
         series = _select_column(frame, column)
-        cleaned, dropped_non_numeric, dropped_negative = _clean_duration_series(series)
+        cleaned, dropped_non_numeric, dropped_negative = _clean_duration_series(
+            series, logger=logger, file_name=file_path.name
+        )
         info = _summarise_group(
             cleaned,
             file_name=file_path.name,

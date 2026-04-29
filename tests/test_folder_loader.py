@@ -152,3 +152,80 @@ def test_find_group_files_requires_multiple_csvs(tmp_path: Path) -> None:
 def test_group_metadata_dataclass_repr() -> None:
     meta = GroupMetadata("file.csv", 3, 1.0, 2.0, 1, 0)
     assert "file.csv" in repr(meta)
+
+
+# ---------------------------------------------------------------------------
+# Integration tests for unit normalization in folder ingestion (Tasks 6.4, 6.5)
+# ---------------------------------------------------------------------------
+
+
+def test_load_group_durations_normalizes_suffixed_csvs(tmp_path: Path) -> None:
+    """**Validates: Requirements 4.1, 4.2**
+
+    A folder with CSVs containing ms/s-suffixed values should be normalized
+    to plain ms floats and negative-value filters still applied.
+    """
+    folder = tmp_path / "suffixed"
+    folder.mkdir()
+
+    (folder / "group_a.csv").write_text("duration\n1507ms\n2.08s\n500\n", encoding="utf-8")
+    (folder / "group_b.csv").write_text("duration\n3s\n250ms\n100\n", encoding="utf-8")
+
+    arrays, meta = load_group_durations(folder, "*.csv", column="duration")
+
+    assert [sorted(arr.tolist()) for arr in arrays] == [
+        sorted([1507.0, 2080.0, 500.0]),
+        sorted([3000.0, 250.0, 100.0]),
+    ]
+
+    assert all(m.n > 0 for m in meta)
+
+
+def test_load_group_durations_plain_numeric_unchanged() -> None:
+    """**Validates: Requirements 4.3**
+
+    Plain-numeric fixtures in tests/fixtures/kruskal/ should pass through
+    load_group_durations unchanged.
+    """
+    fixture_dir = FIXTURE_DIR / "kruskal"
+
+    arrays, meta = load_group_durations(fixture_dir, "*.csv", column="duration")
+
+    expected_a = [10.0, 12.0, 14.0, 16.0, 18.0, 20.0]
+    expected_b = [11.0, 13.0, 15.0, 17.0, 19.0, 21.0]
+    expected_c = [30.0, 32.0, 34.0, 36.0, 38.0, 40.0]
+
+    by_name = {m.file_name: (arr, m) for arr, m in zip(arrays, meta)}
+
+    assert sorted(by_name["same_group_a.csv"][0].tolist()) == expected_a
+    assert sorted(by_name["same_group_b.csv"][0].tolist()) == expected_b
+    assert sorted(by_name["shifted_group_c.csv"][0].tolist()) == expected_c
+
+
+# ---------------------------------------------------------------------------
+# Logger integration test for folder ingestion (Task 6.6)
+# ---------------------------------------------------------------------------
+
+from unittest.mock import MagicMock
+
+
+def test_load_group_durations_logger_receives_summary(tmp_path: Path) -> None:
+    """**Validates: Requirements 5.3, 5.4**
+
+    When a logger is provided and suffixed conversions occur, logger.info
+    should be called with a normalization summary for each file.
+    """
+    folder = tmp_path / "logged"
+    folder.mkdir()
+
+    (folder / "a.csv").write_text("duration\n1507ms\n2.08s\n", encoding="utf-8")
+    (folder / "b.csv").write_text("duration\n3s\n250ms\n", encoding="utf-8")
+
+    logger = MagicMock()
+    load_group_durations(folder, "*.csv", column="duration", logger=logger)
+
+    info_calls = [str(c) for c in logger.info.call_args_list]
+    summary_calls = [c for c in info_calls if "Unit normalization" in c]
+    assert len(summary_calls) >= 2, (
+        f"Expected normalization summary for each file, got: {info_calls}"
+    )

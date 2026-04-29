@@ -951,3 +951,131 @@
 2026-04-13 14:26:21,339 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
 2026-04-13 16:45:19,242 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
 2026-04-13 16:45:20,714 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: p95_sample1_cleaned.csv
+2026-04-14 17:00:40,517 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 17:00:42,443 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 17:50:22,107 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 17:50:22,123 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-14 17:50:22,124 - ERROR - hypothesis_tool - main:222 - [Error] [Errno 2] No such file or directory: 'USL_UKIUSL_UKI_PROD_070426.csv'
+2026-04-14 17:50:42,883 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 17:50:42,925 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-14 17:50:43,003 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-14 17:50:45,475 - INFO - hypothesis_tool - run_bootstrap_test:93 - Starting bootstrapping for both samples at P90...
+2026-04-14 17:50:45,584 - INFO - hypothesis_tool - run_bootstrap_test:98 - Running P90 comparison...
+2026-04-14 17:50:45,584 - INFO - hypothesis_tool - run_bootstrap_test:121 - Bootstrapping and comparison completed.
+2026-04-14 17:50:45,587 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 17:50:45,587 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-14 17:50:45,587 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_sample.csv
+2026-04-14 17:50:45,588 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-14 17:52:57,018 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 17:52:57,033 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-14 17:52:57,066 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-14 17:52:59,256 - INFO - hypothesis_tool - run_bootstrap_test:93 - Starting bootstrapping for both samples at P90...
+2026-04-14 17:52:59,754 - INFO - hypothesis_tool - run_bootstrap_test:98 - Running P90 comparison...
+2026-04-14 17:52:59,754 - INFO - hypothesis_tool - run_bootstrap_test:121 - Bootstrapping and comparison completed.
+2026-04-14 17:52:59,757 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 17:52:59,758 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-14 17:52:59,758 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_sample.csv
+2026-04-14 17:52:59,758 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-14 17:58:45,726 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 17:58:45,741 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-14 17:58:45,776 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-14 17:58:48,086 - INFO - hypothesis_tool - run_bootstrap_test:93 - Starting bootstrapping for both samples at P90...
+2026-04-14 17:58:48,981 - INFO - hypothesis_tool - run_bootstrap_test:98 - Running P90 comparison...
+2026-04-14 17:58:48,982 - INFO - hypothesis_tool - run_bootstrap_test:121 - Bootstrapping and comparison completed.
+2026-04-14 17:58:48,985 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 17:58:48,986 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-14 17:58:48,986 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_sample.csv
+2026-04-14 17:58:48,986 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-14 20:45:31,586 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 20:45:33,533 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-14 20:45:34,000 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-14 20:45:34,000 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-14 20:45:34,004 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 20:45:34,005 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_sample.csv
+2026-04-14 20:47:03,206 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 20:47:04,707 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-14 20:47:05,171 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-14 20:47:05,171 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-14 20:47:05,173 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-14 20:47:05,174 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-14 20:48:57,813 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 20:48:59,216 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-14 20:48:59,681 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-14 20:48:59,681 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-14 20:48:59,681 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-14 20:48:59,681 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-14 20:51:02,640 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-14 20:51:02,655 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-14 20:51:02,678 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-14 20:51:04,926 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-14 20:51:04,938 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-21 16:58:30,920 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-21 16:58:31,044 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for SEMANTIC-2026-04-14-20.csv
+2026-04-21 16:58:31,142 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-21 16:58:40,412 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: SEMANTIC-2026-04-14-20_cleaned.csv
+2026-04-21 16:58:40,413 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-21 17:21:24,157 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-21 17:21:24,195 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for SEMANTIC-2026-04-14-20.csv
+2026-04-21 17:21:24,227 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for USL_UKI_PROD_070426.csv
+2026-04-21 17:21:24,290 - INFO - hypothesis_tool - run_bootstrap_test:93 - Starting bootstrapping for both samples at P90...
+2026-04-21 17:21:25,163 - INFO - hypothesis_tool - run_bootstrap_test:98 - Running P90 comparison...
+2026-04-21 17:21:25,169 - INFO - hypothesis_tool - run_bootstrap_test:121 - Bootstrapping and comparison completed.
+2026-04-21 17:21:25,171 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: SEMANTIC-2026-04-14-20_cleaned.csv
+2026-04-21 17:21:25,171 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_cleaned.csv
+2026-04-21 17:21:25,173 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: SEMANTIC-2026-04-14-20_sample.csv
+2026-04-21 17:21:25,173 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: USL_UKI_PROD_070426_sample.csv
+2026-04-21 17:26:49,953 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-21 17:26:49,990 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for SEMANTIC-2026-04-14-20.csv
+2026-04-21 17:26:50,011 - INFO - hypothesis_tool - validate_and_clean:33 - Cleaning completed for semantic-search-5d.csv
+2026-04-21 17:26:50,058 - INFO - hypothesis_tool - run_bootstrap_test:93 - Starting bootstrapping for both samples at P90...
+2026-04-21 17:26:50,928 - INFO - hypothesis_tool - run_bootstrap_test:98 - Running P90 comparison...
+2026-04-21 17:26:50,933 - INFO - hypothesis_tool - run_bootstrap_test:121 - Bootstrapping and comparison completed.
+2026-04-21 17:26:50,935 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: SEMANTIC-2026-04-14-20_cleaned.csv
+2026-04-21 17:26:50,936 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_cleaned.csv
+2026-04-21 17:26:50,938 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: SEMANTIC-2026-04-14-20_sample.csv
+2026-04-21 17:26:50,938 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: semantic-search-5d_sample.csv
+2026-04-28 18:22:30,797 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 18:22:30,797 - INFO - hypothesis_tool - run_kw_permutation_command:32 - Loaded 3 groups from 'C:\Users\votu\AppData\Local\Temp\pytest-of-votu\pytest-187\test_run_cli_kw_permutation_su0\cli' using pattern '*.csv'
+2026-04-28 18:22:30,846 - INFO - hypothesis_tool - run_kw_permutation_command:57 - Wrote kw-permutation report to C:\Users\votu\AppData\Local\Temp\pytest-of-votu\pytest-187\test_run_cli_kw_permutation_su0\result.json
+2026-04-28 18:22:30,846 - INFO - hypothesis_tool - run_kw_permutation_command:59 - Wrote kw-permutation summary CSV to C:\Users\votu\AppData\Local\Temp\pytest-of-votu\pytest-187\test_run_cli_kw_permutation_su0\summary.csv
+2026-04-28 18:22:30,864 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 18:22:30,864 - ERROR - hypothesis_tool - run_cli:312 - [Error] Folder does not exist: 'does-not-exist'
+2026-04-28 18:41:05,136 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 18:41:05,263 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-28 18:41:05,717 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-28 18:41:05,717 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-28 18:41:05,717 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_cleaned.csv
+2026-04-28 18:41:05,717 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_sample.csv
+2026-04-28 18:43:51,639 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 18:43:53,823 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-28 18:43:54,273 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-28 18:43:54,278 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-28 18:43:54,278 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_cleaned.csv
+2026-04-28 18:43:54,281 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_sample.csv
+2026-04-28 19:13:24,091 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 19:13:28,629 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P90...
+2026-04-28 19:13:30,018 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P90 comparison...
+2026-04-28 19:13:30,031 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-28 19:13:30,039 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_cleaned.csv
+2026-04-28 19:13:30,041 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_sample.csv
+2026-04-28 19:16:31,782 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-28 19:16:33,144 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:167 - Starting bootstrapping for single sample at P95...
+2026-04-28 19:16:33,584 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:171 - Running single sample P95 comparison...
+2026-04-28 19:16:33,587 - INFO - hypothesis_tool - run_bootstrap_single_sample_test:188 - Bootstrapping and comparison completed.
+2026-04-28 19:16:33,590 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_cleaned.csv
+2026-04-28 19:16:33,590 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: extract-2026-04-21-27_sample.csv
+2026-04-29 08:20:53,785 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-29 08:20:53,801 - INFO - hypothesis_tool - validate_and_clean:51 - Cleaning completed for resp_test_clean.csv
+2026-04-29 08:20:53,801 - ERROR - hypothesis_tool - main:222 - [Error] [Errno 2] No such file or directory: 'rest_test_unclean.csv'
+2026-04-29 08:21:45,466 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-29 08:21:45,470 - INFO - hypothesis_tool - validate_and_clean:51 - Cleaning completed for resp_test_clean.csv
+2026-04-29 08:21:45,470 - INFO - hypothesis_tool - validate_and_clean:33 - Unit normalization: 31 ms-suffixed, 2 s-suffixed, 0 plain, 0 failed (file: resp_test_unclean.csv)
+2026-04-29 08:21:45,470 - INFO - hypothesis_tool - validate_and_clean:51 - Cleaning completed for resp_test_unclean.csv
+2026-04-29 08:21:47,851 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: resp_test_clean_cleaned.csv
+2026-04-29 08:21:47,851 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: resp_test_unclean_cleaned.csv
+2026-04-29 08:22:52,091 - DEBUG - hypothesis_tool - setup_logger:30 - Logger initialized.
+2026-04-29 08:22:52,091 - INFO - hypothesis_tool - validate_and_clean:51 - Cleaning completed for resp_test_clean.csv
+2026-04-29 08:22:52,091 - INFO - hypothesis_tool - validate_and_clean:33 - Unit normalization: 31 ms-suffixed, 2 s-suffixed, 0 plain, 0 failed (file: resp_test_unclean.csv)
+2026-04-29 08:22:52,091 - INFO - hypothesis_tool - validate_and_clean:51 - Cleaning completed for resp_test_unclean.csv
+2026-04-29 08:22:53,771 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: resp_test_clean_cleaned.csv
+2026-04-29 08:22:53,771 - INFO - hypothesis_tool - _remove_cleaned_files:288 - Removed cleaned file: resp_test_unclean_cleaned.csv

@@ -4,17 +4,17 @@
 # Significance level for hypothesis tests
 alpha = 0.05
 # Number of bootstrap resamples (lower for faster runs while keeping stability)
-bootstrapping iterations = 600
+bootstrapping iterations = 1000
 # Target sample size used when auto-sampling cleaned inputs
-sample = 2000
+sample = 19000
 # Threshold for single-sample comparisons (required when only one dataset is provided)
 threshold = 1000
 # Percentile to analyze (must be an integer between 1 and 99)
-percentile = 95
+percentile = 90
 
 [input]
 # Outlier guard rails applied during cleaning
-outlier threshold = 2500
+outlier threshold = 10000
 lower threshold = 100
 minimum sample size = 500
 validate_ratio_scale = True
@@ -38,8 +38,8 @@ sample size = True
 significant difference = True
 threshold = True
 data source = False
-percentile_1_empirical = False
-percentile_2_empirical = False
+percentile_1_empirical = True
+percentile_2_empirical = True
 
 # Diagram exports
 histogram = True
@@ -61,7 +61,7 @@ sample size = True
 standard deviation = True
 skewness = False
 mode = False
-percentile_empirical = False
+percentile_empirical = True
 diagraming = True
 unimodality_test_enabled = False
 bandwidth = silverman

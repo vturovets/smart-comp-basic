@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+import os
+
 import pandas as pd
 from pandas import DataFrame
+
+from smart_comp.io.unit_parser import normalize_series
 
 
 def validate_and_clean(file_path: str, config, logger=None) -> str:
@@ -15,6 +19,20 @@ def validate_and_clean(file_path: str, config, logger=None) -> str:
 
     if df.shape[1] != 1:
         raise Exception(f"Input file {file_path} should contain only one column.")
+
+    df["value"], summary = normalize_series(df["value"])
+
+    if summary["ms"] > 0 or summary["s"] > 0:
+        fname = os.path.basename(file_path)
+        msg = (
+            f"Unit normalization: {summary['ms']} ms-suffixed, "
+            f"{summary['s']} s-suffixed, {summary['plain']} plain, "
+            f"{summary['failed']} failed (file: {fname})"
+        )
+        if logger:
+            logger.info(msg)
+        else:
+            print(msg)
 
     df = df[pd.to_numeric(df["value"], errors="coerce").notnull()]
     df["value"] = df["value"].astype(float)

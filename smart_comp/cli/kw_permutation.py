@@ -25,6 +25,7 @@ def run_kw_permutation_command(args, config, logger=None):
         folder=args.folder,
         pattern=args.pattern,
         column=args.column,
+        logger=logger,
     )
 
     if logger:
